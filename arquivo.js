@@ -1,4 +1,3 @@
-
 .calculadora {
   background: #333;
   padding: 20px;
