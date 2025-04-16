@@ -6,3 +6,6 @@
   width: 260px;
   text-align: center;
 }
+button:hover {
+  background: #555;
+}
