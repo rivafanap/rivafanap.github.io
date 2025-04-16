@@ -43,3 +43,25 @@ button {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+button:hover {
+  background: #555;
+}
+
+button:active {
+  background: #777;
+}
+
+button.zero {
+  grid-column: span 2;
+  width: 100%;
+}
+
+button:nth-child(4n),
+button:last-child {
+  background: #ff9800;
+}
+
+button:nth-child(4n):hover,
+button:last-child:hover {
+  background: #e68900;
+}
