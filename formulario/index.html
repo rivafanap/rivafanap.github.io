@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu formulário</title>
     <style>
-        div {width:'100%'}
-    </style>
+        div {width:'100%'; 
+             margin: 10px
+            }
+     </style>
    </head>
     <body>
          <h1>Musicas Favoritas</h1>
@@ -49,7 +51,21 @@
                <label for="mes">Mês</label>
                <input type='month' id="mes" name="mes" /> 
                </div>
-           
+
+               <div>
+               <label for="semana">Semana</label>
+               <input type='week'id='semana" name="semana" /> 
+               </div>
+                   
+             <div>
+               <label for="hora">Hora</label>
+               <input type=time'id='hora" name="hora" /> 
+              </div>   
+
+              <div>
+                <input type='hidden'id='usuarioLogado" name="usuariologado" value="Vania" /> 
+               </div>      
+               
            <button type="submit">Enviar</button>
          </form>
       
