@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu formulário</title>
+    <style>
+        div {width:'100%'}
+    </style>
    </head>
     <body>
          <h1>Musicas Favoritas</h1>
        <form method="post" action="https://formtester.goodbytes.be/post.php"/>
+       <fieldset>
            <label for="nomeMusica">Nome da Musica</label>
             <input type='text' id=nomeMusica" name="nomeMusica"/>
+       </fieldset>
            
-           <label for="nomeArtista">Nome Artista</label>
-           <input type='text' id="nomeArtista" name="nomeArtista"/>
-
+           <div>
+              <label for="nomeArtista">Nome Artista</label>
+              <input type='text' id="nomeArtista" name="nomeArtista"/>
+           </div>
+           
            <label for="senha">Senha</label>
            <input type='password' id="senha" name="senha" />
            
