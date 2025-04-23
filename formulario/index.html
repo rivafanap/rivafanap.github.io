@@ -13,19 +13,32 @@
        <form method="post" action="https://formtester.goodbytes.be/post.php"/>
        <fieldset>
            <label for="nomeMusica">Nome da Musica</label>
-            <input type='text' id=nomeMusica" name="nomeMusica"/>
+            <input type='text' id=nomeMusica" name="nomeMusica" placeholder="Someone Like You"/>
        </fieldset>
            
            <div>
               <label for="nomeArtista">Nome Artista</label>
-              <input type='text' id="nomeArtista" name="nomeArtista"/>
+              <input type='text' id="nomeArtista" name="nomeArtista" placeholder="Adele" />
            </div>
 
            <div>
-           <label for="senha">Senha</label>
-           <input type='password' id="senha" name="senha" />
+               <label for="senha">Senha</label>
+               <input type='password' id="senha" name="senha" />
            </div> 
            
+           <div>
+               <label for="anoLancamento">Ano Lançamento</label>
+               <input type='number' id="anoLancamento" name="anoLancamento" min="0" max="2025"placeholder="1900 a 20XX" />
+           <div>
+              <label for="email">E-mail da Gravadora</label>
+              <input type='email' id="email" name="email" placeholder="test@dominio.com.br/>
+           </div>
+              <label for="telefone">Telefone</label>
+              <input type='telefone' id="telefone" name="telefone"  placeholder="(62) 9999-9999/>
+           <div>
+
+                  
+           </div>
            <button type="submit">Enviar</button>
          </form>
       
