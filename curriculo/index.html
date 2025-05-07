@@ -6,82 +6,106 @@
     <title><?php echo "Currículo de Vania Oliveira"; ?></title>
     <style>
         body {
-            background-color: <?php echo rand() % 2 == 0 ? 'purple' : 'orange'; ?>;
+            background-color: <?php echo rand() % 2 == 0 ? '#6a0dad' : '#ff8c00'; ?>;
             color: white;
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
             padding: 20px;
         }
-        h1 {
+        .container {
+            width: 60%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        h1, h2 {
             text-align: center;
-            color: <?php echo rand() % 2 == 0 ? 'red' : 'black'; ?>;
+            color: <?php echo rand() % 2 == 0 ? '#ffcc00' : '#00ffcc'; ?>;
         }
         p {
-            font-size: 16px;
+            font-size: 18px;
+            line-height: 1.6;
         }
         input, select, textarea {
-            border: 1px solid <?php echo rand() % 2 == 0 ? 'gray' : 'black'; ?>;
-            padding: 5px;
-            margin: 5px 0;
-            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         fieldset {
             border: 2px solid white;
-            padding: 10px;
+            padding: 15px;
+            border-radius: 5px;
             margin-top: 20px;
         }
         input[type="submit"] {
-            background-color: white;
+            background-color: #ffcc00;
             color: black;
             font-weight: bold;
             cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-   <h1>Currículo de Vania Oliveira</h1>
+    <div class="container">
+        <h1>Currículo de Vania Oliveira</h1>
 
-    <h2>Informações Pessoais</h2>
-    <p>Nome: Vania Oliveira</p>
-    <p>E-mail: vania.oliveira@email.com</p>
+        <h2>Informações Pessoais</h2>
+        <p><strong>Nome:</strong> Vania Oliveira</p>
+        <p><strong>E-mail:</strong> vania.oliveira@email.com</p>
 
-    <h2>Formação</h2>
-    <p>Graduação: Ciência da Computação</p>
-    <p>Cursos: Desenvolvimento Full Stack, Cloud Computing</p>
+        <h2>Formação</h2>
+        <p><strong>Graduação:</strong> Ciência da Computação</p>
+        <p><strong>Cursos:</strong> Desenvolvimento Full Stack, Cloud Computing</p>
 
-    <h2>Experiências</h2>
-    <p>Empresa: Code Innovators - Desenvolvedora Web</p>
-    <p>Freelancer em aplicações empresariais</p>
+        <h2>Experiências</h2>
+        <p><strong>Empresa:</strong> Code Innovators - Desenvolvedora Web</p>
+        <p><strong>Freelancer:</strong> Aplicações empresariais</p>
 
-    <fieldset>
-        <legend>Deixe um comentário</legend>
+        <fieldset>
+            <legend><strong>Deixe um comentário</strong></legend>
 
-        <form action="https://formtester.goodbytes.be/post.php" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <form action="https://formtester.goodbytes.be/post.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-            <label for="data">Data:</label>
-            <input type="date" id="data" name="data" required>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="tipo">Tipo de avaliação:</label>
-            <select id="tipo" name="tipo" required>
-                <option value="observacao">Observação</option>
-                <option value="elogio">Elogio</option>
-            </select>
+                <label for="tipo">Tipo de avaliação:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="observacao">Observação</option>
+                    <option value="elogio">Elogio</option>
+                </select>
 
-            <label for="comentario">Comentário:</label>
-            <textarea id="comentario" name="comentario" required></textarea>
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
 
-            <label>Deseja receber resposta?</label>
-            <input type="radio" name="resposta" value="sim" required> Sim
-            <input type="radio" name="resposta" value="nao" required> Não
+                <label>Deseja receber resposta?</label>
+                <input type="radio" name="resposta" value="sim" required> Sim
+                <input type="radio" name="resposta" value="nao" required> Não
 
-            <input type="submit" value="Enviar">
-        </form>
-    </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+        </fieldset>
+    </div>
 
 </body>
 </html>
+
