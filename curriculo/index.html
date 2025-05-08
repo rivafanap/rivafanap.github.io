@@ -24,7 +24,7 @@ $habilidades = "PHP, HTML, CSS, JavaScript, MySQL, Trabalho em equipe";
             text-align: center;
             color: #007bff;
         }
-        form {
+        .container {
             max-width: 600px;
             margin: auto;
             padding: 20px;
@@ -32,45 +32,28 @@ $habilidades = "PHP, HTML, CSS, JavaScript, MySQL, Trabalho em equipe";
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
 
     <h1>Currículo de <?php echo $nome; ?></h1>
 
-    <form>
+    <div class="container">
         <h2>Informações Pessoais</h2>
-        <label>Nome Completo:</label>
-        <input type="text" value="<?php echo $nome; ?>" readonly>
-
-        <label>E-mail:</label>
-        <input type="email" value="<?php echo $email; ?>" readonly>
-
-        <label>Telefone:</label>
-        <input type="text" value="<?php echo $telefone; ?>" readonly>
-
-        <label>Endereço:</label>
-        <input type="text" value="<?php echo $endereco; ?>" readonly>
+        <p><strong>Nome Completo:</strong> <?php echo $nome; ?></p>
+        <p><strong>E-mail:</strong> <?php echo $email; ?></p>
+        <p><strong>Telefone:</strong> <?php echo $telefone; ?></p>
+        <p><strong>Endereço:</strong> <?php echo $endereco; ?></p>
 
         <h2>Formação Acadêmica</h2>
-        <label>Curso / Instituição:</label>
-        <input type="text" value="<?php echo $formacao; ?>" readonly>
+        <p><strong>Curso / Instituição:</strong> <?php echo $formacao; ?></p>
 
         <h2>Experiência Profissional</h2>
-        <label>Último cargo / empresa:</label>
-        <input type="text" value="<?php echo $experiencia; ?>" readonly>
+        <p><strong>Último cargo / empresa:</strong> <?php echo $experiencia; ?></p>
 
         <h2>Habilidades</h2>
-        <label>Liste suas principais habilidades:</label>
-        <textarea rows="3" readonly><?php echo $habilidades; ?></textarea>
-    </form>
+        <p><strong>Principais habilidades:</strong> <?php echo $habilidades; ?></p>
+    </div>
 
 </body>
 </html>
