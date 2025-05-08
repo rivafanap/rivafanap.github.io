@@ -63,12 +63,19 @@ nav a:hover {
     max-width: 800px;
 }
 
+/* Estilização das seções (aplicando o espaçamento) */
+section {
+    padding: 40px 20px; /* Aumenta o padding superior e inferior */
+    margin-bottom: 40px; /* Adiciona margem abaixo de cada seção */
+}
+
 /* Ajuste da seção de orçamento */
-.form-section {
+#orcamento {
+    /* Mantém a estilização específica da seção de orçamento */
     padding: 2rem;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 20px auto 40px; /* Adiciona margem inferior */
     width: 90%;
     max-width: 600px;
     text-align: center;
@@ -117,6 +124,27 @@ form button:hover {
     background: #002f6c;
 }
 
+/* Seção de Contato (removendo a margem inferior) */
+#contato {
+    margin-bottom: 0; /* Remove a margem inferior da última seção */
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
     header {
@@ -135,5 +163,18 @@ form button:hover {
 
     form button {
         width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
     }
 }
