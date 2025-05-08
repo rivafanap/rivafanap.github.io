@@ -133,3 +133,91 @@ footer {
         padding: 1rem;
     }
 }
+/* Estilo do Formulário Moderno */
+.form-section {
+    background: #f4f8fc; /* Fundo azul claro */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    color: #002f6c; /* Azul escuro */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.form-section p {
+    color: #555; /* Texto complementar */
+    margin-bottom: 2rem;
+}
+
+.modern-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    color: #002f6c; /* Azul escuro */
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #ff6600; /* Laranja para foco */
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+    outline: none;
+}
+
+.btn {
+    background: #ff6600; /* Laranja */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #002f6c; /* Azul escuro no hover */
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .modern-form {
+        gap: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
