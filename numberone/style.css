@@ -17,6 +17,7 @@ body {
 }
 
 /* Cabeçalho */
+/* Cabeçalho */
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
@@ -35,6 +36,21 @@ header {
     height: auto;
     vertical-align: middle;
 }
+
+/* Adicionando a logo antes do nome */
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1::before {
+    content: url('https://rivafanap.github.io/numberone/aviao.png'); /* Caminho da logo */
+    display: inline-block;
+    width: 80px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
 
 /* Destaque do título */
 .bold-uppercase {
