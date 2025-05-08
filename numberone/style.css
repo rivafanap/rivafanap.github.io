@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: url('https://rivafanap.github.io/numberone/design%20.jpg') no-repeat center center/cover;
     background-size: cover;
     background-attachment: fixed;
@@ -16,7 +16,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Cabeçalho corrigido */
+/* Cabeçalho */
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
@@ -27,22 +27,16 @@ header {
     gap: 15px;
 }
 
-/* Logo do avião - Removemos a duplicação */
+/* Logo do avião */
 .logo-aviao {
-    width: 120px; /* Ajuste conforme necessário */
+    width: 120px;
     height: auto;
-}
-
-/* Removemos a duplicação */
-header h1::before {
-    content: none;
 }
 
 /* Destaque do título */
 .bold-uppercase {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     color: #ffffff;
 }
@@ -57,13 +51,104 @@ header h1::before {
     width: 90%;
     max-width: 800px;
 }
+
 .hero h2 {
     font-size: 2rem;
     color: #002f6c;
 }
+
 .hero p {
     font-size: 1.2rem;
     color: #ff6600;
+}
+
+/* Seção Orçamento */
+.form-section {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Estilização dos campos do formulário */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #002f6c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #002f6c;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Botão */
+form button {
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #002f6c;
+}
+
+/* Navegação */
+nav {
+    background: rgba(255, 102, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #ff6600;
+}
+
+/* Contato */
+#contato p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+#contato a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
 }
 
 /* Rodapé */
@@ -72,4 +157,29 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bold-uppercase {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        width: 95%;
+        padding: 1rem;
+    }
 }
