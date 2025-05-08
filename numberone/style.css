@@ -1,1 +1,134 @@
 
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto padrão */
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #002f6c; /* Azul escuro */
+    color: #fff; /* Branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+/* Navegação */
+nav {
+    background-color: #ff6600; /* Laranja forte */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff; /* Branco */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fff; /* Branco no hover */
+    color: #ff6600; /* Laranja forte no texto */
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fundo claro */
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Branco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+h2 {
+    color: #002f6c; /* Azul escuro */
+    margin-bottom: 10px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Contatos */
+#contatos {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contatos a {
+    color: #ff6600; /* Laranja forte */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contatos a:hover {
+    color: #002f6c; /* Azul escuro */
+}
+
+/* Rodapé */
+footer {
+    background-color: #002f6c; /* Azul escuro */
+    color: #fff; /* Branco */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra no topo do rodapé */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+}
