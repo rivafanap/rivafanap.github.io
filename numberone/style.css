@@ -16,8 +16,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Cabeçalho */
-/* Cabeçalho */
+/* Cabeçalho corrigido */
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
@@ -28,13 +27,13 @@ header {
     gap: 15px;
 }
 
-/* Logo do avião */
+/* Logo do avião - Removemos a duplicação */
 .logo-aviao {
     width: 120px; /* Ajuste conforme necessário */
     height: auto;
 }
 
-/* Removendo a duplicação */
+/* Removemos a duplicação */
 header h1::before {
     content: none;
 }
@@ -45,15 +44,6 @@ header h1::before {
     font-weight: 700;
     font-size: 4rem;
     text-transform: uppercase;
-    color: #ffffff;
-}
-
-.italic-normal {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 3rem;
-    text-transform: capitalize;
     color: #ffffff;
 }
 
