@@ -16,23 +16,26 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Cabeçalho */
+/* Cabeçalho corrigido */
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
     padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
 
-/* Logo do avião */
+/* Logo do avião - Removemos a duplicação */
 .logo-aviao {
     width: 120px; /* Ajuste conforme necessário */
     height: auto;
+}
+
+/* Removemos a duplicação */
+header h1::before {
+    content: none;
 }
 
 /* Destaque do título */
@@ -41,15 +44,6 @@ header {
     font-weight: 700;
     font-size: 4rem;
     text-transform: uppercase;
-    color: #ffffff;
-}
-
-.italic-normal {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 3rem;
-    text-transform: capitalize;
     color: #ffffff;
 }
 
