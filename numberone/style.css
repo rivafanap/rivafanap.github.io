@@ -17,12 +17,11 @@ body {
 }
 
 /* Cabeçalho */
+/* Cabeçalho */
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
     padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +32,11 @@ header {
 .logo-aviao {
     width: 120px; /* Ajuste conforme necessário */
     height: auto;
+}
+
+/* Removendo a duplicação */
+header h1::before {
+    content: none;
 }
 
 /* Destaque do título */
