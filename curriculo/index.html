@@ -1,26 +1,28 @@
 <?php
 // Dados do currículo
 $nome = "Vania Santos";
-$titulo = "Currículo de $nome";
-$corFundo = "#f8f9fa"; // Cor neutra para fundo
-$corTexto = "#333"; // Cor escura para texto
-$corBorda = "#007bff"; // Azul para detalhes visuais
+$email = "vania.santos@example.com";
+$telefone = "(62) 99999-9999";
+$endereco = "Rua Exemplo, 123 - Aparecida de Goiânia, GO";
+$formacao = "Graduação em Análise e Desenvolvimento de Sistemas - Faculdade XYZ";
+$experiencia = "Desenvolvedora Júnior na DevCorp (2023-presente)";
+$habilidades = "PHP, HTML, CSS, JavaScript, MySQL, Trabalho em equipe";
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $titulo; ?></title>
+    <title>Currículo de <?php echo $nome; ?></title>
     <style>
         body {
-            background-color: <?php echo $corFundo; ?>;
-            color: <?php echo $corTexto; ?>;
+            background-color: #f8f9fa;
+            color: #333;
             font-family: Arial, sans-serif;
             margin: 20px;
         }
         h1, h2 {
             text-align: center;
-            color: <?php echo $corBorda; ?>;
+            color: #007bff;
         }
         form {
             max-width: 600px;
@@ -37,31 +39,38 @@ $corBorda = "#007bff"; // Azul para detalhes visuais
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        input[type="submit"] {
-            background-color: <?php echo $corBorda; ?>;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
 
-    <h1><?php echo $titulo; ?></h1>
+    <h1>Currículo de <?php echo $nome; ?></h1>
 
-    <form action="https://formtester.goodbytes.be/post.php" method="POST">
+    <form>
         <h2>Informações Pessoais</h2>
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
+        <label>Nome Completo:</label>
+        <input type="text" value="<?php echo $nome; ?>" readonly>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <label>E-mail:</label>
+        <input type="email" value="<?php echo $email; ?>" readonly>
 
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" required>
+        <label>Telefone:</label>
+        <input type="text" value="<?php echo $telefone; ?>" readonly>
 
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required
+        <label>Endereço:</label>
+        <input type="text" value="<?php echo $endereco; ?>" readonly>
+
+        <h2>Formação Acadêmica</h2>
+        <label>Curso / Instituição:</label>
+        <input type="text" value="<?php echo $formacao; ?>" readonly>
+
+        <h2>Experiência Profissional</h2>
+        <label>Último cargo / empresa:</label>
+        <input type="text" value="<?php echo $experiencia; ?>" readonly>
+
+        <h2>Habilidades</h2>
+        <label>Liste suas principais habilidades:</label>
+        <textarea rows="3" readonly><?php echo $habilidades; ?></textarea>
+    </form>
+
+</body>
+</html>
