@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     font-family: 'Arial', sans-serif;
     background: url('https://rivafanap.github.io/numberone/design%20.jpg') no-repeat center center/cover; /* Imagem de fundo */
@@ -21,6 +23,24 @@ header {
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Destaque do título */
+.bold-uppercase {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Negrito */
+    font-size: 4rem; /* Fonte maior */
+    text-transform: uppercase; /* Tudo maiúsculo */
+    color: #ffffff;
+}
+
+.italic-capitalize {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-style: italic; /* Itálico */
+    font-size: 3rem; /* Um pouco menor */
+    text-transform: capitalize; /* Apenas "V" maiúsculo */
+    color: #ffffff;
 }
 
 /* Navegação */
