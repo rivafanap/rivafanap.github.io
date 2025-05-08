@@ -1,41 +1,51 @@
 /* Reset básico */
-body, h1, h2, h3, p, ul, li, a {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, ul, li, a {
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 /* Estilo geral */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Fundo claro */
+    background-color: #f4f4f4; /* Fundo claro */
     color: #333; /* Texto padrão */
+    scroll-behavior: smooth;
 }
 
 /* Cabeçalho */
 header {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #002f6c; /* Azul escuro */
-    color: #fff; /* Branco */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 50px 20px;
+    background: linear-gradient(120deg, #0056b3, #002f6c); /* Gradiente moderno */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    animation: fadeIn 1s ease-out; /* Animação */
 }
 
 header p {
     font-size: 1.5rem;
+    opacity: 0.9;
 }
 
 /* Navegação */
 nav {
-    background-color: #ff6600; /* Laranja forte */
+    background-color: #ff6600;
+    position: sticky; /* Barra fixa no topo */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -46,41 +56,63 @@ nav ul {
 }
 
 nav a {
-    color: #fff; /* Branco */
+    color: #fff;
     font-weight: bold;
     font-size: 1rem;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #fff; /* Branco no hover */
-    color: #ff6600; /* Laranja forte no texto */
+    background-color: #fff;
+    color: #ff6600;
+    transform: scale(1.1);
 }
 
 /* Conteúdo principal */
 main {
     padding: 20px;
-    background-color: #f9f9f9; /* Fundo claro */
+    background-color: #f9f9f9;
 }
 
 section {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff; /* Branco */
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02); /* Efeito hover */
 }
 
 h2 {
-    color: #002f6c; /* Azul escuro */
+    color: #0056b3;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-ul li {
-    margin-bottom: 5px;
+/* Botões */
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 /* Contatos */
@@ -93,23 +125,35 @@ ul li {
 }
 
 #contatos a {
-    color: #ff6600; /* Laranja forte */
+    color: #ff6600;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 #contatos a:hover {
-    color: #002f6c; /* Azul escuro */
+    color: #0056b3;
 }
 
 /* Rodapé */
 footer {
-    background-color: #002f6c; /* Azul escuro */
-    color: #fff; /* Branco */
+    background: #002f6c;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
     font-size: 1rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra no topo do rodapé */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsividade */
