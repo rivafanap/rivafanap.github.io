@@ -26,12 +26,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Container do título */
+.titulo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Logo do avião */
 .logo-aviao {
-    width: 80px; /* Ajuste o tamanho da logo */
+    width: 80px; /* Ajuste do tamanho da logo */
     height: auto;
     vertical-align: middle;
 }
@@ -120,4 +128,68 @@ form button {
     background: #ff6600;
     color: white;
     font-weight: bold;
-    cursor: pointer
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+form button:hover {
+    background: #002f6c;
+}
+
+/* Contato */
+#contato p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+#contato a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background: rgba(0, 47, 108, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bold-uppercase {
+        font-size: 3rem; /* Ajuste menor para telas menores */
+    }
+
+    .italic-normal {
+        font-size: 2.5rem; /* Ajuste menor para telas menores */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        width: 95%;
+        padding: 1rem;
+    }
+}
