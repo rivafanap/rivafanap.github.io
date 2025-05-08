@@ -10,13 +10,11 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <img class="logo-aviao" src="https://rivafanap.github.io/numberone/aviao.png" alt="Logo Avião">
         <h1 class="bold-uppercase">NUMBER ONE VIAGENS</h1>
     </header>
 
-    <!-- Navegação -->
     <nav>
         <a href="#orcamento">Solicitar Orçamento</a>
         <a href="#pacotes">Pacotes de Viagem</a>
@@ -24,60 +22,66 @@
         <a href="#contato">Contato</a>
     </nav>
 
-    <!-- Seção Hero -->
-    <section class="hero">
-        <h2>Planeje sua próxima viagem conosco!</h2>
-        <p>Ofertas incríveis para destinos nacionais e internacionais.</p>
-        <p><strong>Vendas de Passagens Aéreas - Pacotes e Reservas</strong></p>
-    </section>
+    <div class="hero">
+        <div class="hero-overlay">
+            <h2>Planeje sua próxima viagem conosco!</h2>
+            <p>Ofertas incríveis para destinos nacionais e internacionais.</p>
+            <p><strong>Vendas de Passagens Aéreas - Pacotes e Reservas</strong></p>
+        </div>
+    </div>
 
-    <!-- Seção de Orçamento -->
     <section id="orcamento" class="form-section" data-aos="fade-up">
         <h2>Solicite Seu Orçamento</h2>
         <form action="submit-orcamento.php" method="POST">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-            </div>
-
-            <div class="form-group">
-                <label for="tipo_viagem">Tipo de Viagem:</label>
-                <select id="tipo_viagem" name="tipo_viagem" required>
-                    <option value="" disabled selected>Selecione</option>
-                    <option value="nacional">Passagem Nacional</option>
-                    <option value="internacional">Passagem Internacional</option>
-                    <option value="pacote">Pacote de Viagem</option>
-                    <option value="hotel">Reserva de Hotel</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="mensagem">Detalhes:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="5" required></textarea>
-            </div>
-
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+            
+            <label for="tipo_viagem">Tipo de Viagem:</label>
+            <select id="tipo_viagem" name="tipo_viagem" required>
+                <option value="" disabled selected>Selecione o Tipo de Viagem</option>
+                <option value="nacional">Passagem Nacional</option>
+                <option value="internacional">Passagem Internacional</option>
+                <option value="pacote">Pacote de Viagem</option>
+                <option value="hotel">Reserva de Hotel</option>
+            </select>
+            
+            <label for="mensagem">Detalhes:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="5" required></textarea>
+            
             <button type="submit">Enviar</button>
         </form>
     </section>
 
-    <!-- Seção de Pacotes -->
     <section id="pacotes" data-aos="fade-up">
         <h2>Pacotes de Viagem</h2>
         <p>Confira nossas promoções de pacotes de viagem para os destinos mais incríveis.</p>
     </section>
 
-    <!-- Seção de Hotéis -->
     <section id="hoteis" data-aos="fade-up">
         <h2>Reserva de Hotéis</h2>
         <p>Encontre os melhores hotéis para sua estadia.</p>
     </section>
 
-    <!-- Seção de Contato -->
     <section id="contato" data-aos="fade-up">
         <h2>Entre em Contato</h2>
-        <p>Estamos prontos para ajudá-lo a planejar sua viagem
+        <p>Estamos prontos para ajudá-lo a planejar sua viagem dos sonhos!</p>
+        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:number1viagens@gmail.com">number1viagens@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> Telefone: <a href="tel:+5562992597106">(62) 99259-7106</a></p>
+        <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/agencianumberone" target="_blank">@agencianumberone</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Agência NUMBER ONE VIAGENS - Vendas de Passagens Aéreas. Todos os direitos reservados.</p>
+        <small>Desenvolvido por Rivania</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
