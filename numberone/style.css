@@ -7,28 +7,16 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: url('https://rivafanap.github.io/numberone/design.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    background: url('https://rivafanap.github.io/numberone/design%20.jpg') no-repeat center center/cover; /* Imagem de fundo */
     background-size: cover;
     background-attachment: fixed;
-    color: #333; /* Texto padrão */
+    color: #333;
     scroll-behavior: smooth;
-}
-
-/* Adicionando overlay para melhorar contraste */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7); /* Fundo translúcido */
-    z-index: -1;
 }
 
 /* Cabeçalho */
 header {
-    background: rgba(0, 47, 108, 0.9); /* Azul escuro semitransparente */
+    background: rgba(0, 47, 108, 0.9);
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -37,7 +25,7 @@ header {
 
 /* Navegação */
 nav {
-    background: rgba(255, 102, 0, 0.9); /* Laranja semitransparente */
+    background: rgba(255, 102, 0, 0.9);
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -57,11 +45,6 @@ nav a:hover {
     color: #ff6600;
 }
 
-/* Seção Hero */
-.hero {
-    position: relative;
-    text-align: center;
-    padding: 5rem 2rem;
-}
-
-.hero h1, .hero p {
+/* Seções */
+section {
+    padding
