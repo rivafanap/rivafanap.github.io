@@ -32,8 +32,9 @@ header {
 
 /* Logo do avião */
 .logo-aviao {
-    width: 80px; /* Ajuste o tamanho da logo */
-    height: auto;
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém proporções */
+    display: inline-block;
     vertical-align: middle;
 }
 
