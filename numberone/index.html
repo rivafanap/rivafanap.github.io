@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendas de Passagens Aéreas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -106,17 +107,17 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
-    <section id="pacotes">
+    <section id="pacotes" data-aos="fade-up">
         <h2>Pacotes de Viagem</h2>
         <p>Confira nossas promoções de pacotes de viagem para os destinos mais incríveis.</p>
         <!-- Adicione aqui os pacotes com imagens e descrições -->
     </section>
-    <section id="hoteis">
+    <section id="hoteis" data-aos="fade-up">
         <h2>Reserva de Hotéis</h2>
         <p>Encontre os melhores hotéis para sua estadia.</p>
         <!-- Adicione aqui a lista de hotéis ou opções de reserva -->
     </section>
-    <section id="contato">
+    <section id="contato" data-aos="fade-up">
         <h2>Entre em Contato</h2>
         <p>Estamos prontos para ajudá-lo a planejar sua viagem dos sonhos!</p>
         <p>Email: contato@suaviagem.com</p>
@@ -125,5 +126,9 @@
     <footer>
         <p>&copy; 2025 Vendas de Passagens Aéreas. Todos os direitos reservados.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
