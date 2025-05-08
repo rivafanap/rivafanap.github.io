@@ -32,18 +32,17 @@ header {
 
 /* Logo do avião */
 .logo-aviao {
-    width: 150px; /* Ajuste conforme necessário */
-    height: auto; /* Mantém proporções */
-    display: inline-block;
-    vertical-align: middle;
+    width: 20%; /* Define a largura proporcional ao tamanho do cabeçalho */
+    max-width: 150px; /* Limite máximo para evitar exageros */
+    height: auto; /* Mantém a proporção */
 }
 
-/* Adicionando a logo antes do nome */
-header h1 {
+header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
+
 
 header h1::before {
     content: url('https://rivafanap.github.io/numberone/aviao.png'); /* Caminho da logo */
