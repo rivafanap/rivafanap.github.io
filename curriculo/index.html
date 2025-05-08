@@ -1,73 +1,78 @@
+<?php
+// Dados do currículo
+$nome = "Vania Santos";
+$titulo = "Currículo de $nome";
+$corFundo = rand() % 2 == 0 ? 'pink' : 'yellow';
+$corTexto = rand() % 2 == 0 ? 'purple' : 'red';
+$corBorda = rand() % 2 == 0 ? 'blue' : 'green';
+?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo "Currículo de Vania Oliveira"; ?></title>
+    <title><?php echo $titulo; ?></title>
     <style>
         body {
-            background-color: <?php echo rand() % 2 == 0 ? 'purple' : 'orange'; ?>;
-            color: white;
+            background-color: <?php echo $corFundo; ?>;
+            color: <?php echo $corTexto; ?>;
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
+            margin: 20px;
         }
-        input, select, textarea {
-            width: 80%;
-            padding: 5px;
-            margin: 5px 0;
-        }
-        input[type="submit"] {
-            background-color: yellow;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 10px;
-            width: 80%;
+        h2 {
+            border-bottom: 2px solid <?php echo $corBorda; ?>;
         }
     </style>
 </head>
 <body>
-
-    <h1>Currículo de Vania Oliveira</h1>
+    <h1><?php echo $titulo; ?></h1>
 
     <h2>Informações Pessoais</h2>
-    <p>Nome: Vania Oliveira</p>
-    <p>E-mail: vania.oliveira@email.com</p>
+    <ul>
+        <li>Nome: <?php echo $nome; ?></li>
+        <li>Idade: 28 anos</li>
+        <li>Endereço: Rua Exemplo, 123 - Cidade Fictícia</li>
+    </ul>
 
     <h2>Formação</h2>
-    <p>Graduação: Ciência da Computação</p>
-    <p>Cursos: Desenvolvimento Web</p>
+    <ul>
+        <li>Graduação em Análise e Desenvolvimento de Sistemas - Faculdade XYZ</li>
+        <li>Curso Técnico em Informática - Escola Técnica ABC</li>
+    </ul>
 
     <h2>Experiências</h2>
-    <p>Empresa: Code Innovators - Desenvolvedora Web</p>
-    <p>Freelancer em projetos empresariais</p>
+    <ul>
+        <li>Suporte Técnico na Empresa Beta (2020-2022)</li>
+        <li>Desenvolvedor Júnior na DevCorp (2023-presente)</li>
+    </ul>
 
     <h2>Deixe um comentário</h2>
-    <form action="https://formtester.goodbytes.be/post.php" method="post">
-        <label>Nome:</label>
-        <input type="text" name="nome" required><br>
+    <form action="https://formtester.goodbytes.be/post.php" method="POST" style="background-color:#f0f0f0; padding:15px;">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
 
-        <label>Data:</label>
-        <input type="date" name="data" required><br>
+        <label for="data">Data:</label><br>
+        <input type="date" id="data" name="data" required><br><br>
 
-        <label>E-mail:</label>
-        <input type="email" name="email" required><br>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <label>Tipo de avaliação:</label>
-        <select name="tipo">
+        <label for="tipo">Tipo de avaliação:</label><br>
+        <select id="tipo" name="tipo">
             <option value="observacao">Observação</option>
             <option value="elogio">Elogio</option>
-        </select><br>
+            <option value="critica">Crítica</option>
+        </select><br><br>
 
-        <label>Comentário:</label><br>
-        <textarea name="comentario" required></textarea><br>
+        <label for="mensagem">Comentário:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea><br><br>
 
         <label>Deseja receber resposta?</label><br>
-        <input type="radio" name="resposta" value="sim"> Sim
-        <input type="radio" name="resposta" value="nao"> Não<br>
+        <input type="radio" id="sim" name="resposta" value="sim">
+        <label for="sim">Sim</label><br>
+        <input type="radio" id="nao" name="resposta" value="nao">
+        <label for="nao">Não</label><br><br>
 
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar Comentário" style="background-color:green; color:white; padding:10px;">
     </form>
 
 </body>
