@@ -150,12 +150,52 @@ section {
 
 /* Seção de Contato (removendo a margem inferior) */
 #contato {
-    margin-bottom: 0; /* Remove a margem inferior da última seção */
-    background-color: #fff; /* Adiciona fundo branco */
-    padding: 40px 20px; /* Adiciona padding para o fundo branco não ficar colado no texto */
-    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
+   text-align: center;
+    padding: 40px 20px;
+    background-color: #fff; /* Fundo branco para boa leitura */
+    border-radius: 8px;
+    margin-bottom: 0; /* Mantenho a margem inferior como 0 */
 }
 
+#contato h2 {
+    font-size: 2.2rem; /* Similar ao título da seção de serviços */
+    color: #002f6c; /* Seu azul principal */
+    margin-bottom: 25px;
+}
+.contato-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Linha sutil para separar os itens */
+}
+
+.contato-lista li:last-child {
+    border-bottom: none; /* Remove a borda da última linha */
+}
+
+.contato-lista i {
+    font-size: 1.5rem;
+    color: #ff6600; /* Seu laranja para os ícones */
+    width: 30px;
+    text-align: center;
+}
+
+.contato-lista a {
+    color: #333; /* Cor do texto dos links */
+    text-decoration: none;
+}
+
+.contato-lista a:hover {
+    text-decoration: underline;
+}
 /* Rodapé */
 footer {
     background-color: #333;
@@ -233,7 +273,7 @@ footer small {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 30px 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,32 +281,29 @@ footer small {
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .servico-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra leve ao passar o mouse */
 }
-
 .servico-item i {
-    font-size: 3rem;
-    color: #ff6600;
+    font-size: 2.5rem; /* Reduzi um pouco o tamanho do ícone */
+    color: #ff6600; /* Seu laranja principal */
     margin-bottom: 15px;
 }
-
 .servico-item h3 {
-    font-size: 1.3rem;
-    color: #333;
-    margin-top: 0;
+    font-size: 1.2rem; /* Reduzi um pouco o tamanho da fonte */
+    color: #002f6c; /* Seu azul principal */
+    margin-top: 10px;
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
     .servico-item {
-        padding: 20px 10px;
+        padding: 15px;
     }
 
     .servico-item i {
