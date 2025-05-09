@@ -15,8 +15,6 @@ body {
 }
 
 /* Cabeçalho */
-/* ... outros estilos ... */
-
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
@@ -25,20 +23,19 @@ header {
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
 }
 
 .logo-aviao {
     width: 200px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
-    gap: 25px;
 }
 
 .header-title {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza "Viagens" abaixo de "NUMBER ONE" */
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: flex-start; /* Alinha "Viagens" à esquerda de "NUMBER ONE" */
+    justify-content: center;
 }
 
 .number-one {
@@ -59,7 +56,6 @@ header {
     padding-left: 0.1em; /* Pequeno ajuste para compensar o espaçamento inicial */
 }
 
-/* ... outros estilos ... */
 /* Navegação */
 nav {
     background: rgba(255, 102, 0, 0.9);
@@ -100,42 +96,43 @@ section {
 
 /* Ajuste da seção de orçamento */
 #orcamento {
-    /* Mantém a estilização específica da seção de orçamento */
     padding: 2rem;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    margin: 20px auto 40px; /* Adiciona margem inferior */
+    margin: 40px auto;
     width: 90%;
     max-width: 600px;
-    text-align: center;
-}
-
-/* Estilização dos campos do formulário */
-.form-group {
-    margin-bottom: 15px;
     text-align: left;
 }
 
-.form-group label {
-    font-size: 1rem;
+/* Estilização dos campos do formulário */
+.form-section label {
+    font-size: 1.2rem;
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     color: #002f6c;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section select,
+.form-section textarea {
     width: 100%;
-    padding: 0.8rem;
+    padding: 1rem;
     border: 1px solid #002f6c;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-section textarea {
+    min-height: 150px;
 }
 
 /* Botão ajustado */
-form button {
+#orcamento button[type="submit"] { /* Use este seletor */
     background: #ff6600;
     color: white;
     font-weight: bold;
@@ -147,10 +144,8 @@ form button {
     width: 100%;
     max-width: 300px;
     font-size: 1.2rem;
-}
-
-form button:hover {
-    background: #002f6c;
+    display: block;
+    margin: 20px auto 0;
 }
 
 /* Seção de Contato (removendo a margem inferior) */
@@ -190,7 +185,7 @@ footer small {
         width: 95%;
     }
 
-    form button {
+    #orcamento button[type="submit"] {
         width: 90%;
     }
 
