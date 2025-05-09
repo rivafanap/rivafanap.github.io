@@ -263,11 +263,12 @@ footer small {
 
 .servicos-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 960px;
+    grid-template-columns: repeat(5, 1fr); /* Define 5 colunas iguais */
+    gap: 15px; /* Espaço entre os serviços */
+    max-width: 1200px; /* Ajusta para comportar melhor os itens */
     margin: 0 auto;
 }
+
 
 .servico-item {
     background-color: #fff;
@@ -301,6 +302,7 @@ footer small {
     .servicos-grid-container {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
+}
 
     .servico-item {
         padding: 15px;
