@@ -22,7 +22,64 @@ header {
     justify-content: center; /* Centraliza horizontalmente o container */
     align-items: center; /* Centraliza verticalmente */
 }
-/* Barra de destaque */
+
+/* Ajuste do container de logo e título */
+.logo-titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza perfeitamente */
+    gap: 5px; /* Aproxima a logo do texto */
+}
+
+.header-title {
+    margin-left: -10px; /* Aproxima o texto da logo */
+}
+
+/* Ajuste da logo */
+.logo-aviao {
+    height: auto;
+    max-height: 10em; /* Ajuste conforme necessário */
+    width: auto;
+    align-self: center; /* Mantém alinhado dentro do flex container */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .logo-aviao {
+        max-height: 2em; /* Ajuste para telas menores */
+    }
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
+    align-items: flex-end; /* Alinha "Viagens" à direita */
+    justify-content: center;
+}
+
+.viagens {
+    padding-right: 10px; /* Ajuste o valor para uma melhor posição */
+}
+
+.number-one {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+.viagens {
+    font-size: 2em;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.2em;
+    padding-left: 0.1em;
+}
+
+/* Barra de Destaque */
 .banner {
     width: 100%;
     background: linear-gradient(45deg, #ff6600, #ff9900); /* Degradê moderno */
@@ -34,6 +91,7 @@ header {
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 /* Imagem do avião */
 .banner .logo-aviao {
     max-height: 80px; /* Ajuste conforme necessário */
@@ -68,61 +126,6 @@ header {
 .banner button:hover {
     background: #001d4a;
 }
-/* Ajuste do container de logo e título */
-.logo-titulo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza perfeitamente */
-    gap: 5px; /* Aumenta a distância entre logo e texto */
-}
-.header-title {
-    margin-left: -10px; /* Aproxima o texto da logo */
-}
-
-
-/* Ajuste da logo */
-.logo-aviao {
-    height: auto;
-    max-height: 10em; /* Ajuste conforme necessário */
-    width: auto;
-    align-self: center; /* Mantém alinhado dentro do flex container */
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    .logo-aviao {
-        max-height: 2em; /* Ajuste para telas menores */
-    }
-}
-
-.header-title {
-    display: flex;
-    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
-    align-items: flex-end; /* Alinha "Viagens" à direita */
-    justify-content: center;
-}
-.viagens {
-    padding-right: 10px; /* Ajuste o valor para uma melhor posição */
-
-}
-
-.number-one {
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 0;
-}
-
-.viagens {
-    font-size: 2em;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 0.2em;
-    padding-left: 0.1em;
-}
 
 /* Navegação */
 nav {
@@ -147,46 +150,17 @@ nav a:hover {
 
 /* Seção Hero */
 .hero {
-    text-align: center; /* Centraliza melhor o texto */
+    text-align: center;
     padding: 3rem;
-    background: linear-gradient(45deg, #ff6600, #ff9900); /* Degradê mais sofisticado */
+    background: linear-gradient(45deg, #ff6600, #ff9900);
     border-radius: 10px;
     margin: 20px auto;
     width: 85%;
     max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
-    color: white; /* Texto branco para melhor contraste */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
     font-weight: bold;
 }
-
-/* Ajuste no título */
-.hero h2 {
-    font-size: 2.8em; /* Aumenta o tamanho do título */
-    font-family: 'Montserrat', sans-serif; /* Mantém um estilo moderno */
-}
-
-/* Espaçamento refinado */
-.hero p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Botão chamativo */
-.hero button {
-    background: #002f6c;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-.hero button:hover {
-    background: #001d4a;
-}
-
 
 /* Ajuste da seção de orçamento */
 #orcamento {
@@ -206,42 +180,6 @@ nav a:hover {
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 20px;
-}
-
-/* Lista de contatos */
-.contato-lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.contato-lista li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: none;
-    padding: 5px 0;
-}
-
-.contato-lista i {
-    font-size: 1.5rem;
-    color: #ff6600;
-    text-align: center;
-}
-
-.contato-lista a {
-    color: #333;
-    text-decoration: none;
-}
-
-.contato-lista a:hover {
-    text-decoration: underline;
 }
 
 /* Responsividade */
@@ -277,79 +215,6 @@ nav a:hover {
     .viagens {
         font-size: 1.8em;
         letter-spacing: 0.15em;
-    }
-}
-
-/* Seção Nossos Serviços */
-#servicos {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-#servicos h2 {
-    font-size: 2.5rem;
-    color: #002f6c;
-    margin-bottom: 30px;
-}
-
-/* Grid de serviços */
-.servicos-grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.servico-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.servico-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.servico-item i {
-    font-size: 2.5rem;
-    color: #ff6600;
-    margin-bottom: 15px;
-}
-
-.servico-item h3 {
-    font-size: 1.2rem;
-    color: #002f6c;
-    margin-top: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .servico-item {
-        padding: 15px;
-    }
-
-    .servico-item i {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .servico-item h3 {
-        font-size: 1.1rem;
     }
 }
 
