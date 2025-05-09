@@ -20,36 +20,41 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    align-items: center; /* Alinha verticalmente os itens do header */
-    justify-content: flex-start; /* Alinha os itens à esquerda e deixa espaço entre eles */
-    flex-wrap: wrap;
-    gap: 20px; /* Adiciona um espaço entre a logo e o título */
+    flex-direction: column; /* Alinha os itens verticalmente para centralizar tudo */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    justify-content: center; /* Centraliza verticalmente o conteúdo dentro do header */
+    flex-wrap: wrap; /* Mantém a responsividade */
+    gap: 10px; /* Espaço entre a logo e o título quando em coluna */
+    text-align: center; /* Garante que o texto interno também esteja centralizado */
 }
 
 /* Logo */
 .logo-aviao {
-    width: 120px;
+    width: 150px; /* Aumentei um pouco a largura da logo, ajuste conforme necessário */
     height: auto;
+    margin-bottom: 10px; /* Adiciona um espaço abaixo da logo */
 }
+
 .header-title {
     display: flex;
-    flex-direction: column; /* Coloca "NUMBER ONE" acima de "Viagens" */
-    justify-content: center; /* Centraliza verticalmente o texto */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza "NUMBER ONE" e "Viagens" horizontalmente */
 }
 
 .number-one {
-    font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 3em; /* Aumentei bastante o tamanho da fonte, ajuste conforme necessário */
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 0; /* Remove a margem padrão do h1 para aproximar "Viagens" */
+    margin-bottom: 0;
 }
 
 .viagens {
-    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 1.5em; /* Aumentei o tamanho da fonte, ajuste conforme necessário */
     font-style: italic;
-    font-weight: normal; /* Garante que não esteja em negrito */
-    margin-top: 5px; /* Adiciona um pequeno espaço acima de "Viagens" */
-    margin-bottom: 0; /* Remove qualquer margem inferior desnecessária */
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 /* Navegação */
