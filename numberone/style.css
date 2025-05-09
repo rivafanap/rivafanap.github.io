@@ -31,8 +31,10 @@ header {
 }
 
 .logo-aviao {
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 2.5em; /* Ajuste este valor para controlar o tamanho da logo em relação ao texto */
+    height: auto;
+    max-height: 3em; /* Ajuste conforme necessário */
+}
+
 }
 
 .header-title {
