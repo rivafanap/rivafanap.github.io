@@ -20,15 +20,18 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column; /* Organiza os itens verticalmente (logo+nome e "Viagens") */
+    align-items: center; /* Centraliza horizontalmente os itens dentro do header */
 }
-
+.logo-titulo-container {
+    display: flex; /* Alinha a logo e o nome horizontalmente */
+    align-items: center; /* Alinha verticalmente a logo e o nome */
+    gap: 10px; /* Espaçamento entre a logo e o nome. Ajuste conforme necessário */
+    margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo da logo e do nome */
+}
 .logo-aviao {
-    width: 200px; 
-    height: auto;
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 1.2em; /* Define uma altura máxima relativa à fonte do "NUMBER ONE". Ajuste conforme necessário */
 }
 
 .header-title {
@@ -39,20 +42,20 @@ header {
 }
 
 .number-one {
-    font-size: 4em;
+    font-size: 3em; /* Tamanho do "NUMBER ONE". Ajuste conforme necessário */
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: -7px;
-    line-height: 0.9;
+    line-height: 1; /* Melhora o alinhamento vertical com a logo */
+    margin: 0; /* Remove margens padrão para melhor controle do alinhamento */
 }
 
 .viagens {
-    font-size: 2.8em;
+    font-size: 2em;
     font-style: italic;
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
     padding-left: 0.1em;
 }
 
@@ -219,11 +222,26 @@ section {
     margin-top: 10px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .logo-titulo-container {
+        gap: 8px; /* Reduz o espaçamento em telas menores */
+        margin-bottom: 3px;
+     }
+
+    .logo-aviao {
+        max-height: 1em; /* Reduz a altura máxima da logo em telas menores */
     }
+
+    .number-one {
+        font-size: 2.5em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .viagens {
+        font-size: 1.8em;
+        letter-spacing: 0.15em;
+    }
+}
 
     .servico-item {
         padding: 15px;
