@@ -102,21 +102,46 @@ nav a:hover {
 
 /* Seção Hero */
 .hero {
-    text-align: left;
+    text-align: center; /* Centraliza melhor o texto */
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.85);
+    background: linear-gradient(45deg, #ff6600, #ff9900); /* Degradê mais sofisticado */
     border-radius: 10px;
     margin: 20px auto;
     width: 85%;
     max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
+    color: white; /* Texto branco para melhor contraste */
+    font-weight: bold;
 }
 
-/* Seções */
-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
+/* Ajuste no título */
+.hero h2 {
+    font-size: 2.8em; /* Aumenta o tamanho do título */
+    font-family: 'Montserrat', sans-serif; /* Mantém um estilo moderno */
 }
+
+/* Espaçamento refinado */
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Botão chamativo */
+.hero button {
+    background: #002f6c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.hero button:hover {
+    background: #001d4a;
+}
+
 
 /* Ajuste da seção de orçamento */
 #orcamento {
