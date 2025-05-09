@@ -36,7 +36,7 @@ header {
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 7em; /* Ajuste conforme necessário */
+    max-height: 10em; /* Ajuste conforme necessário */
     width: auto;
     align-self: center; /* Mantém alinhado dentro do flex container */
 }
