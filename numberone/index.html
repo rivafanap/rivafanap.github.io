@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<header>
-    <img class="logo-aviao" src="https://rivafanap.github.io/numberone/aviao.png" alt="Logo Avião">
-    <div class="header-title">
-        <h1 class="number-one">NUMBER ONE</h1>
-        <p class="viagens"><em>Viagens</em></p>
-    </div>
-</header>
+    <header>
+        <img class="logo-aviao" src="https://rivafanap.github.io/numberone/aviao.png" alt="Logo Avião">
+        <div class="header-title">
+            <h1 class="number-one">NUMBER ONE</h1>
+            <p class="viagens"><em>Viagens</em></p>
+        </div>
+    </header>
 
     <nav>
         <a href="#orcamento">Solicitar Orçamento</a>
@@ -37,10 +37,10 @@
         <form action="submit-orcamento.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-            
+
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-            
+
             <label for="tipo_viagem">Tipo de Viagem:</label>
             <select id="tipo_viagem" name="tipo_viagem" required>
                 <option value="" disabled selected>Selecione o Tipo de Viagem</option>
@@ -49,10 +49,10 @@
                 <option value="pacote">Pacote de Viagem</option>
                 <option value="hotel">Reserva de Hotel</option>
             </select>
-            
+
             <label for="mensagem">Detalhes:</label>
             <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="5" required></textarea>
-            
+
             <button type="submit">Enviar</button>
         </form>
     </section>
@@ -60,19 +60,53 @@
     <section id="pacotes" data-aos="fade-up">
         <h2>Pacotes de Viagem</h2>
         <p>Confira nossas promoções de pacotes de viagem para os destinos mais incríveis.</p>
+        <div class="pacotes-grid">
+            <div class="pacote-item">
+                <img src="https://via.placeholder.com/300/007bff/ffffff?Text=Destino%201" alt="Pacote para Destino 1">
+                <h3>Pacote Exemplo 1</h3>
+                <p>Uma breve descrição deste pacote incrível.</p>
+                <span class="preco">A partir de R$ 999</span>
+                <a href="#" class="botao-detalhes">Ver Detalhes</a>
+            </div>
+            <div class="pacote-item">
+                <img src="https://via.placeholder.com/300/dc3545/ffffff?Text=Destino%202" alt="Pacote para Destino 2">
+                <h3>Pacote Exemplo 2</h3>
+                <p>Aproveite esta oferta especial por tempo limitado!</p>
+                <span class="preco">A partir de R$ 1299</span>
+                <a href="#" class="botao-detalhes">Ver Detalhes</a>
+            </div>
+        </div>
+        <a href="#" class="botao-ver-mais">Ver Mais Pacotes</a>
     </section>
 
     <section id="hoteis" data-aos="fade-up">
         <h2>Reserva de Hotéis</h2>
         <p>Encontre os melhores hotéis para sua estadia.</p>
+        <div class="hoteis-destaque">
+            <div class="hotel-item">
+                <img src="https://via.placeholder.com/300/28a745/ffffff?Text=Hotel%201" alt="Hotel Exemplo 1">
+                <h3>Hotel Incrível 1</h3>
+                <p>Conforto e comodidade no seu destino.</p>
+                <a href="#" class="botao-reservar">Reservar Agora</a>
+            </div>
+            <div class="hotel-item">
+                <img src="https://via.placeholder.com/300/ffc107/000000?Text=Hotel%202" alt="Hotel Exemplo 2">
+                <h3>Ótima Opção 2</h3>
+                <p>Localização privilegiada e excelentes serviços.</p>
+                <a href="#" class="botao-reservar">Reservar Agora</a>
+            </div>
+        </div>
+        <a href="#" class="botao-ver-mais">Ver Mais Hotéis</a>
     </section>
 
     <section id="contato" data-aos="fade-up">
         <h2>Entre em Contato</h2>
         <p>Estamos prontos para ajudá-lo a planejar sua viagem dos sonhos!</p>
-        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:number1viagens@gmail.com">number1viagens@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> Telefone: <a href="tel:+5562992597106">(62) 99259-7106</a></p>
-        <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/agencianumberone" target="_blank">@agencianumberone</a></p>
+        <ul class="contato-lista">
+            <li><i class="fas fa-envelope"></i> E-mail: <a href="mailto:number1viagens@gmail.com">number1viagens@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i> Telefone: <a href="tel:+5562992597106">(62) 99259-7106</a></li>
+            <li><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/agencianumberone" target="_blank">@agencianumberone</a></li>
+        </ul>
     </section>
 
     <footer>
