@@ -34,7 +34,7 @@ header {
 .header-title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha "Viagens" à esquerda de "NUMBER ONE" */
+    align-items: flex-start; /* Centralize "Viagens" centralizar a baixo  de "NUMBER ONE" */
     justify-content: center;
 }
 
