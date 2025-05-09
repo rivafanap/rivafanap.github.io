@@ -14,157 +14,28 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Cabeçalho */
-header {
-    background: rgba(0, 47, 108, 0.9);
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.logo-aviao {
-    width: 200px;
-    height: auto;
-}
-
-.header-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.number-one {
-    font-size: 4em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: -7px;
-    line-height: 0.9;
-}
-
-.viagens {
-    font-size: 2.8em;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 0.3em;
-    padding-left: 0.1em;
-}
-
-/* Navegação */
-nav {
-    background: rgba(255, 102, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-}
-
-nav a {
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 15px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #fff;
-    color: #ff6600;
-}
-
-/* Seção Hero */
-.hero {
-    text-align: left; /* Ajuste de alinhamento para um visual mais refinado */
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.85); /* Leve transparência */
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 85%;
-    max-width: 700px; /* Ajuste para um tamanho mais proporcional */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
-}
-
-/* Seções */
-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
-}
-
-/* Ajuste da seção de orçamento */
-#orcamento {
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    margin: 40px auto;
-    width: 90%;
-    max-width: 600px;
-    text-align: left;
-}
-
-/* Campos do formulário */
-.form-section label {
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-    color: #002f6c;
-}
-
-.form-section input[type="text"],
-.form-section input[type="email"],
-.form-section select,
-.form-section textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #002f6c;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.form-section textarea {
-    min-height: 150px;
-}
-
-/* Botão ajustado */
-#orcamento button[type="submit"] {
-    background: #ff6600;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-    font-size: 1.2rem;
-    display: block;
-    margin: 20px auto 0;
-}
-
-/* Seção de Contato */
+/* Seção de Contato - Ajustada */
 #contato {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px; /* Reduzi o espaço interno */
     background-color: #fff;
     border-radius: 8px;
-    margin-bottom: 0;
+    margin-bottom: 20px; /* Reduzi a margem inferior */
 }
 
 #contato h2 {
     font-size: 2.2rem;
     color: #002f6c;
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Ajustei o espaçamento */
 }
 
+/* Lista de contatos - Agora em uma linha única */
 .contato-lista {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    gap: 20px; /* Espaço entre os elementos */
+    flex-wrap: wrap; /* Garante responsividade */
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -174,19 +45,14 @@ section {
 .contato-lista li {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.contato-lista li:last-child {
-    border-bottom: none;
+    gap: 10px;
+    border-bottom: none; /* Remove a linha separadora */
+    padding: 5px 0;
 }
 
 .contato-lista i {
     font-size: 1.5rem;
     color: #ff6600;
-    width: 30px;
     text-align: center;
 }
 
@@ -199,53 +65,10 @@ section {
     text-decoration: underline;
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-}
-
-footer small {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.8rem;
-    color: #ccc;
-}
-
-/* Responsividade */
+/* Responsividade para garantir que fique legível */
 @media (max-width: 600px) {
-    header {
+    .contato-lista {
         flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .form-section {
-        width: 95%;
-    }
-
-    #orcamento button[type="submit"] {
-        width: 90%;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-        border-radius: 5px;
+        gap: 15px; /* Mantém espaçamento adequado */
     }
 }
-
