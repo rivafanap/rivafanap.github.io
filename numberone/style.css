@@ -53,13 +53,13 @@ header {
 
 .header-title {
     display: flex;
-    flex-direction: row; /* Alinha os itens horizontalmente */
-    align-items: center; /* Mantém alinhado na mesma linha */
-    justify-content: flex-start; /* Mantém o alinhamento inicial */
-    gap: 15px; /* Espaço entre "NUMBER ONE" e "Viagens" */
+    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
+    align-items: flex-end; /* Alinha "Viagens" à direita */
+    justify-content: center;
 }
 .viagens {
-    margin-left: 10px; /* Ajuste conforme necessário */
+    padding-right: 10px; /* Ajuste o valor para uma melhor posição */
+
 }
 
 .number-one {
