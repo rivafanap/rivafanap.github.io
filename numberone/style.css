@@ -20,15 +20,36 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente os itens do header */
+    justify-content: flex-start; /* Alinha os itens à esquerda e deixa espaço entre eles */
     flex-wrap: wrap;
+    gap: 20px; /* Adiciona um espaço entre a logo e o título */
 }
 
 /* Logo */
 .logo-aviao {
     width: 120px;
     height: auto;
+}
+.header-title {
+    display: flex;
+    flex-direction: column; /* Coloca "NUMBER ONE" acima de "Viagens" */
+    justify-content: center; /* Centraliza verticalmente o texto */
+}
+
+.number-one {
+    font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0; /* Remove a margem padrão do h1 para aproximar "Viagens" */
+}
+
+.viagens {
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-style: italic;
+    font-weight: normal; /* Garante que não esteja em negrito */
+    margin-top: 5px; /* Adiciona um pequeno espaço acima de "Viagens" */
+    margin-bottom: 0; /* Remove qualquer margem inferior desnecessária */
 }
 
 /* Navegação */
