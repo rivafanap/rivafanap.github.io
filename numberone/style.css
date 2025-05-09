@@ -28,13 +28,15 @@ header {
 .logo-titulo-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaço entre a logo e o texto */
+    justify-content: center; /* Centraliza perfeitamente */
+    gap: 15px; /* Aumenta a distância entre logo e texto */
 }
+
 
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 3em; /* Ajuste conforme necessário */
+    max-height: 5em; /* Ajuste conforme necessário */
     width: auto;
     align-self: center; /* Mantém alinhado dentro do flex container */
 }
