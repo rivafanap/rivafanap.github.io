@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url('https://rivafanap.github.io/numberone/design%20.jpg') no-repeat center center/cover;
+    background: url('https://rivafanap.github.io/numberone/design.jpg') no-repeat center center/cover;
     background-size: cover;
     background-attachment: fixed;
     color: #333;
@@ -20,32 +20,41 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente o container da logo e do título */
-    align-items: center; /* Centraliza verticalmente os itens dentro do header */
+    justify-content: center; /* Centraliza horizontalmente o container */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Ajuste do container de logo e título */
 .logo-titulo-container {
-    display: flex; /* Alinha a logo e o título horizontalmente */
-    align-items: center; /* Alinha verticalmente a logo e o título */
-    gap: 15px; /* Espaçamento entre a logo e o título. Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a logo e o texto */
 }
 
+/* Ajuste da logo */
 .logo-aviao {
     height: auto;
     max-height: 3em; /* Ajuste conforme necessário */
+    width: auto;
+    align-self: center; /* Mantém alinhado dentro do flex container */
 }
 
+/* Responsividade */
+@media (max-width: 600px) {
+    .logo-aviao {
+        max-height: 2em; /* Ajuste para telas menores */
+    }
 }
 
 .header-title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha o texto à esquerda dentro do container do título */
+    align-items: flex-start;
     justify-content: center;
 }
 
 .number-one {
-    font-size: 3em; /* Tamanho do "NUMBER ONE". Ajuste conforme necessário */
+    font-size: 3em;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -83,16 +92,16 @@ nav a:hover {
     color: #ff6600;
 }
 
-/* Seção Hero - Ajustada */
+/* Seção Hero */
 .hero {
-    text-align: left; /* Alinhamento refinado */
+    text-align: left;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.85); /* Leve transparência */
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     margin: 20px auto;
     width: 85%;
     max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Seções */
@@ -112,22 +121,16 @@ section {
     text-align: left;
 }
 
-/* Seção de Contato - Ajustada */
+/* Ajuste da seção de contato */
 #contato {
     text-align: center;
-    padding: 20px; /* Reduzi o espaço interno */
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    margin-bottom: 20px; /* Reduzi a margem inferior */
+    margin-bottom: 20px;
 }
 
-#contato h2 {
-    font-size: 2.2rem;
-    color: #002f6c;
-    margin-bottom: 15px;
-}
-
-/* Lista de contatos - Agora em uma linha única */
+/* Lista de contatos */
 .contato-lista {
     display: flex;
     justify-content: center;
@@ -214,7 +217,7 @@ section {
     margin-bottom: 30px;
 }
 
-/* Layout em Grid atualizado */
+/* Grid de serviços */
 .servicos-grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -231,7 +234,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
