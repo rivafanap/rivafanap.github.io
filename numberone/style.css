@@ -29,8 +29,9 @@ header {
 }
 
 .logo-aviao {
-    width: 190px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 200px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
+    gap: 25px;
 }
 
 .header-title {
@@ -44,12 +45,12 @@ header {
     font-size: 4em; /* Aumentei a fonte, ajuste conforme necessário */
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: -8px; /* Reduzi a margem para aproximar "Viagens" */
+    margin-bottom: -7px; /* Reduzi a margem para aproximar "Viagens" */
     line-height: 0.9; /* Reduzi o espaçamento entre linhas */
 }
 
 .viagens {
-    font-size: 3.0em; /* Aumentei a fonte, ajuste para ser proporcional */
+    font-size: 2.8em; /* Aumentei a fonte, ajuste para ser proporcional */
     font-style: italic;
     font-weight: normal;
     margin-top: 0; /* Remove a margem superior para aproximar */
