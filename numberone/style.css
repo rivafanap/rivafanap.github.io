@@ -151,6 +151,9 @@ section {
 /* Seção de Contato (removendo a margem inferior) */
 #contato {
     margin-bottom: 0; /* Remove a margem inferior da última seção */
+    background-color: #fff; /* Adiciona fundo branco */
+    padding: 40px 20px; /* Adiciona padding para o fundo branco não ficar colado no texto */
+    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
 }
 
 /* Rodapé */
@@ -203,7 +206,7 @@ footer small {
     }
 }
 
-/* Estilos para a seção Nossos Serviços */
+/* Estilos para a seção Nossos Serviços (Layout em Grade) */
 #servicos {
     text-align: center;
     padding: 40px 20px;
@@ -215,36 +218,63 @@ footer small {
 #servicos h2 {
     font-size: 2.5rem;
     color: #002f6c;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.servicos-lista {
-    list-style: none;
-    padding: 0;
+.servicos-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 960px;
     margin: 0 auto;
-    max-width: 600px;
 }
 
-.servicos-lista li {
+.servico-item {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 30px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: left;
-    gap: 15px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.servicos-lista li:hover {
-    transform: scale(1.02);
-}
-
-.servicos-lista i {
-    font-size: 1.5rem;
-    color: #ff6600;
-    width: 30px; /* Para alinhar os ícones */
+    justify-content: center;
     text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.servico-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servico-item i {
+    font-size: 3rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.servico-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .servicos-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .servico-item {
+        padding: 20px 10px;
+    }
+
+    .servico-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .servico-item h3 {
+        font-size: 1.1rem;
+    }
 }
