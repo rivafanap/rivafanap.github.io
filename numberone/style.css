@@ -20,43 +20,40 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Organiza os itens verticalmente (logo+nome e "Viagens") */
-    align-items: center; /* Centraliza horizontalmente os itens dentro do header */
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.logo-titulo-container {
-    display: flex; /* Alinha a logo e o nome horizontalmente */
-    align-items: center; /* Alinha verticalmente a logo e o nome */
-    gap: 10px; /* Espaçamento entre a logo e o nome. Ajuste conforme necessário */
-    margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo da logo e do nome */
-}
+
 .logo-aviao {
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 1.2em; /* Define uma altura máxima relativa à fonte do "NUMBER ONE". Ajuste conforme necessário */
+    width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
 }
 
 .header-title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinha "Viagens" à esquerda de "NUMBER ONE" */
     justify-content: center;
 }
 
 .number-one {
-    font-size: 3em; /* Tamanho do "NUMBER ONE". Ajuste conforme necessário */
+    font-size: 4em; /* Aumentei a fonte, ajuste conforme necessário */
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1; /* Melhora o alinhamento vertical com a logo */
-    margin: 0; /* Remove margens padrão para melhor controle do alinhamento */
+    margin-bottom: -7px; /* Reduzi a margem para aproximar "Viagens" */
+    line-height: 0.9; /* Reduzi o espaçamento entre linhas */
 }
 
 .viagens {
-    font-size: 2em;
+    font-size: 2.8em; /* Aumentei a fonte, ajuste para ser proporcional */
     font-style: italic;
     font-weight: normal;
-    margin-top: 0;
+    margin-top: 0; /* Remove a margem superior para aproximar */
     margin-bottom: 0;
-    letter-spacing: 0.2em;
-    padding-left: 0.1em;
+    letter-spacing: 0.3em; /* Adicionei espaçamento entre as letras */
+    padding-left: 0.1em; /* Pequeno ajuste para compensar o espaçamento inicial */
 }
 
 /* Navegação */
@@ -80,22 +77,21 @@ nav a:hover {
     color: #ff6600;
 }
 
-/* Seção Hero - Ajustada */
+/* Seção Hero */
 .hero {
-    text-align: left; /* Alinhamento refinado */
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.85); /* Leve transparência */
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     margin: 20px auto;
-    width: 85%;
-    max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    width: 90%;
+    max-width: 800px;
 }
 
-/* Seções */
+/* Estilização das seções (aplicando o espaçamento) */
 section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
+    padding: 40px 20px; /* Aumenta o padding superior e inferior */
+    margin-bottom: 40px; /* Adiciona margem abaixo de cada seção */
 }
 
 /* Ajuste da seção de orçamento */
@@ -109,28 +105,64 @@ section {
     text-align: left;
 }
 
-/* Seção de Contato - Ajustada */
+/* Estilização dos campos do formulário */
+.form-section label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #002f6c;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section select,
+.form-section textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #002f6c;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-section textarea {
+    min-height: 150px;
+}
+
+/* Botão ajustado */
+#orcamento button[type="submit"] { /* Use este seletor */
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.2rem;
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Seção de Contato (removendo a margem inferior) */
 #contato {
-    text-align: center;
-    padding: 20px; /* Reduzi o espaço interno */
-    background-color: #fff;
+   text-align: center;
+    padding: 40px 20px;
+    background-color: #fff; /* Fundo branco para boa leitura */
     border-radius: 8px;
-    margin-bottom: 20px; /* Reduzi a margem inferior */
+    margin-bottom: 0; /* Mantenho a margem inferior como 0 */
 }
 
 #contato h2 {
-    font-size: 2.2rem;
-    color: #002f6c;
-    margin-bottom: 15px;
+    font-size: 2.2rem; /* Similar ao título da seção de serviços */
+    color: #002f6c; /* Seu azul principal */
+    margin-bottom: 25px;
 }
-
-/* Lista de contatos - Agora em uma linha única */
 .contato-lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -140,35 +172,81 @@ section {
 .contato-lista li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    border-bottom: none;
-    padding: 5px 0;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Linha sutil para separar os itens */
+}
+
+.contato-lista li:last-child {
+    border-bottom: none; /* Remove a borda da última linha */
 }
 
 .contato-lista i {
     font-size: 1.5rem;
-    color: #ff6600;
+    color: #ff6600; /* Seu laranja para os ícones */
+    width: 30px;
     text-align: center;
 }
 
 .contato-lista a {
-    color: #333;
+    color: #333; /* Cor do texto dos links */
     text-decoration: none;
 }
 
 .contato-lista a:hover {
     text-decoration: underline;
 }
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
 
 /* Responsividade */
 @media (max-width: 600px) {
-    .contato-lista {
+    header {
         flex-direction: column;
-        gap: 15px;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-section {
+        width: 95%;
+    }
+
+    #orcamento button[type="submit"] {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
     }
 }
 
-/* Seção Nossos Serviços */
+/* Estilos para a seção Nossos Serviços (Layout em Grade) */
 #servicos {
     text-align: center;
     padding: 40px 20px;
@@ -183,12 +261,11 @@ section {
     margin-bottom: 30px;
 }
 
-/* Layout em Grid atualizado */
 .servicos-grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -204,44 +281,26 @@ section {
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .servico-item:hover {
     transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra leve ao passar o mouse */
 }
-
 .servico-item i {
-    font-size: 2.5rem;
-    color: #ff6600;
+    font-size: 2.5rem; /* Reduzi um pouco o tamanho do ícone */
+    color: #ff6600; /* Seu laranja principal */
     margin-bottom: 15px;
 }
-
 .servico-item h3 {
-    font-size: 1.2rem;
-    color: #002f6c;
+    font-size: 1.2rem; /* Reduzi um pouco o tamanho da fonte */
+    color: #002f6c; /* Seu azul principal */
     margin-top: 10px;
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 600px) {
-    .logo-titulo-container {
-        gap: 8px; /* Reduz o espaçamento em telas menores */
-        margin-bottom: 3px;
-     }
-
-    .logo-aviao {
-        max-height: 1em; /* Reduz a altura máxima da logo em telas menores */
+@media (max-width: 768px) {
+    .servicos-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
-
-    .number-one {
-        font-size: 2.5em; /* Reduz o tamanho da fonte em telas menores */
-    }
-
-    .viagens {
-        font-size: 1.8em;
-        letter-spacing: 0.15em;
-    }
-}
 
     .servico-item {
         padding: 15px;
