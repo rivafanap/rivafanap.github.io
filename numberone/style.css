@@ -117,6 +117,12 @@ nav a:hover {
 .hero-overlay h2, .hero-overlay p {
     margin: 0.5em 0; /* Ajuste as margens verticais do texto */
 }
+.hero {
+    /* Outras propriedades */
+    padding: 0.5rem 0; /* Experimente um valor menor para reduzir a altura */
+    /* Outras propriedades */
+}
+
 ..hero {
     display: flex;
     flex-direction: column;
