@@ -17,7 +17,7 @@ body {
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
-    padding: 25px;
+    padding: 20px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente o container */
     align-items: center; /* Centraliza verticalmente */
@@ -38,15 +38,15 @@ header {
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 15em; /* Ajuste conforme necessário */
+    max-height: 20em; /* Ajuste conforme necessário */
     width: auto;
     align-self: center; /* Mantém alinhado dentro do flex container */
 }
 
 /* Responsividade */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .logo-aviao {
-        max-height: 2.5em; /* Ajuste para telas menores */
+        max-height: 3.0em; /* Ajuste para telas menores */
     }
 }
 
