@@ -107,8 +107,8 @@ nav a:hover {
     background: none; /* Removendo background do hero container */
     border-radius: 0; /* Removendo border-radius do hero container */
     margin: 10px auto;
-    width: 50%; /* Largura da etiqueta */
-    max-width: 400px; /* Largura máxima da etiqueta */
+    width: 100%; /* Largura da etiqueta */
+    max-width: 900px; /* Largura máxima da etiqueta */
     box-shadow: none; /* Removendo box-shadow do hero container */
     color: white; /* Cor do texto (será aplicado no overlay) */
     font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
