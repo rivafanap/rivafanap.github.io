@@ -7,9 +7,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url('https://rivafanap.github.io/numberone/design%20.jpg') no-repeat center center/cover;
+    background: url('https://rivafanap.github.io/numberone/Design.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
     color: #333;
     scroll-behavior: smooth;
 }
@@ -20,40 +19,64 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center; /* Centraliza horizontalmente o container */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Ajuste do container de logo e título */
+.logo-titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza perfeitamente */
+    gap: 5px; /* Aumenta a distância entre logo e texto */
+}
+.header-title {
+    margin-left: -10px; /* Aproxima o texto da logo */
+}
+
+
+/* Ajuste da logo */
 .logo-aviao {
-    width: 200px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
+    max-height: 10em; /* Ajuste conforme necessário */
+    width: auto;
+    align-self: center; /* Mantém alinhado dentro do flex container */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .logo-aviao {
+        max-height: 2em; /* Ajuste para telas menores */
+    }
 }
 
 .header-title {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha "Viagens" à esquerda de "NUMBER ONE" */
+    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
+    align-items: flex-end; /* Alinha "Viagens" à direita */
     justify-content: center;
+}
+.viagens {
+    padding-right: 10px; /* Ajuste o valor para uma melhor posição */
+
 }
 
 .number-one {
-    font-size: 4em; /* Aumentei a fonte, ajuste conforme necessário */
+    font-size: 3em;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: -7px; /* Reduzi a margem para aproximar "Viagens" */
-    line-height: 0.9; /* Reduzi o espaçamento entre linhas */
+    line-height: 1;
+    margin: 0;
 }
 
 .viagens {
-    font-size: 2.8em; /* Aumentei a fonte, ajuste para ser proporcional */
+    font-size: 2em;
     font-style: italic;
     font-weight: normal;
-    margin-top: 0; /* Remove a margem superior para aproximar */
+    margin-top: 0;
     margin-bottom: 0;
-    letter-spacing: 0.3em; /* Adicionei espaçamento entre as letras */
-    padding-left: 0.1em; /* Pequeno ajuste para compensar o espaçamento inicial */
+    letter-spacing: 0.2em;
+    padding-left: 0.1em;
 }
 
 /* Navegação */
@@ -79,20 +102,46 @@ nav a:hover {
 
 /* Seção Hero */
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    text-align: center; /* Centraliza melhor o texto */
+    padding: 3rem;
+    background: linear-gradient(45deg, #ff6600, #ff9900); /* Degradê mais sofisticado */
     border-radius: 10px;
     margin: 20px auto;
-    width: 90%;
-    max-width: 800px;
+    width: 85%;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
+    color: white; /* Texto branco para melhor contraste */
+    font-weight: bold;
 }
 
-/* Estilização das seções (aplicando o espaçamento) */
-section {
-    padding: 40px 20px; /* Aumenta o padding superior e inferior */
-    margin-bottom: 40px; /* Adiciona margem abaixo de cada seção */
+/* Ajuste no título */
+.hero h2 {
+    font-size: 2.8em; /* Aumenta o tamanho do título */
+    font-family: 'Montserrat', sans-serif; /* Mantém um estilo moderno */
 }
+
+/* Espaçamento refinado */
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Botão chamativo */
+.hero button {
+    background: #002f6c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.hero button:hover {
+    background: #001d4a;
+}
+
 
 /* Ajuste da seção de orçamento */
 #orcamento {
@@ -105,108 +154,88 @@ section {
     text-align: left;
 }
 
-/* Estilização dos campos do formulário */
-.form-section label {
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-    color: #002f6c;
-}
-
-.form-section input[type="text"],
-.form-section input[type="email"],
-.form-section select,
-.form-section textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #002f6c;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.form-section textarea {
-    min-height: 150px;
-}
-
-/* Botão ajustado */
-#orcamento button[type="submit"] { /* Use este seletor */
-    background: #ff6600;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-    font-size: 1.2rem;
-    display: block;
-    margin: 20px auto 0;
-}
-
-/* Seção de Contato (removendo a margem inferior) */
+/* Ajuste da seção de contato */
 #contato {
-    margin-bottom: 0; /* Remove a margem inferior da última seção */
-    background-color: #fff; /* Adiciona fundo branco */
-    padding: 40px 20px; /* Adiciona padding para o fundo branco não ficar colado no texto */
-    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
     padding: 20px;
-    font-size: 0.9rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-footer small {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.8rem;
-    color: #ccc;
+/* Lista de contatos */
+.contato-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: none;
+    padding: 5px 0;
+}
+
+.contato-lista i {
+    font-size: 1.5rem;
+    color: #ff6600;
+    text-align: center;
+}
+
+.contato-lista a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contato-lista a:hover {
+    text-decoration: underline;
 }
 
 /* Responsividade */
 @media (max-width: 600px) {
+    .contato-lista {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    .form-section {
-        width: 95%;
-    }
-
-    #orcamento button[type="submit"] {
-        width: 90%;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
         padding: 15px;
     }
 
-    nav a {
-        width: 100%;
+    .logo-titulo-container {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        border-radius: 5px;
+    }
+
+    .logo-aviao {
+        max-height: 2em;
+        margin-bottom: 10px;
+    }
+
+    .header-title {
+        align-items: center;
+    }
+
+    .number-one {
+        font-size: 2.5em;
+    }
+
+    .viagens {
+        font-size: 1.8em;
+        letter-spacing: 0.15em;
     }
 }
 
-/* Estilos para a seção Nossos Serviços (Layout em Grade) */
+/* Seção Nossos Serviços */
 #servicos {
     text-align: center;
     padding: 40px 20px;
@@ -221,11 +250,12 @@ footer small {
     margin-bottom: 30px;
 }
 
+/* Grid de serviços */
 .servicos-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 960px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -233,40 +263,39 @@ footer small {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 30px 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .servico-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .servico-item i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #ff6600;
     margin-bottom: 15px;
 }
 
 .servico-item h3 {
-    font-size: 1.3rem;
-    color: #333;
-    margin-top: 0;
+    font-size: 1.2rem;
+    color: #002f6c;
+    margin-top: 10px;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
     .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
     .servico-item {
-        padding: 20px 10px;
+        padding: 15px;
     }
 
     .servico-item i {
@@ -278,3 +307,15 @@ footer small {
         font-size: 1.1rem;
     }
 }
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+
+
