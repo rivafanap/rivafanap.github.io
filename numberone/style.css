@@ -113,76 +113,26 @@ nav a:hover {
     font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
 }
 
+.hero-overlay {
+    text-align: center; /* Centraliza o conteúdo dentro da faixa laranja */
+    padding: 1rem 0; /* Ajuste o espaçamento vertical conforme necessário */
+}
+
 .hero-overlay h2 {
-    font-size: 3.5em; /* Aumentando o tamanho da fonte */
+    font-size: 2.0em; /* Ajuste o tamanho conforme desejado */
     font-weight: bold;
-    margin-bottom: 0.8em;
-}
-
-.hero-overlay {
-    padding: 0.5rem 0; /* Diminuindo o espaçamento interno */
-    height: 80px; /* Definindo uma altura menor */
-}
-
-..hero {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch; /* Estica os filhos horizontalmente */
-    margin: 20px auto; /* Ou qualquer outra margem */
-    max-width: 900px; /* Largura máxima do container hero */
-    /* Outros estilos do hero container */
-}
-
-.hero-overlay {
-    padding: 1rem 0; /* Reduz o padding vertical */
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo */
-    border-radius: 0; /* Remove bordas arredondadas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    color: white;
-    text-align: center;
-}
-/* Ajuste o conteúdo dentro do .hero-overlay se necessário */
-.hero-overlay h2, .hero-overlay p {
-    margin: 0.5em 0; /* Ajuste as margens verticais do texto */
-}
-.hero-overlay h2 {
-    font-size: 3em; /* Tamanho do título ajustado */
-    font-weight: 800; /* Peso da fonte do título */
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 1.5em; /* Espaçamento abaixo do título */
+    color: #fff;
+    margin-bottom: 10px; /* Adiciona um espaço entre as frases */
 }
 
 .hero-overlay p {
-    font-size:2.0em; /* Tamanho do parágrafo ajustado */
-    font-weight: 600; /* Peso da fonte do parágrafo */
-    line-height: 2.0; /* Espaçamento entre linhas do parágrafo */
-    margin-top: 0;
+    font-size: 1.2em; /* Define um tamanho menor para a segunda frase (ajuste conforme desejado) */
+    color: #fff;
+    font-weight: normal;
+    margin-top: 0; /* Remove qualquer margem superior padrão */
+    line-height: 1.4; /* Melhora a leitura da segunda frase */
 }
 
-.hero-overlay p strong {
-    font-weight: 300; /* Manter o negrito */
-}
-.hero-overlay h2 {
-    font-size: 2.0em; /* Aumente este valor para o tamanho desejado */
-    font-weight: bold; /* Se quiser manter ou adicionar negrito */
-    /* Outros estilos que você queira adicionar */
-}
-.hero-overlay {
-  text-align: center; /* Centraliza o conteúdo dentro da faixa laranja */
-}
-
-.hero-overlay h2 {
-  /* Mantém os estilos existentes para a frase "Planeje" */
-  font-size: 2.0em; /* Exemplo do tamanho, ajuste se necessário */
-  font-weight: bold;
-  margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo de "Planeje" */
-}
-.frase-vendas {
-  font-size: 0.5em; /* Define um tamanho menor para a frase "Vendas" (ajuste conforme desejado) */
-  color: #fff; /* Define a cor branca para a frase "Vendas" */
-  font-weight: normal; /* Define a espessura da fonte */
-  margin-top: 0; /* Remove qualquer margem superior padrão */
-}
 /* Ajuste da seção de orçamento */
 #orcamento {
     padding: 2rem;
