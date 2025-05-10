@@ -146,10 +146,10 @@ nav a:hover {
     margin: 0.5em 0; /* Ajuste as margens verticais do texto */
 }
 .hero-overlay h2 {
-    font-size: 2.2em; /* Tamanho do título ajustado */
-    font-weight: 600; /* Peso da fonte do título */
+    font-size: 3em; /* Tamanho do título ajustado */
+    font-weight: 800; /* Peso da fonte do título */
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 0.8em; /* Espaçamento abaixo do título */
+    margin-bottom: 1.5em; /* Espaçamento abaixo do título */
 }
 
 .hero-overlay p {
