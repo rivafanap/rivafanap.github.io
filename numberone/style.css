@@ -17,7 +17,7 @@ body {
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
-    padding: 15px; /* Altura da faixa azul diminuída */
+    padding: 15px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente o container */
     align-items: center; /* Centraliza verticalmente */
@@ -62,7 +62,7 @@ header {
 }
 
 .number-one {
-    font-size: 3.0em; /* Título "NUMBER ONE" um pouco menor */
+    font-size: 3.0em;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -189,46 +189,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .contato-lista {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    header {
-        padding: 15px;
-    }
-
-    .logo-titulo-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .logo-aviao {
-        max-height: 2em;
-        margin-bottom: 10px;
-    }
-
-    .header-title {
-        align-items: center;
-    }
-
-    .number-one {
-        font-size: 2.5em;
-    }
-
-    .viagens {
-        font-size: 1.8em;
-        letter-spacing: 0.15em;
-    }
-}
-
 /* Seção Nossos Serviços */
 #servicos {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px; /* Altura da faixa branca diminuída */
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 40px;
@@ -253,7 +217,7 @@ nav a:hover {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 25px;
+    padding: 15px; /* Padding interno dos itens diminuído */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,21 +225,16 @@ nav a:hover {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.servico-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
 .servico-item i {
-    font-size: 2.5rem;
+    font-size: 2.0rem; /* Tamanho dos ícones diminuído */
     color: #ff6600;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .servico-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.0rem; /* Tamanho dos títulos diminuído */
     color: #002f6c;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* Responsividade */
