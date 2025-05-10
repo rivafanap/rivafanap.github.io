@@ -17,7 +17,7 @@ body {
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente o container */
     align-items: center; /* Centraliza verticalmente */
@@ -31,22 +31,22 @@ header {
     gap: 5px; /* Aumenta a distância entre logo e texto */
 }
 .header-title {
-    margin-left: -10px; /* Aproxima o texto da logo */
+    margin-left: -0.8px; /* Aproxima o texto da logo */
 }
 
 
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 10em; /* Ajuste conforme necessário */
+    max-height: 15em; /* Ajuste conforme necessário */
     width: auto;
     align-self: center; /* Mantém alinhado dentro do flex container */
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .logo-aviao {
-        max-height: 2em; /* Ajuste para telas menores */
+        max-height: 2.5em; /* Ajuste para telas menores */
     }
 }
 
@@ -57,12 +57,12 @@ header {
     justify-content: center;
 }
 .viagens {
-    padding-right: 10px; /* Ajuste o valor para uma melhor posição */
+    padding-right: 1.5px; /* Ajuste o valor para uma melhor posição */
 
 }
 
 .number-one {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -178,7 +178,7 @@ nav a:hover {
   margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo de "Planeje" */
 }
 .frase-vendas {
-  font-size: 0.9em; /* Define um tamanho menor para a frase "Vendas" (ajuste conforme desejado) */
+  font-size: 0.5em; /* Define um tamanho menor para a frase "Vendas" (ajuste conforme desejado) */
   color: #fff; /* Define a cor branca para a frase "Vendas" */
   font-weight: normal; /* Define a espessura da fonte */
   margin-top: 0; /* Remove qualquer margem superior padrão */
