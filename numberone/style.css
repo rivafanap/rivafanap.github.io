@@ -17,7 +17,7 @@ body {
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
-    padding: 1.0px;
+    padding: 15px; /* Altura da faixa azul diminuída */
     display: flex;
     justify-content: center; /* Centraliza horizontalmente o container */
     align-items: center; /* Centraliza verticalmente */
@@ -38,15 +38,15 @@ header {
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 10em; /* Ajuste conforme necessário */
+    max-height: 8em; /* Logo um pouco menor */
     width: auto;
-    align-self: center; /* Mantém alinhado dentro do flex container */
+    align-self: center;
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .logo-aviao {
-        max-height: 2.0em; /* Ajuste para telas menores */
+        max-height: 2.5em; /* Ajuste para telas menores */
     }
 }
 
@@ -62,7 +62,7 @@ header {
 }
 
 .number-one {
-    font-size: 3.0em;
+    font-size: 3.0em; /* Título "NUMBER ONE" um pouco menor */
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
