@@ -114,9 +114,11 @@ nav a:hover {
 }
 
 .hero-overlay h2 {
-    font-size: 1.8em; /* Diminuindo o tamanho da fonte */
-    margin-bottom: 0.5em; /* Reduzindo o espaço abaixo do título */
+    font-size: 2.8em; /* Aumentando o tamanho da fonte */
+    font-weight: bold;
+    margin-bottom: 0.8em;
 }
+
 .hero-overlay {
     padding: 0.5rem 0; /* Diminuindo o espaçamento interno */
     height: 80px; /* Definindo uma altura menor */
