@@ -206,35 +206,40 @@ nav a:hover {
 
 /* Grid de serviços */
 .servicos-grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+   gap: 15px;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 .servico-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px; /* Padding interno dos itens diminuído */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   background-color: #ff6600; /* Fundo laranja */
+   border: 1px solid #ddd; /* Mantenho a borda para leve separação */
+   border-radius: 10px; /* Arredondamento dos cantos */
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   color: #fff; /* Texto branco para melhor contraste com o laranja */
+}
+.servico-item:hover {
+   transform: scale(1.05); /* Leve efeito ao passar o mouse */
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .servico-item i {
-    font-size: 2.0rem; /* Tamanho dos ícones diminuído */
-    color: #ff6600;
-    margin-bottom: 10px;
+   font-size: 2.5rem;
+   color: #fff; /* Ícones brancos */
+   margin-bottom: 15px;
 }
 
 .servico-item h3 {
-    font-size: 1.0rem; /* Tamanho dos títulos diminuído */
-    color: #002f6c;
-    margin-top: 5px;
+   font-size: 1.2rem;
+   color: #fff; /* Títulos brancos */
+   margin-top: 10px;
 }
 
 /* Responsividade */
