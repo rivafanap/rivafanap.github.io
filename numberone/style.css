@@ -17,7 +17,7 @@ body {
 
 /* Logo */
 .logo-aviao {
-    max-height: 10em;
+    max-height: 50em;
     width: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -32,15 +32,14 @@ body {
 }
 
 .number-one {
-    font-size: 6em;
+    font-size:20em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.viagens {
-    font-size: 3em;
+viagens {
+    font-size: 10em;
     font-style: italic;
-}
 
 /* Responsividade */
 @media (max-width: 600px) {
