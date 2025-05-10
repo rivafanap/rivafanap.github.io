@@ -13,7 +13,7 @@ body {
 
 /* Ajuste da Logo */
 .logo-aviao {
-    max-height: 5em;
+    max-height: 30em;
     width: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -26,6 +26,11 @@ body {
     .logo-aviao {
         max-height: 3em;
     }
+}
+.number-one {
+    font-size: 30em; /* Ajuste para um tamanho maior */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Barra de navegação */
