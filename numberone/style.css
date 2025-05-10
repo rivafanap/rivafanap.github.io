@@ -162,8 +162,9 @@ nav a:hover {
 }
 .hero-overlay h2,
 .hero-overlay p {
-    display: none; /* Oculta os textos */
+    display: none; /* Oculta apenas os textos da primeira imagem */
 }
+
 
 /* Ajuste da seção de orçamento */
 #orcamento {
