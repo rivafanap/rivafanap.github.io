@@ -159,7 +159,7 @@ nav a:hover {
 }
 
 .hero-overlay p strong {
-    font-weight: 700; /* Manter o negrito */
+    font-weight: 300; /* Manter o negrito */
 }
 
 /* Ajuste da seção de orçamento */
