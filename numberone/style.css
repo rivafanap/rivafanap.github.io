@@ -103,28 +103,27 @@ nav a:hover {
 /* Seção Hero */
 .hero {
     text-align: center; /* Centraliza melhor o texto */
-    padding:4rem;
+    padding: 3rem;
     background: linear-gradient(45deg, #ff6600, #ff9900); /* Degradê mais sofisticado */
-    border-radius: 12px;
+    border-radius: 10px;
     margin: 20px auto;
     width: 85%;
-    max-width: 600px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
     color: white; /* Texto branco para melhor contraste */
     font-weight: bold;
 }
 
 /* Ajuste no título */
 .hero h2 {
-    font-size: 3em; /* Aumenta o tamanho do título */
+    font-size: 2.8em; /* Aumenta o tamanho do título */
     font-family: 'Montserrat', sans-serif; /* Mantém um estilo moderno */
-    transition: opacity 0.3s ease-in-out;
-}  
+}
 
 /* Espaçamento refinado */
 .hero p {
-    font-size: 1.4em;
-    margin-top: 15px;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 /* Botão chamativo */
@@ -146,48 +145,14 @@ nav a:hover {
 
 /* Ajuste da seção de orçamento */
 #orcamento {
-    padding: 3rem;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
+    border-radius: 10px;
     margin: 40px auto;
     width: 90%;
     max-width: 600px;
     text-align: left;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-#orcamento h2 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-* Ajuste nos campos do formulário */
-input, select, textarea {
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid #ccc;
-    padding: 12px;
-    border-radius: 8px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-/* Botão chamativo */
-button {
-    background: #ff6600;
-    color: white;
-    padding: 14px;
-    font-size: 1.3em;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    display: block;
-    margin: 20px auto;
-}
-
-button:hover {
-    background: #cc5500;
-}
-
 
 /* Ajuste da seção de contato */
 #contato {
@@ -351,6 +316,4 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
 }
-
-
 
