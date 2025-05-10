@@ -6,14 +6,18 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #002f6c, #ff6600);
+    background: url('imagem-de-fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
-    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Ajuste da Logo */
+/* Logo */
 .logo-aviao {
-    max-height: 30em;
+    max-height: 10em;
     width: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -22,76 +26,33 @@ body {
     transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
-    .logo-aviao {
-        max-height: 3em;
-    }
+/* Nome da Agência */
+.header-title {
+    text-align: center;
 }
+
 .number-one {
-    font-size: 30em; /* Ajuste para um tamanho maior */
+    font-size: 6em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-/* Barra de navegação */
-.navbar {
-    background: rgba(0, 47, 108, 0.9);
-    padding: 15px 0;
-    text-align: center;
+.viagens {
+    font-size: 3em;
+    font-style: italic;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.navbar a {
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    background-color: #ff6600;
-    color: #fff;
-}
-
-.hero {
-    text-align: center;
-    padding: 3rem;
-    background: linear-gradient(135deg, #ff6600, #ff9900);
-    border-radius: 10px;
-    max-width: 700px;
-    margin: 40px auto;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+/* Responsividade */
+@media (max-width: 600px) {
+    .number-one {
+        font-size: 4em;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .viagens {
+        font-size: 2em;
     }
-}
 
-.hero button {
-    background: #002f6c;
-    color: white;
-    padding: 12px 20px;
-    font-size: 1.2em;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.hero button:hover {
-    background: #001d4a;
+    .logo-aviao {
+        max-height: 5em;
+    }
 }
