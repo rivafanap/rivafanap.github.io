@@ -103,7 +103,7 @@ nav a:hover {
 /* Seção Hero */
 .hero {
     text-align: center; /* Centraliza melhor o texto */
-    padding: 1rem 0; /* Removendo padding do hero container */
+    padding: 0.6rem 0; /* Removendo padding do hero container */
     background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo da etiqueta */
     border-radius: 0; /* Removendo border-radius do hero container */
    margin: 0; /* Remove margens para grudar nas bordas da página */
@@ -119,7 +119,7 @@ nav a:hover {
 }
 .hero {
     /* Outras propriedades */
-    padding: 1rem 0; /* Experimente um valor menor para reduzir a altura */
+    padding: 0.3rem 0; /* Experimente um valor menor para reduzir a altura */
     /* Outras propriedades */
 }
 
