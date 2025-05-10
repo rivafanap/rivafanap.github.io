@@ -153,9 +153,9 @@ nav a:hover {
 }
 
 .hero-overlay p {
-    font-size: 1.1em; /* Tamanho do parágrafo ajustado */
-    font-weight: 400; /* Peso da fonte do parágrafo */
-    line-height: 1.6; /* Espaçamento entre linhas do parágrafo */
+    font-size:2.0em; /* Tamanho do parágrafo ajustado */
+    font-weight: 600; /* Peso da fonte do parágrafo */
+    line-height: 2.0; /* Espaçamento entre linhas do parágrafo */
     margin-top: 0;
 }
 
