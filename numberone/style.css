@@ -103,45 +103,43 @@ nav a:hover {
 /* Seção Hero */
 .hero {
     text-align: center; /* Centraliza melhor o texto */
-    padding: 3rem;
-    background: linear-gradient(45deg, #ff6600, #ff9900); /* Degradê mais sofisticado */
-    border-radius: 10px;
+    padding: 0; /* Removendo padding do hero container */
+    background: none; /* Removendo background do hero container */
+    border-radius: 0; /* Removendo border-radius do hero container */
     margin: 20px auto;
-    width: 85%;
-    max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
-    color: white; /* Texto branco para melhor contraste */
-    font-weight: bold;
+    width: 95%; /* Largura da etiqueta */
+    max-width: 900px; /* Largura máxima da etiqueta */
+    box-shadow: none; /* Removendo box-shadow do hero container */
+    color: white; /* Cor do texto (será aplicado no overlay) */
+    font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
 }
 
-/* Ajuste no título */
-.hero h2 {
-    font-size: 2.8em; /* Aumenta o tamanho do título */
-    font-family: 'Montserrat', sans-serif; /* Mantém um estilo moderno */
-}
-
-/* Espaçamento refinado */
-.hero p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Botão chamativo */
-.hero button {
-    background: #002f6c;
+.hero-overlay {
+    padding: 2rem; /* Reduzindo um pouco o padding interno */
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Laranja com leve transparência */
+    border-radius: 8px; /* Borda levemente arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
     color: white;
-    padding: 12px 20px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
+    text-align: center;
 }
 
-.hero button:hover {
-    background: #001d4a;
+.hero-overlay h2 {
+    font-size: 2.2em; /* Tamanho do título ajustado */
+    font-weight: 600; /* Peso da fonte do título */
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.8em; /* Espaçamento abaixo do título */
 }
 
+.hero-overlay p {
+    font-size: 1.1em; /* Tamanho do parágrafo ajustado */
+    font-weight: 400; /* Peso da fonte do parágrafo */
+    line-height: 1.6; /* Espaçamento entre linhas do parágrafo */
+    margin-top: 0;
+}
+
+.hero-overlay p strong {
+    font-weight: 700; /* Manter o negrito */
+}
 
 /* Ajuste da seção de orçamento */
 #orcamento {
@@ -316,4 +314,3 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
 }
-
