@@ -1,40 +1,70 @@
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>NUMBER ONE VIAGENS - Sua Agência de Viagens</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="calculadora">
-        <input type="text" id="display" disabled>
-        <div id="teclado">
-            <button onclick="limpar()">C</button>
-            <button onclick="adicionarValor('^')">  ^  </button>
-            <button onclick="adicionarValor('%')">  %  </button>
-            <button onclick="adicionarValor('/')">  /  </button>
-            
-            <button onclick="adicionarValor('7')">7</button>
-            <button onclick="adicionarValor('8')">8</button>
-            <button onclick="adicionarValor('9')">9</button>
-            <button onclick="adicionarValor('*')">  *  </button>
-            
-            <button onclick="adicionarValor('4')">4</button>
-            <button onclick="adicionarValor('5')">5</button>
-            <button onclick="adicionarValor('6')">6</button>
-            <button onclick="adicionarValor('+')">+</button>
-            
-            <button onclick="adicionarValor('1')">1</button>
-            <button onclick="adicionarValor('2')">2</button>
-            <button onclick="adicionarValor('3')">3</button>
-            <button onclick="adicionarValor('-')">  -  </button>
-            
-            <button onclick="adicionarValor('0')" class="zero">0</button>
-            <button onclick="adicionarValor('.')">.</button>
-            <button onclick="calcular()">=</button>
+    <header>
+        <div class="logo-titulo-container">
+            <img class="logo-aviao" src="branca.png" alt="Logo Number One">
+            <div class="header-title">
+                <h1 class="number-one">NUMBER ONE</h1>
+                <p class="viagens"><em>Viagens</em></p>
+            </div>
         </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#orcamento">Solicitar Orçamento</a></li>
+            <li><a href="#servicos">Nossos Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h2>Planeje sua próxima viagem conosco!</h2>
+        <p>Ofertas incríveis para destinos nacionais e internacionais.</p>
+        <button onclick="scrollToSection('#orcamento')">Solicitar Orçamento</button>
     </div>
-  <script src="script.js"></script>
+
+    <section id="orcamento" data-aos="fade-up">
+        <h2>Solicite Seu Orçamento</h2>
+        <form action="submit-orcamento.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+            
+            <label for="tipo_viagem">Tipo de Viagem:</label>
+            <select id="tipo_viagem" name="tipo_viagem" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="nacional">Passagem Nacional</option>
+                <option value="internacional">Passagem Internacional</option>
+                <option value="pacote">Pacote de Viagem</option>
+                <option value="hotel">Reserva de Hotel</option>
+            </select>
+            
+            <label for="mensagem">Detalhes:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="5" required></textarea>
+            
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NUMBER ONE VIAGENS - Todos os direitos reservados.</p>
+        <small>Desenvolvido por Rivania</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
+</html>
