@@ -167,8 +167,22 @@ nav a:hover {
     font-weight: bold; /* Se quiser manter ou adicionar negrito */
     /* Outros estilos que você queira adicionar */
 }
+.hero-overlay {
+  text-align: center; /* Centraliza o conteúdo dentro da faixa laranja */
+}
 
-
+.hero-overlay h2 {
+  /* Mantém os estilos existentes para a frase "Planeje" */
+  font-size: 2.0em; /* Exemplo do tamanho, ajuste se necessário */
+  font-weight: bold;
+  margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo de "Planeje" */
+}
+.frase-vendas {
+  font-size: 0.9em; /* Define um tamanho menor para a frase "Vendas" (ajuste conforme desejado) */
+  color: #555; /* Define uma cor (ajuste conforme o design) */
+  font-weight: normal; /* Define a espessura da fonte */
+  margin-top: 0; /* Remove qualquer margem superior padrão */
+}
 /* Ajuste da seção de orçamento */
 #orcamento {
     padding: 2rem;
