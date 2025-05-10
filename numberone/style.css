@@ -113,14 +113,13 @@ nav a:hover {
     font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
 }
 
-/* Ajuste o conteúdo dentro do .hero-overlay se necessário */
-.hero-overlay h2, .hero-overlay p {
-    margin: 0.5em 0; /* Ajuste as margens verticais do texto */
+.hero-overlay h2 {
+    font-size: 1.8em; /* Diminuindo o tamanho da fonte */
+    margin-bottom: 0.5em; /* Reduzindo o espaço abaixo do título */
 }
-.hero {
-    /* Outras propriedades */
-    padding: 0.3rem 0; /* Experimente um valor menor para reduzir a altura */
-    /* Outras propriedades */
+.hero-overlay {
+    padding: 0.5rem 0; /* Diminuindo o espaçamento interno */
+    height: 80px; /* Definindo uma altura menor */
 }
 
 ..hero {
