@@ -179,7 +179,7 @@ nav a:hover {
 }
 .frase-vendas {
   font-size: 0.9em; /* Define um tamanho menor para a frase "Vendas" (ajuste conforme desejado) */
-  color: #555; /* Define uma cor (ajuste conforme o design) */
+  color: #fff; /* Define a cor branca para a frase "Vendas" */
   font-weight: normal; /* Define a espessura da fonte */
   margin-top: 0; /* Remove qualquer margem superior padrão */
 }
