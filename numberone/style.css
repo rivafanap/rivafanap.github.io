@@ -103,26 +103,41 @@ nav a:hover {
 /* Seção Hero */
 .hero {
     text-align: center; /* Centraliza melhor o texto */
-    padding: 0; /* Removendo padding do hero container */
-    background: none; /* Removendo background do hero container */
+    padding: 1rem 0; /* Removendo padding do hero container */
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo da etiqueta */
     border-radius: 0; /* Removendo border-radius do hero container */
-    margin: 10px auto;
+   margin: 0; /* Remove margens para grudar nas bordas da página */
     width: 100%; /* Largura da etiqueta */
-    max-width: 900px; /* Largura máxima da etiqueta */
-    box-shadow: none; /* Removendo box-shadow do hero container */
-    color: white; /* Cor do texto (será aplicado no overlay) */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
     font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
 }
 
+/* Ajuste o conteúdo dentro do .hero-overlay se necessário */
+.hero-overlay h2, .hero-overlay p {
+    margin: 0.5em 0; /* Ajuste as margens verticais do texto */
+}
+..hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Estica os filhos horizontalmente */
+    margin: 20px auto; /* Ou qualquer outra margem */
+    max-width: 900px; /* Largura máxima do container hero */
+    /* Outros estilos do hero container */
+}
+
 .hero-overlay {
-    padding: 2rem; /* Reduzindo um pouco o padding interno */
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Laranja com leve transparência */
-    border-radius: 8px; /* Borda levemente arredondada */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+    padding: 1rem 0; /* Reduz o padding vertical */
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
     color: white;
     text-align: center;
 }
-
+/* Ajuste o conteúdo dentro do .hero-overlay se necessário */
+.hero-overlay h2, .hero-overlay p {
+    margin: 0.5em 0; /* Ajuste as margens verticais do texto */
+}
 .hero-overlay h2 {
     font-size: 2.2em; /* Tamanho do título ajustado */
     font-weight: 600; /* Peso da fonte do título */
