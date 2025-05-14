@@ -1,76 +1,112 @@
 <?php
 // Dados do currículo
-$nome = "Vania Santos";
-$email = "vania.santos@example.com";
-$telefone = "(62) 99999-9999";
-$endereco = "Rua Exemplo, 123 - Aparecida de Goiânia, GO";
-$formacao = "Graduação em Análise e Desenvolvimento de Sistemas - Faculdade XYZ";
-$experiencia = "Desenvolvedora Júnior na DevCorp (2023-presente)";
-$habilidades = "PHP, HTML, CSS, JavaScript, MySQL, Trabalho em equipe";
+$nome = "Vânia Santos";
+$titulo = "Currículo de $nome";
+$corFundo = rand() % 2 == 0 ? 'lightblue' : 'lightgreen';
+$corTexto = rand() % 2 == 0 ? 'black' : 'darkblue';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Currículo de <?php echo $nome; ?></title>
+    <title><?php echo $titulo; ?></title>
     <style>
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: <?php echo $corFundo; ?>;
+            color: <?php echo $corTexto; ?>;
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        h1, h2 {
-            text-align: center;
-            color: #007bff;
+        h2 {
+            border-bottom: 3px solid <?php echo rand() % 2 == 0 ? 'blue' : 'green'; ?>;
+            padding-bottom: 5px;
         }
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        form {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
         }
         input, select, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             margin: 5px 0;
-            border: 1px solid #ccc;
             border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <h1>Currículo de <?php echo $nome; ?></h1>
+<div class="container">
+    <h1><?php echo $titulo; ?></h1>
 
-    <div class="container">
-        <h2>Informações Pessoais</h2>
-        <label>Nome Completo:</label>
-        <input type="text" name="nome" value="<?php echo $nome; ?>">
+    <h2>Informações Pessoais</h2>
+    <ul>
+        <li><strong>Nome:</strong> <?php echo $nome; ?></li>
+        <li><strong>Email:</strong> vaniasantos@gmail.com</li>
+        <li><strong>Telefone:</strong> 62 993986745</li>
+        <li><strong>Endereço:</strong> Rua Nossa Sra Perpetuo Socorro, Qd 01 Lt 08, Jardim Alto Paraíso, Aparecida de Goiânia-GO</li>
+    </ul>
 
-        <label>E-mail:</label>
-        <input type="email" name="email" value="<?php echo $email; ?>">
+    <h2>Formação</h2>
+    <ul>
+        <li>Graduação em Análise e Desenvolvimento de Sistemas</li>
+    </ul>
 
-        <label>Telefone:</label>
-        <input type="text" name="telefone" value="<?php echo $telefone; ?>">
+    <h2>Experiência</h2>
+    <ul>
+        <li>Desenvolvimento Web</li>
+    </ul>
 
-        <label>Endereço:</label>
-        <input type="text" name="endereco" value="<?php echo $endereco; ?>">
+    <h2>Habilidades</h2>
+    <ul>
+        <li>HTML, CSS, JavaScript, MySQL</li>
+    </ul>
 
-        <h2>Formação Acadêmica</h2>
-        <label>Curso / Instituição:</label>
-        <input type="text" name="formacao" value="<?php echo $formacao; ?>">
+    <h2>Deixe um comentário</h2>
+    <form action="https://formtester.goodbytes.be/post.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-        <h2>Experiência Profissional</h2>
-        <label>Último cargo / empresa:</label>
-        <input type="text" name="experiencia" value="<?php echo $experiencia; ?>">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
 
-        <h2>Habilidades</h2>
-        <label>Principais habilidades:</label>
-        <textarea name="habilidades"><?php echo $habilidades; ?></textarea>
-    </div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="tipo">Tipo de avaliação:</label>
+        <select id="tipo" name="tipo">
+            <option value="observacao">Observação</option>
+            <option value="elogio">Elogio</option>
+            <option value="critica">Crítica</option>
+        </select>
+
+        <label for="mensagem">Comentário:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+        <label>Deseja receber resposta?</label><br>
+        <input type="radio" id="sim" name="resposta" value="sim">
+        <label for="sim">Sim</label>
+        <input type="radio" id="nao" name="resposta" value="nao">
+        <label for="nao">Não</label><br>
+
+        <input type="submit" value="Enviar Comentário">
+    </form>
+</div>
 
 </body>
 </html>
