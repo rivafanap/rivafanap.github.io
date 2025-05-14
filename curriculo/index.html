@@ -1,6 +1,6 @@
 <?php
 // Dados do currículo
-$nome = "Vânia Santos";
+$nome = "Rivania Souza";
 $titulo = "Currículo de $nome";
 $corFundo = rand() % 2 == 0 ? 'lightblue' : 'lightgreen';
 $corTexto = rand() % 2 == 0 ? 'black' : 'darkblue';
@@ -17,18 +17,27 @@ $corTexto = rand() % 2 == 0 ? 'black' : 'darkblue';
             color: <?php echo $corTexto; ?>;
             font-family: Arial, sans-serif;
             margin: 20px;
+            }
+        h1.titulo-principal {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: <?php echo rand() % 2 == 0 ? 'darkblue' : 'darkgreen'; ?>;
+            margin-bottom: 20px;
         }
         h2 {
             border-bottom: 3px solid <?php echo rand() % 2 == 0 ? 'blue' : 'green'; ?>;
             padding-bottom: 5px;
+            text-align: left;
         }
-        .container {
+         .container {
             max-width: 700px;
             margin: auto;
             padding: 20px;
             background-color: #ffffff;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: left;
         }
         form {
             background-color: #f0f0f0;
@@ -41,25 +50,27 @@ $corTexto = rand() % 2 == 0 ? 'black' : 'darkblue';
             margin: 5px 0;
             border-radius: 5px;
             border: 1px solid #ccc;
-        }
+      }
         input[type="submit"] {
             background-color: green;
             color: white;
             cursor: pointer;
+        
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <h1>CURRÍCULO</h1> 
     <h1><?php echo $titulo; ?></h1>
 
     <h2>Informações Pessoais</h2>
     <ul>
         <li><strong>Nome:</strong> <?php echo $nome; ?></li>
-        <li><strong>Email:</strong> vaniasantos@gmail.com</li>
-        <li><strong>Telefone:</strong> 62 993986745</li>
-        <li><strong>Endereço:</strong> Rua Nossa Sra Perpetuo Socorro, Qd 01 Lt 08, Jardim Alto Paraíso, Aparecida de Goiânia-GO</li>
+        <li><strong>Email:</strong> cursoadafanap@gmail.com</li>
+        <li><strong>Telefone:</strong> (62) 99259-7106</li>
+        <li><strong>Endereço:</strong> Rua Nossa Sra Perpetuo Socorro, Quadra 01 Lote 08, Jardim Alto Paraíso, Aparecida de Goiânia-GO</li>
     </ul>
 
     <h2>Formação</h2>
