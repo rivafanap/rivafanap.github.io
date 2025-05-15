@@ -27,19 +27,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
 }
 
 .logo-aviao {
     height: auto;
-    max-height: 8em;
+    max-height: 15em;
     width: auto;
     align-self: center;
 }
 
 @media (max-width: 700px) {
     .logo-aviao {
-        max-height: 2.5em;
+        max-height: 3.5em;
     }
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 .number-one {
-    font-size: 3.0em;
+    font-size: 5.0em;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -60,7 +60,7 @@ header {
 }
 
 .viagens {
-    font-size: 2em;
+    font-size: 3em;
     font-style: italic;
     font-weight: normal;
     margin-top: 0;
@@ -128,8 +128,8 @@ nav a:hover {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     padding: 30px;
-    width: 60%;
-    max-width: 400px;
+    width: 70%;
+    max-width: 500px;
     position: absolute;
     right: 50px;
     top: 150px;
@@ -138,9 +138,9 @@ nav a:hover {
 }
 
 #orcamento h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #002f6c;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
