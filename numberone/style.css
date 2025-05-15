@@ -192,6 +192,50 @@ nav a:hover {
 #orcamento button[type="submit"]:hover {
     background-color: #ff8033;
 }
+/* Ajuste da seção de contato */
+#contato {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Lista de contatos */
+.contato-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: none;
+    padding: 5px 0;
+}
+
+.contato-lista i {
+    font-size: 1.5rem;
+    color: #ff6600;
+    text-align: center;
+}
+
+.contato-lista a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contato-lista a:hover {
+    text-decoration: underline;
+}
 
 /* Seção Nossos Serviços */
 #servicos {
