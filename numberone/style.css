@@ -172,10 +172,10 @@ nav a:hover {
     font-size: 1rem;
 }
 #orcamento {
-    width: 60%; /* Reduz o tamanho do formulário */
+    width: 70%; /* Reduz o tamanho do formulário */
     max-width: 500px; /* Ajusta o limite de largura */
     position: absolute;
-    right: 70px; /* Move para a direita */
+    right: 55px; /* Move para a direita */
     top: 150px; /* Ajusta a posição vertical */
 }
 
@@ -271,7 +271,7 @@ nav a:hover {
 /* Seção Nossos Serviços */
 #servicos {
     text-align: center;
-    padding: 20px 20px; /* Altura da faixa branca diminuída */
+    padding: 15px 15px; /* Altura da faixa branca diminuída */
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 40px;
