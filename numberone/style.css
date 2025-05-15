@@ -132,9 +132,8 @@ nav a:hover {
 #orcamento {
     width: 70%;
     max-width: 550px;
-    position: absolute;
-    right: 60px; /* Move o formulário para a direita */
-    top: 150px;
+    position: relative; /* Mantém no fluxo da página */
+    margin: 100px auto; /* Move o formulário para baixo */
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     padding: 30px;
@@ -192,7 +191,9 @@ nav a:hover {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
-
+#servicos {
+    margin-top: 50px; /* Ajusta a posição da seção abaixo do formulário */
+}
 #servicos h2 {
     font-size: 2.5rem;
     color: #002f6c;
