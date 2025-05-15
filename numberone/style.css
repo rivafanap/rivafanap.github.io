@@ -139,7 +139,17 @@ nav a:hover {
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+/* Mantendo "Nossos Serviços" abaixo do formulário */
+#servicos {
+    position: relative; /* Mantém no fluxo normal */
+    margin-top: 50px; /* Garante espaçamento adequado abaixo do formulário */
+}
 
+/* Mantendo "Entre em Contato" abaixo de "Nossos Serviços" */
+#contato {
+    position: relative;
+    margin-top: 50px; /* Espaço suficiente para evitar sobreposição */
+}
 /* Título do formulário */
 #orcamento h2 {
     font-size: 2.2rem;
