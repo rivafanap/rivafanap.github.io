@@ -208,6 +208,12 @@ nav a:hover {
     transition: background-color 0.3s ease;
     width: 100%; /* Botão ocupar toda a largura */
 }
+#orcamento {
+    width: 90%; /* Mantém o tamanho atual */
+    max-width: 700px; /* Mantém a largura */
+    position: relative;
+    margin: 40px auto 40px 50px; /* Adiciona margem à esquerda para deslocar */
+}
 
 #orcamento button[type="submit"]:hover {
     background-color: #ff8033;
