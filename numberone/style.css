@@ -171,14 +171,6 @@ nav a:hover {
     box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
     font-size: 1rem;
 }
-#orcamento {
-    width: 60%; /* Reduz o tamanho do formulário */
-    max-width: 400px; /* Ajusta o limite de largura */
-    position: absolute;
-    right: 50px; /* Move para a direita */
-    top: 150px; /* Ajusta a posição vertical */
-}
-
 #orcamento select {
     appearance: none; /* Remove a aparência padrão do select */
     background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center; /* Adiciona um ícone de seta */
