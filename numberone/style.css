@@ -191,7 +191,7 @@ nav a:hover {
 }
 
 /* Layout em duas colunas */
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .form-row {
         display: flex;
         gap: 20px;
