@@ -1,3 +1,5 @@
+
+
 /* Reset básico */
 * {
     margin: 0;
@@ -19,40 +21,50 @@ header {
     color: #fff;
     padding: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente o container */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Ajuste do container de logo e título */
 .logo-titulo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    justify-content: center; /* Centraliza perfeitamente */
+    gap: 5px; /* Aumenta a distância entre logo e texto */
+}
+.header-title {
+    margin-left: -0.8px; /* Aproxima o texto da logo */
 }
 
+
+/* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 18em;
+    max-height: 8em; /* Logo um pouco menor */
     width: auto;
     align-self: center;
 }
 
-@media (max-width: 800px) {
+/* Responsividade */
+@media (max-width: 700px) {
     .logo-aviao {
-        max-height: 3.2em;
+        max-height: 2.5em; /* Ajuste para telas menores */
     }
 }
 
 .header-title {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
+    align-items: flex-end; /* Alinha "Viagens" à direita */
     justify-content: center;
-    margin-left: -0.8px;
+}
+.viagens {
+    padding-right: 1.5px; /* Ajuste o valor para uma melhor posição */
+
 }
 
 .number-one {
-    font-size: 7.0em;
+    font-size: 3.0em;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -60,14 +72,13 @@ header {
 }
 
 .viagens {
-    font-size: 3em;
+    font-size: 2em;
     font-style: italic;
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 0;
     letter-spacing: 0.2em;
     padding-left: 0.1em;
-    padding-right: 1.5px;
 }
 
 /* Navegação */
@@ -93,117 +104,171 @@ nav a:hover {
 
 /* Seção Hero */
 .hero {
-    text-align: center;
-    padding: 0.6rem 0;
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
-    border-radius: 0;
-    margin: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
+    text-align: center; /* Centraliza melhor o texto */
+    padding: 0.6rem 0; /* Removendo padding do hero container */
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo da etiqueta */
+    border-radius: 0; /* Removendo border-radius do hero container */
+   margin: 0; /* Remove margens para grudar nas bordas da página */
+    width: 100%; /* Largura da etiqueta */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
 }
 
 .hero-overlay {
-    text-align: center;
-    padding: 1rem 0;
+    text-align: center; /* Centraliza o conteúdo dentro da faixa laranja */
+    padding: 1rem 0; /* Ajuste o espaçamento vertical conforme necessário */
 }
 
 .hero-overlay h2 {
-    font-size: 2.0em;
+    font-size: 2.0em; /* Ajuste o tamanho conforme desejado */
     font-weight: bold;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adiciona um espaço entre as frases */
 }
 
 .hero-overlay p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Define um tamanho menor para a segunda frase (ajuste conforme desejado) */
     color: #fff;
     font-weight: normal;
-    margin-top: 0;
-    line-height: 1.4;
+    margin-top: 0; /* Remove qualquer margem superior padrão */
+    line-height: 1.4; /* Melhora a leitura da segunda frase */
 }
 
-/* Seção de Orçamento */
+/* Ajuste da seção de orçamento */
 #orcamento {
-    position: absolute; /* Fixar no layout */
-    right: 50px; /* Move o formulário para a direita */
-    top: 150px; /* Ajusta a altura */
-    width: 70%;
-    max-width: 500px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 600px;
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#orcamento h2 {
+/* Ajuste da seção de contato */
+#contato {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Lista de contatos */
+.contato-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: none;
+    padding: 5px 0;
+}
+
+.contato-lista i {
     font-size: 1.5rem;
-    color: #002f6c;
-    margin-bottom: 30px;
+    color: #ff6600;
     text-align: center;
 }
 
-#orcamento label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.contato-lista a {
     color: #333;
+    text-decoration: none;
 }
 
-#orcamento input[type="text"],
-#orcamento input[type="email"],
-#orcamento select,
-#orcamento textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+.contato-lista a:hover {
+    text-decoration: underline;
 }
 
-#orcamento select {
-    appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
-    background-size: 16px;
-}
-
-#orcamento textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-#orcamento button[type="submit"] {
-    background-color: #ff6600;
-    color: #fff;
-    padding: 14px 24px;
-    border: none;
+/* Seção Nossos Serviços */
+#servicos {
+    text-align: center;
+    padding: 20px 20px; /* Altura da faixa branca diminuída */
+    background-color: #f9f9f9;
     border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    margin-bottom: 40px;
 }
 
-#orcamento button[type="submit"]:hover {
-    background-color: #ff8033;
+#servicos h2 {
+    font-size: 2.5rem;
+    color: #002f6c;
+    margin-bottom: 30px;
 }
 
-/* Layout em duas colunas */
-@media (min-width: 700px) {
-    .form-row {
-        display: flex;
-        gap: 20px;
+/* Grid de serviços */
+.servicos-grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+   gap: 15px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.servico-item {
+   background-color: #ff6600; /* Fundo laranja */
+   border: 1px solid #ddd; /* Mantenho a borda para leve separação */
+   border-radius: 10px; /* Arredondamento dos cantos */
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   color: #fff; /* Texto branco para melhor contraste com o laranja */
+}
+.servico-item:hover {
+   transform: scale(1.05); /* Leve efeito ao passar o mouse */
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servico-item i {
+   font-size: 2.5rem;
+   color: #fff; /* Ícones brancos */
+   margin-bottom: 15px;
+}
+
+.servico-item h3 {
+   font-size: 1.2rem;
+   color: #fff; /* Títulos brancos */
+   margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
-    .form-row > div {
-        flex: 1;
+    .servico-item {
+        padding: 15px;
     }
 
-    .form-row #tipo_viagem {
-        width: 100%;
+    .servico-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .servico-item h3 {
+        font-size: 1.1rem;
     }
 }
 
-
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
