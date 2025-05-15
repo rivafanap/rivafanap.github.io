@@ -151,6 +151,14 @@ nav a:hover {
     right: 60px; /* Move para a direita */
     top: 150px; /* Ajusta a posição vertical */
 }
+    #orcamento {
+    width: 90%; /* Mantém o tamanho atual */
+    max-width: 700px; /* Mantém a largura */
+    position: relative;
+    margin: 40px auto; /* Centraliza e garante espaçamento */
+    transform: translateX(50px); /* Move um pouco para a direita */
+}
+
 
 #orcamento h2 {
     font-size: 2.2rem; /* Ajustei o tamanho do título */
