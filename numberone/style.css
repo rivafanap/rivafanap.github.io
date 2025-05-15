@@ -32,14 +32,14 @@ header {
 
 .logo-aviao {
     height: auto;
-    max-height: 20em;
+    max-height: 18em;
     width: auto;
     align-self: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .logo-aviao {
-        max-height: 3.5em;
+        max-height: 3.2em;
     }
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 .number-one {
-    font-size: 8.0em;
+    font-size: 7.0em;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -171,7 +171,7 @@ nav a:hover {
 
 #orcamento textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 80px;
 }
 
 #orcamento button[type="submit"] {
