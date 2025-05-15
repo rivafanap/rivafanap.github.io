@@ -222,6 +222,12 @@ nav a:hover {
     position: relative; /* Isso evita que ele saia do fluxo normal da página */
     margin-bottom: 40px; /* Garante espaço abaixo do formulário */
 }
+#orcamento {
+    position: absolute;
+    right: 10%; /* Ajuste conforme necessário */
+    width: 90%;
+    max-width: 700px;
+}
 
 /* Layout em duas colunas para telas maiores */
 @media (min-width: 600px) {
