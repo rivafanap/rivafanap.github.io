@@ -175,7 +175,7 @@ nav a:hover {
     width: 60%; /* Reduz o tamanho do formulário */
     max-width: 400px; /* Ajusta o limite de largura */
     position: absolute;
-    right: 50px; /* Move para a direita */
+    right: 80px; /* Move para a direita */
     top: 150px; /* Ajusta a posição vertical */
 }
 
