@@ -204,6 +204,10 @@ nav a:hover {
 #orcamento button[type="submit"]:hover {
     background-color: #ff8033;
 }
+#orcamento {
+    position: relative; /* Isso evita que ele saia do fluxo normal da página */
+    margin-bottom: 50px; /* Garante espaço abaixo do formulário */
+}
 
 /* Layout em duas colunas para telas maiores */
 @media (min-width: 600px) {
@@ -274,6 +278,9 @@ nav a:hover {
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 40px;
+}
+#servicos {
+    margin-top: 250px; /* Ajuste conforme necessário */
 }
 
 #servicos h2 {
