@@ -146,9 +146,9 @@ nav a:hover {
 }
 #orcamento {
     width: 70%; /* Reduz o tamanho do formulário */
-    max-width: 600px; /* Ajusta o limite de largura */
+    max-width: 550px; /* Ajusta o limite de largura */
     position: absolute;
-    right: 50px; /* Move para a direita */
+    right: 60px; /* Move para a direita */
     top: 150px; /* Ajusta a posição vertical */
 }
 
@@ -206,7 +206,7 @@ nav a:hover {
 }
 #orcamento {
     position: relative; /* Isso evita que ele saia do fluxo normal da página */
-    margin-bottom: 50px; /* Garante espaço abaixo do formulário */
+    margin-bottom: 40px; /* Garante espaço abaixo do formulário */
 }
 
 /* Layout em duas colunas para telas maiores */
