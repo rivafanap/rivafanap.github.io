@@ -144,6 +144,13 @@ nav a:hover {
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra para profundidade */
 }
+#orcamento {
+    width: 70%; /* Reduz o tamanho do formulário */
+    max-width: 500px; /* Ajusta o limite de largura */
+    position: absolute;
+    right: 50px; /* Move para a direita */
+    top: 150px; /* Ajusta a posição vertical */
+}
 
 #orcamento h2 {
     font-size: 2.2rem; /* Ajustei o tamanho do título */
