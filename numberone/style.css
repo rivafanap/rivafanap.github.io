@@ -1,5 +1,3 @@
-CSS ATUAL EM 15/05/ 17:15HS
-
 /* Reset básico */  * {
     margin: 0;
     padding: 0;
@@ -18,7 +16,7 @@ body {
 header {
     background: rgba(0, 47, 108, 0.9);
     color: #fff;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente o container */
     align-items: center; /* Centraliza verticalmente */
@@ -120,15 +118,12 @@ nav a:hover {
 }
 
 .hero-overlay h2 {
-    font-size: 2.5em; /* Ajuste o tamanho conforme desejado */
+    font-size: 2.0em; /* Ajuste o tamanho conforme desejado */
     font-weight: bold;
     color: #fff;
     margin-bottom: 10px; /* Adiciona um espaço entre as frases */
 }
-.frase-vendas {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
+
 .hero-overlay p {
     font-size: 1.2em; /* Define um tamanho menor para a segunda frase (ajuste conforme desejado) */
     color: #fff;
@@ -248,26 +243,7 @@ nav a:hover {
     margin: 0 auto;
     max-width: 600px;
 }
-/* Entre em Contato */
-.contato-lista {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
 
-.contato-lista li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.contato-lista a {
-    color: #00509e;
-    text-decoration: none;
-}
-
-.contato-lista a:hover {
-    text-decoration: underline;
-}
 .contato-lista li {
     display: flex;
     align-items: center;
@@ -310,7 +286,7 @@ nav a:hover {
 .servicos-grid-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-   gap: 20px;
+   gap: 15px;
    max-width: 1200px;
    margin: 0 auto;
 }
@@ -319,26 +295,13 @@ nav a:hover {
    background-color: #ff6600; /* Fundo laranja */
    border: 1px solid #ddd; /* Mantenho a borda para leve separação */
    border-radius: 10px; /* Arredondamento dos cantos */
-   padding: 20px;
+   padding: 25px;
    display: flex;
    flex-direction: column;
    align-items: center;
    text-align: center;
    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
    color: #fff; /* Texto branco para melhor contraste com o laranja */
-}
-
-/* Seções Gerais */
-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: #003366;
 }
 .servico-item:hover {
    transform: scale(1.05); /* Leve efeito ao passar o mouse */
@@ -385,23 +348,8 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
 }
-/* Responsividade */
-@media (max-width: 768px) {
-    .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
-    }
 
-    .servico-item {
-        padding: 15px;
-    }
 
-    .servico-item i {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
 
-    .servico-item h3 {
-        font-size: 1.1rem;
-    }
-}
+
+
