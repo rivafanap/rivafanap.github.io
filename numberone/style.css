@@ -140,7 +140,7 @@ nav a:hover {
     border-radius: 12px; /* Cantos mais arredondados para um visual moderno */
     margin: 40px auto;
     width: 90%;
-    max-width: 700px; /* Aumentei a largura máxima para melhor aproveitamento do espaço */
+    max-width: 600px; /* Aumentei a largura máxima para melhor aproveitamento do espaço */
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra para profundidade */
 }
@@ -173,9 +173,9 @@ nav a:hover {
 }
 #orcamento {
     width: 60%; /* Reduz o tamanho do formulário */
-    max-width: 400px; /* Ajusta o limite de largura */
+    max-width: 500px; /* Ajusta o limite de largura */
     position: absolute;
-    right: 60px; /* Move para a direita */
+    right: 70px; /* Move para a direita */
     top: 150px; /* Ajusta a posição vertical */
 }
 
