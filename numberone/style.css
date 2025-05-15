@@ -1,139 +1,4 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background: url('https://rivafanap.github.io/numberone/Design.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 100vh;
-}
-
-/* Cabeçalho */
-header {
-    background: rgba(0, 47, 108, 0.9);
-    color: #fff;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-titulo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-.header-title {
-    margin-left: -0.8px;
-}
-
-
-/* Ajuste da logo */
-.logo-aviao {
-    height: auto;
-    max-height: 8em;
-    width: auto;
-    align-self: center;
-}
-
-@media (max-width: 700px) {
-    .logo-aviao {
-        max-height: 2.5em;
-    }
-}
-
-.header-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-}
-.viagens {
-    padding-right: 1.5px;
-
-}
-
-.number-one {
-    font-size: 3.0em;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 0;
-}
-
-.viagens {
-    font-size: 2em;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 0.2em;
-    padding-left: 0.1em;
-}
-
-/* Navegação */
-nav {
-    background: rgba(255, 102, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-}
-
-nav a {
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 15px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #fff;
-    color: #ff6600;
-}
-
-/* Seção Hero */
-.hero {
-    text-align: center;
-    padding: 0.6rem 0;
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
-    border-radius: 0;
-   margin: 0;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-}
-
-.hero-overlay {
-    text-align: center;
-    padding: 1rem 0;
-}
-
-.hero-overlay h2 {
-    font-size: 2.0em;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.hero-overlay p {
-    font-size: 1.2em;
-    color: #fff;
-    font-weight: normal;
-    margin-top: 0;
-    line-height: 1.4;
-}
+/* ... (seu CSS anterior) ... */
 
 /* Container principal para organizar o conteúdo */
 .main-container {
@@ -154,70 +19,11 @@ nav a:hover {
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 20px;
+    /* width: 100%; Remova esta linha para que a largura seja controlada pelo container */
     margin-top: 20px; /* Adiciona espaço acima da seção */
 }
 
-#servicos h2 {
-    font-size: 2.5rem;
-    color: #002f6c;
-    margin-bottom: 30px;
-}
-
-.servicos-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.servico-item {
-    background-color: #ff6600;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    color: #fff;
-}
-.servico-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.servico-item i {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.servico-item h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .servico-item {
-        padding: 15px;
-    }
-
-    .servico-item i {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .servico-item h3 {
-        font-size: 1.1rem;
-    }
-}
+/* ... (seu CSS da seção #servicos) ... */
 
 /* Ajuste da seção de orçamento */
 #orcamento {
@@ -235,59 +41,7 @@ nav a:hover {
     right: 20px; /* Coloca à direita com uma margem */
 }
 
-#orcamento h2 {
-    font-size: 2.2rem;
-    color: #002f6c;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-#orcamento label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-}
-
-#orcamento input[type="text"],
-#orcamento input[type="email"],
-#orcamento select,
-#orcamento textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 1rem;
-}
-
-#orcamento select {
-    appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
-    background-size: 16px;
-}
-
-#orcamento textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-#orcamento button[type="submit"] {
-    background-color: #ff6600;
-    color: #fff;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-#orcamento button[type="submit"]:hover {
-    background-color: #ff8033;
-}
+/* ... (seu CSS restante) ... */
 
 /* Ajuste da seção de contato */
 #contato {
@@ -296,53 +50,10 @@ nav a:hover {
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 100%; /* Garante que ocupe a largura total abaixo de "Nossos Serviços" */
 }
 
-.contato-lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.contato-lista li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: none;
-    padding: 5px 0;
-}
-
-.contato-lista i {
-    font-size: 1.5rem;
-    color: #ff6600;
-    text-align: center;
-}
-
-.contato-lista a {
-    color: #333;
-    text-decoration: none;
-}
-
-.contato-lista a:hover {
-    text-decoration: underline;
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    margin-top: auto;
-}
+/* ... (seu CSS da seção #contato) ... */
 
 /* Media Query para telas maiores */
 @media (min-width: 900px) {
@@ -361,7 +72,7 @@ footer {
 
     #servicos {
         width: 100%; /* Garante que a seção de serviços ocupe a largura total abaixo */
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 20px; /* Mantém o espaçamento */
+        margin-bottom: 20px; /* Mantém o espaçamento */
     }
 }
