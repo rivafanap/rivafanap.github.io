@@ -125,8 +125,9 @@ nav a:hover {
 
 /* Seção de Orçamento */
 #orcamento {
-    position: relative; /* Antes estava absolute, agora ele segue o fluxo da página */
-    margin-top: 20px; /* Adiciona espaçamento para separar do texto */
+    position: absolute; /* Fixar no layout */
+    right: 50px; /* Move o formulário para a direita */
+    top: 150px; /* Ajusta a altura */
     width: 70%;
     max-width: 500px;
     padding: 30px;
