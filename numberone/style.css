@@ -11,10 +11,6 @@ body {
     background-size: cover;
     color: #333;
     scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -23,43 +19,45 @@ header {
     color: #fff;
     padding: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente o container */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Ajuste do container de logo e título */
 .logo-titulo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    justify-content: center; /* Centraliza perfeitamente */
+    gap: 5px; /* Aumenta a distância entre logo e texto */
 }
 .header-title {
-    margin-left: -0.8px;
+    margin-left: -0.8px; /* Aproxima o texto da logo */
 }
 
 
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
-    max-height: 8em;
+    max-height: 8em; /* Logo um pouco menor */
     width: auto;
     align-self: center;
 }
 
+/* Responsividade */
 @media (max-width: 700px) {
     .logo-aviao {
-        max-height: 2.5em;
+        max-height: 2.5em; /* Ajuste para telas menores */
     }
 }
 
 .header-title {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
+    align-items: flex-end; /* Alinha "Viagens" à direita */
     justify-content: center;
 }
 .viagens {
-    padding-right: 1.5px;
+    padding-right: 1.5px; /* Ajuste o valor para uma melhor posição */
 
 }
 
@@ -104,148 +102,60 @@ nav a:hover {
 
 /* Seção Hero */
 .hero {
-    text-align: center;
-    padding: 0.6rem 0;
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
-    border-radius: 0;
-   margin: 0;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
+    text-align: center; /* Centraliza melhor o texto */
+    padding: 0.6rem 0; /* Removendo padding do hero container */
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo da etiqueta */
+    border-radius: 0; /* Removendo border-radius do hero container */
+   margin: 0; /* Remove margens para grudar nas bordas da página */
+    width: 100%; /* Largura da etiqueta */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
 }
 
 .hero-overlay {
-    text-align: center;
-    padding: 1rem 0;
+    text-align: center; /* Centraliza o conteúdo dentro da faixa laranja */
+    padding: 1rem 0; /* Ajuste o espaçamento vertical conforme necessário */
 }
 
 .hero-overlay h2 {
-    font-size: 2.0em;
+    font-size: 2.0em; /* Ajuste o tamanho conforme desejado */
     font-weight: bold;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adiciona um espaço entre as frases */
 }
 
 .hero-overlay p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Define um tamanho menor para a segunda frase (ajuste conforme desejado) */
     color: #fff;
     font-weight: normal;
-    margin-top: 0;
-    line-height: 1.4;
-}
-
-/* Container principal para organizar o conteúdo */
-.main-container {
-    display: flex;
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
-    align-items: flex-start; /* Alinha os itens ao topo */
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-    position: relative;
-    flex-wrap: wrap; /* Permite que os itens quebrem em telas menores */
-}
-
-/* Seção Nossos Serviços */
-#servicos {
-    text-align: center;
-    padding: 30px 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    width: 100%; /* Ocupa a largura total abaixo do formulário */
-}
-
-#servicos h2 {
-    font-size: 2.5rem;
-    color: #002f6c;
-    margin-bottom: 30px;
-}
-
-.servicos-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.servico-item {
-    background-color: #ff6600;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    color: #fff;
-}
-.servico-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.servico-item i {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.servico-item h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .servico-item {
-        padding: 15px;
-    }
-
-    .servico-item i {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .servico-item h3 {
-        font-size: 1.1rem;
-    }
+    margin-top: 0; /* Remove qualquer margem superior padrão */
+    line-height: 1.4; /* Melhora a leitura da segunda frase */
 }
 
 /* Ajuste da seção de orçamento */
 #orcamento {
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 40%; /* Ajuste conforme necessário */
-    max-width: 500px;
+    padding: 30px; /* Aumentei um pouco o padding interno para mais respiro */
+    background: rgba(255, 255, 255, 0.95); /* Levemente mais opaco para destacar */
+    border-radius: 12px; /* Cantos mais arredondados para um visual moderno */
+    margin: 40px auto;
+    width: 90%;
+    max-width: 600px; /* Aumentei a largura máxima para melhor aproveitamento do espaço */
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 100px; /* Ajuste a distância do topo */
-    right: 20px; /* Coloca à direita com uma margem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra para profundidade */
 }
 
 #orcamento h2 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* Ajustei o tamanho do título */
     color: #002f6c;
-    margin-bottom: 25px;
-    text-align: center;
+    margin-bottom: 25px; /* Mais espaço abaixo do título */
+    text-align: center; /* Centralizei o título da seção */
 }
 
 #orcamento label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    display: block; /* Coloca cada rótulo em sua própria linha */
+    margin-bottom: 8px; /* Espaço abaixo de cada rótulo */
+    font-weight: bold; /* Destaca os rótulos */
     color: #333;
 }
 
@@ -253,23 +163,30 @@ nav a:hover {
 #orcamento input[type="email"],
 #orcamento select,
 #orcamento textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+    padding: 12px; /* Aumentei o padding interno dos campos */
+    margin-bottom: 20px; /* Mais espaço abaixo de cada campo */
     border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
+    border-radius: 6px; /* Cantos arredondados nos campos */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
     font-size: 1rem;
+}
+#orcamento {
+    width: 70%; /* Reduz o tamanho do formulário */
+    max-width: 500px; /* Ajusta o limite de largura */
+    position: absolute;
+    right: 55px; /* Move para a direita */
+    top: 150px; /* Ajusta a posição vertical */
 }
 
 #orcamento select {
-    appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+    appearance: none; /* Remove a aparência padrão do select */
+    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center; /* Adiciona um ícone de seta */
     background-size: 16px;
 }
 
 #orcamento textarea {
-    resize: vertical;
+    resize: vertical; /* Permite redimensionamento vertical da textarea */
     min-height: 100px;
 }
 
@@ -282,11 +199,28 @@ nav a:hover {
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: 100%; /* Botão ocupar toda a largura */
 }
 
 #orcamento button[type="submit"]:hover {
     background-color: #ff8033;
+}
+
+/* Layout em duas colunas para telas maiores */
+@media (min-width: 600px) {
+    .form-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .form-row > div {
+        flex: 1; /* Distribui o espaço igualmente entre os itens da linha */
+    }
+
+    /* Ajuste para o campo de tipo de viagem ocupar a largura total */
+    .form-row #tipo_viagem {
+        width: 100%; /* Garante que o select ocupe a largura total do seu contêiner */
+    }
 }
 
 /* Ajuste da seção de contato */
@@ -296,9 +230,9 @@ nav a:hover {
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 20px;
-    width: 100%;
 }
 
+/* Lista de contatos */
 .contato-lista {
     display: flex;
     justify-content: center;
@@ -334,6 +268,79 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Seção Nossos Serviços */
+#servicos {
+    text-align: center;
+    padding: 15px 15px; /* Altura da faixa branca diminuída */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+#servicos h2 {
+    font-size: 2.5rem;
+    color: #002f6c;
+    margin-bottom: 30px;
+}
+
+/* Grid de serviços */
+.servicos-grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+   gap: 15px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.servico-item {
+   background-color: #ff6600; /* Fundo laranja */
+   border: 1px solid #ddd; /* Mantenho a borda para leve separação */
+   border-radius: 10px; /* Arredondamento dos cantos */
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   color: #fff; /* Texto branco para melhor contraste com o laranja */
+}
+.servico-item:hover {
+   transform: scale(1.05); /* Leve efeito ao passar o mouse */
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servico-item i {
+   font-size: 2.5rem;
+   color: #fff; /* Ícones brancos */
+   margin-bottom: 15px;
+}
+
+.servico-item h3 {
+   font-size: 1.2rem;
+   color: #fff; /* Títulos brancos */
+   margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .servico-item {
+        padding: 15px;
+    }
+
+    .servico-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .servico-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
 /* Rodapé */
 footer {
     background-color: #333;
@@ -341,29 +348,11 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
-    margin-top: auto;
 }
 
-/* Media Query para telas maiores (posiciona o formulário à direita) */
-@media (min-width: 900px) {
-    .main-container {
-        flex-direction: row; /* Coloca os itens em linha */
-        justify-content: flex-end; /* Alinha o formulário à direita */
-        align-items: flex-start; /* Alinha os itens ao topo */
-    }
 
-    #orcamento {
-        width: 40%; /* Ajuste a largura conforme necessário */
-        position: sticky; /* Mantém fixo ao rolar dentro do container */
-        top: 20px; /* Ajuste a distância do topo */
-        right: 20px; /* Ajuste a distância da direita */
-    }
 
-    #servicos {
-        width: 100%; /* Garante que a seção de serviços ocupe a largura total abaixo */
-        margin-bottom: 20px;
-    }
-}
+
 
 
 
