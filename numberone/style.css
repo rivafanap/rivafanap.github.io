@@ -12,26 +12,28 @@ body {
     color: #333;
     scroll-behavior: smooth;
 }
-body {
-    font-family: 'Montserrat', sans-serif;
-}
+
+/* Tipografia refinada */
 h1, h2, h3 {
     font-family: 'Lato', sans-serif;
+    color: #002f6c;
 }
 
+/* Botões mais sofisticados */
 .button {
     background: #ff6600;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
 .button:hover {
-    background: #e65c00; /* Um tom mais escuro no hover */
+    background: #e65c00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Cabeçalho */
@@ -48,7 +50,6 @@ header {
 .logo-titulo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 5px;
 }
 .header-title {
@@ -69,15 +70,26 @@ header {
         max-height: 2.5em;
     }
 }
+
 /* Ajuste das seções */
-#orcamento {
-    width: 80%;
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px;
+.container {
+    display: flex;
+    justify-content: flex-start; /* Alinha conteúdo à esquerda */
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.form-section {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto 50px 20px; /* Ajustado para alinhar à esquerda */
+    padding: 25px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinhamento do texto */
+    position: relative;
+    left: 0;
 }
 
 /* Melhor espaçamento entre seções */
@@ -88,63 +100,17 @@ header {
     margin-bottom: 40px;
 }
 
-/* Redução do tamanho dos itens */
-.servicos-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Itens mais compactos */
-    gap: 15px;
-    max-width: 1000px;
-    margin: 0 auto;
+/* Seção Hero refinada */
+.hero {
+    text-align: center;
+    padding: 1rem 0;
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.servico-item {
-    background-color: #ff6600;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+.hero-overlay h2, .hero-overlay p {
     color: #fff;
-}
-
-.servico-item:hover {
-    transform: scale(1.05);
-}
-
-/* Ajuste da seção de contato */
-#contato {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-.header-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-}
-.viagens {
-    padding-right: 1.5px;
-}
-
-.number-one {
-    font-size: 3.0em;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 0;
-}
-
-.viagens {
-    font-size: 2em;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 0.2em;
-    padding-left: 0.1em;
 }
 
 /* Navegação */
@@ -169,84 +135,39 @@ nav a:hover {
     color: #ff6600;
 }
 
-/* Seção Hero */
-.hero {
-    text-align: center;
-    padding: 0.6rem 0;
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-}
-
-.hero-overlay {
-    text-align: center;
-    padding: 1rem 0;
-}
-
-.hero-overlay h2 {
-    font-size: 2.0em;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.hero-overlay p {
-    font-size: 1.2em;
-    color: #fff;
-    font-weight: normal;
-    margin-top: 0;
-    line-height: 1.4;
-}
-
 /* Seção Nossos Serviços */
-#servicos {
-    text-align: center;
-    padding: 40px 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-#servicos h2 {
-    font-size: 2.5rem;
-    color: #002f6c;
-    margin-bottom: 30px;
-}
-
-/* Grid de serviços */
 .servicos-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-section {
-    margin-bottom: 50px;
-}
 
 .servico-item {
-    background-color: #ff6600;
-    border: 1px solid #ddd;
+    background: #ff6600;
     border-radius: 10px;
     padding: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
+    color: white;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    color: #fff;
 }
+
 .servico-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+/* Ajuste da seção de contato */
+#contato {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+/* Animação sutil para os títulos */
 h1, h2 {
     opacity: 0;
     transform: translateY(20px);
@@ -262,23 +183,6 @@ h1, h2 {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.servico-item i {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.servico-item h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-top: 10px;
-}
-
-.servico-item p {
-    font-size: 1rem;
-    color: #fff;
 }
 
 /* Responsividade */
@@ -301,14 +205,7 @@ h1, h2 {
     }
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
+/* Rodapé refinado */
 footer {
     background-color: #002f6c;
     color: white;
@@ -316,5 +213,3 @@ footer {
     text-align: center;
     font-size: 0.9em;
 }
-
-
