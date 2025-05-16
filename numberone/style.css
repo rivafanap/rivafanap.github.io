@@ -12,6 +12,27 @@ body {
     color: #333;
     scroll-behavior: smooth;
 }
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+.button {
+    background: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #e65c00; /* Um tom mais escuro no hover */
+}
 
 /* Cabeçalho */
 header {
@@ -201,6 +222,14 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+section {
+    margin-bottom: 50px;
+}
 
 .servico-item {
     background-color: #ff6600;
@@ -217,6 +246,22 @@ nav a:hover {
 .servico-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .servico-item i {
@@ -264,3 +309,12 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
 }
+footer {
+    background-color: #002f6c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
