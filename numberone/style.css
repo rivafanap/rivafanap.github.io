@@ -48,6 +48,55 @@ header {
         max-height: 2.5em;
     }
 }
+/* Ajuste das seções */
+#orcamento {
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Melhor espaçamento entre seções */
+#servicos {
+    padding: 40px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+/* Redução do tamanho dos itens */
+.servicos-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Itens mais compactos */
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.servico-item {
+    background-color: #ff6600;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    color: #fff;
+}
+
+.servico-item:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste da seção de contato */
+#contato {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
 
 .header-title {
     display: flex;
