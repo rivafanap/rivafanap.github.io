@@ -10,10 +10,12 @@
 </head>
 <body>
     <header>
-        <img class="logo-aviao" src="https://rivafanap.github.io/numberone/aviao.png" alt="Logo Avião">
-        <div class="header-title">
-            <h1 class="number-one">NUMBER ONE</h1>
-            <p class="viagens"><em>Viagens</em></p>
+        <div class="logo-titulo-container">
+            <img class="logo-aviao" src="https://rivafanap.github.io/numberone/aviao.png" alt="Logo Avião">
+            <div class="header-title">
+                <h1 class="number-one">NUMBER ONE</h1>
+                <p class="viagens"><em>Viagens</em></p>
+            </div>
         </div>
     </header>
 
@@ -56,15 +58,35 @@
         </form>
     </section>
 
-    <section id="servicos" data-aos="fade-up">
+    <section id="servicos" class="servicos-section" data-aos="fade-up">
         <h2>Nossos Serviços</h2>
-        <ul class="servicos-lista">
-            <li><i class="fas fa-plane-departure"></i> Passagens Aéreas Nacionais</li>
-            <li><i class="fas fa-plane-arrival"></i> Passagens Aéreas Internacionais</li>
-            <li><i class="fas fa-suitcase"></i> Pacotes de Viagens</li>
-            <li><i class="fas fa-bed"></i> Reserva de Hotel</li>
-            <li><i class="fas fa-passport"></i> Consultoria de Visto</li>
-        </ul>
+        <div class="servicos-grid-container">
+            <div class="servico-item">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Passagens Aéreas Nacionais</h3>
+                <p>Encontre as melhores tarifas para voos dentro do Brasil com conforto e segurança.</p>
+            </div>
+            <div class="servico-item">
+                <i class="fas fa-plane-arrival"></i>
+                <h3>Passagens Aéreas Internacionais</h3>
+                <p>Viaje para qualquer lugar do mundo com preços acessíveis e suporte especializado.</p>
+            </div>
+            <div class="servico-item">
+                <i class="fas fa-suitcase"></i>
+                <h3>Pacotes de Viagens</h3>
+                <p>Planeje sua viagem completa com hospedagem, transporte e passeios inclusos.</p>
+            </div>
+            <div class="servico-item">
+                <i class="fas fa-bed"></i>
+                <h3>Reserva de Hotel</h3>
+                <p>Escolha entre milhares de hotéis com preços exclusivos e condições especiais.</p>
+            </div>
+            <div class="servico-item">
+                <i class="fas fa-passport"></i>
+                <h3>Consultoria de Visto</h3>
+                <p>Obtenha suporte para emissão de vistos e documentação necessária para sua viagem.</p>
+            </div>
+        </div>
     </section>
 
     <section id="contato" data-aos="fade-up">
@@ -86,7 +108,5 @@
     <script>
         AOS.init();
     </script>
-
 </body>
 </html>
-
