@@ -34,7 +34,6 @@ header {
     margin-left: -0.8px; /* Aproxima o texto da logo */
 }
 
-
 /* Ajuste da logo */
 .logo-aviao {
     height: auto;
@@ -58,7 +57,6 @@ header {
 }
 .viagens {
     padding-right: 1.5px; /* Ajuste o valor para uma melhor posição */
-
 }
 
 .number-one {
@@ -106,7 +104,7 @@ nav a:hover {
     padding: 0.6rem 0; /* Removendo padding do hero container */
     background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo da etiqueta */
     border-radius: 0; /* Removendo border-radius do hero container */
-   margin: 0; /* Remove margens para grudar nas bordas da página */
+    margin: 0; /* Remove margens para grudar nas bordas da página */
     width: 100%; /* Largura da etiqueta */
     border-radius: 0; /* Remove bordas arredondadas */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
@@ -133,14 +131,18 @@ nav a:hover {
     line-height: 1.4; /* Melhora a leitura da segunda frase */
 }
 
-/* Ajuste da seção de orçamento */
+/* AJUSTES IMPORTANTES: Para a seção de orçamento */
 #orcamento {
     padding: 30px; /* Aumentei um pouco o padding interno para mais respiro */
     background: rgba(255, 255, 255, 0.95); /* Levemente mais opaco para destacar */
     border-radius: 12px; /* Cantos mais arredondados para um visual moderno */
-    margin: 40px auto;
-    width: 90%;
-    max-width: 600px; /* Aumentei a largura máxima para melhor aproveitamento do espaço */
+    /* Estas propriedades foram REMOVIDAS ou AJUSTADAS para o novo layout flexbox */
+    /* width: 70%; */ /* Removido */
+    /* max-width: 500px; */ /* Mantido, mas flexbox controlará primariamente */
+    /* position: absolute; */ /* Removido */
+    /* right: 55px; */ /* Removido */
+    /* top: 150px; */ /* Removido */
+    margin: 0; /* Garante que não haja margens conflitantes com o flexbox */
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra para profundidade */
 }
@@ -170,13 +172,6 @@ nav a:hover {
     border-radius: 6px; /* Cantos arredondados nos campos */
     box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
     font-size: 1rem;
-}
-#orcamento {
-    width: 70%; /* Reduz o tamanho do formulário */
-    max-width: 500px; /* Ajusta o limite de largura */
-    position: absolute;
-    right: 55px; /* Move para a direita */
-    top: 150px; /* Ajusta a posição vertical */
 }
 
 #orcamento select {
@@ -223,7 +218,128 @@ nav a:hover {
     }
 }
 
-/* Ajuste da seção de contato */
+/* NOVO: Wrapper para o conteúdo principal (formulário e serviços) */
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start; /* Alinha os itens ao topo do wrapper */
+    gap: 30px; /* Espaço entre o formulário e os serviços */
+    padding: 20px;
+    max-width: 1200px; /* Limita a largura do conteúdo principal */
+    margin: 40px auto; /* Centraliza o wrapper na página */
+}
+
+/* NOVO: Estilo para a seção de orçamento dentro do flexbox */
+#orcamento {
+    flex: 1 1 400px; /* flex-grow, flex-shrink, flex-basis. Define uma largura base de 400px. */
+    order: 1; /* Garante que o formulário venha primeiro na ordem flex */
+    /* Outras propriedades de #orcamento já foram definidas acima */
+}
+
+/* NOVO: Estilo para a seção Nossos Serviços dentro do flexbox */
+#servicos {
+    flex: 2 1 600px; /* Ocupa mais espaço e tem uma largura base maior */
+    order: 2; /* Garante que os serviços venham depois do formulário */
+    margin: 0; /* Garante que não haja margens conflitantes com o flexbox */
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco e ligeiramente opaco */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* AJUSTES: Responsividade para dispositivos menores (coluna única) */
+@media (max-width: 900px) {
+    .main-content-wrapper {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens empilhados */
+        gap: 20px; /* Ajusta o espaçamento quando empilhado */
+    }
+
+    #orcamento,
+    #servicos {
+        width: 90%; /* Ambos ocupam 90% da largura em telas menores */
+        max-width: 600px; /* Mantém um max-width para não ficarem muito grandes em tablets */
+    }
+}
+
+
+/* Seção Nossos Serviços (estilos existentes, mantidos ou ligeiramente ajustados) */
+#servicos {
+    text-align: center;
+    /* padding, background-color, border-radius, margin-bottom já definidos acima no novo bloco */
+}
+
+#servicos h2 {
+    font-size: 2.5rem;
+    color: #002f6c;
+    margin-bottom: 30px;
+}
+
+/* Grid de serviços */
+.servicos-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servico-item {
+    background-color: #ff6600; /* Fundo laranja */
+    border: 1px solid #ddd; /* Mantenho a borda para leve separação */
+    border-radius: 10px; /* Arredondamento dos cantos */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #fff; /* Texto branco para melhor contraste com o laranja */
+}
+.servico-item:hover {
+    transform: scale(1.05); /* Leve efeito ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servico-item i {
+    font-size: 2.5rem;
+    color: #fff; /* Ícones brancos */
+    margin-bottom: 15px;
+}
+
+.servico-item h3 {
+    font-size: 1.2rem;
+    color: #fff; /* Títulos brancos */
+    margin-top: 10px;
+}
+
+/* Responsividade (Serviços) - A media query para o wrapper já cobre o principal */
+@media (max-width: 768px) {
+    .servicos-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .servico-item {
+        padding: 15px;
+    }
+
+    .servico-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .servico-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Seção de Contato (se você tiver uma, ela não está no HTML que me enviou, mas manterei o CSS dela se for adicionada) */
+/* Removi a seção #contato como uma section separada no HTML e assumi que o link
+   do menu vai para o rodapé. Se você tiver uma seção de contato específica,
+   pode adicioná-la de volta ao HTML, talvez logo antes do footer.
+*/
+/*
 #contato {
     text-align: center;
     padding: 20px;
@@ -231,8 +347,10 @@ nav a:hover {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+*/
 
-/* Lista de contatos */
+/* Lista de contatos (se você usar) */
+/*
 .contato-lista {
     display: flex;
     justify-content: center;
@@ -267,79 +385,8 @@ nav a:hover {
 .contato-lista a:hover {
     text-decoration: underline;
 }
+*/
 
-/* Seção Nossos Serviços */
-#servicos {
-    text-align: center;
-    padding: 15px 15px; /* Altura da faixa branca diminuída */
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-#servicos h2 {
-    font-size: 2.5rem;
-    color: #002f6c;
-    margin-bottom: 30px;
-}
-
-/* Grid de serviços */
-.servicos-grid-container {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-   gap: 15px;
-   max-width: 1200px;
-   margin: 0 auto;
-}
-
-.servico-item {
-   background-color: #ff6600; /* Fundo laranja */
-   border: 1px solid #ddd; /* Mantenho a borda para leve separação */
-   border-radius: 10px; /* Arredondamento dos cantos */
-   padding: 25px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-   color: #fff; /* Texto branco para melhor contraste com o laranja */
-}
-.servico-item:hover {
-   transform: scale(1.05); /* Leve efeito ao passar o mouse */
-   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.servico-item i {
-   font-size: 2.5rem;
-   color: #fff; /* Ícones brancos */
-   margin-bottom: 15px;
-}
-
-.servico-item h3 {
-   font-size: 1.2rem;
-   color: #fff; /* Títulos brancos */
-   margin-top: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .servico-item {
-        padding: 15px;
-    }
-
-    .servico-item i {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .servico-item h3 {
-        font-size: 1.1rem;
-    }
-}
 
 /* Rodapé */
 footer {
@@ -348,5 +395,5 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
+    margin-top: 40px; /* Adicionado para garantir espaço após o conteúdo principal */
 }
-
