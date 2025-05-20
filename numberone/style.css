@@ -56,7 +56,13 @@ header {
     justify-content: center;
 }
 .viagens {
-    padding-right: 1.5px; /* Ajuste o valor para uma melhor posição */
+    font-size: 2em;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.2em;
+    padding-left: 0.1em;
 }
 
 .number-one {
@@ -65,16 +71,6 @@ header {
     text-transform: uppercase;
     line-height: 1;
     margin: 0;
-}
-
-.viagens {
-    font-size: 2em;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 0.2em;
-    padding-left: 0.1em;
 }
 
 /* Navegação */
@@ -195,42 +191,40 @@ nav a:hover {
     background-color: #ff8033;
 }
 
-/* Layout em duas colunas para telas maiores (aqui estão os AJUSTES CHAVE) */
+/* AJUSTES IMPORTANTES: Layout para telas maiores (desktop) */
 @media (min-width: 900px) {
     .main-content-wrapper {
         display: flex;
-        /* flex-direction: row-reverse;  COMENTADO: Não precisamos inverter a ordem se o HTML já está na ordem certa */
-        justify-content: center; /* Centraliza o grupo de colunas */
-        align-items: flex-start; /* Alinha ao topo */
+        flex-direction: row; /* Itens em linha, na ordem do HTML */
+        justify-content: center; /* Centraliza as colunas */
+        align-items: flex-start; /* Alinha os itens ao topo */
         gap: 30px; /* Espaço entre as colunas */
         padding: 20px;
         max-width: 1200px; /* Largura máxima do conteúdo principal */
         margin: 40px auto; /* Centraliza o wrapper na página */
     }
 
-    /* AJUSTES IMPORTANTES: Formulário - lado direito e mais largo */
+    /* Formulário - lado direito e um pouco mais largo */
     #orcamento {
-        flex: 0 0 450px; /* Largura fixa (base) de 450px para o formulário. flex-grow e flex-shrink em 0 */
-        order: 2; /* Formulário é o segundo item na ordem visual (direita) */
-        max-width: 500px; /* Limite máximo para o formulário para não esticar demais */
-        margin-top: 0; /* Remove qualquer margem superior que possa ter sido aplicada */
+        flex: 0 0 400px; /* Largura base de 400px. Não cresce nem encolhe */
+        order: 2; /* Move o formulário para o segundo slot (direita) */
+        max-width: 450px; /* Garante que não estique demais */
     }
 
-    /* AJUSTES IMPORTANTES: Seção de Serviços - lado esquerdo e abaixo do formulário */
+    /* Seção de Serviços - lado esquerdo, abaixo do formulário e mais estreita */
     #servicos {
-        flex: 1 1 650px; /* Permite crescer (flex-grow: 1), encolher (flex-shrink: 1) e tem base de 650px */
-        order: 1; /* Serviços é o primeiro item na ordem visual (esquerda) */
+        flex: 0 0 700px; /* Largura base de 700px. Não cresce nem encolhe */
+        order: 1; /* Move os serviços para o primeiro slot (esquerda) */
+        margin-top: 150px; /* ESTE É O AJUSTE CHAVE: Desce a seção de serviços. Ajuste este valor (ex: 120px, 180px) para alinhar como na imagem. */
         background-color: rgba(255, 255, 255, 0.95);
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
-        margin-top: calc(30px + 30px); /* Ajuste para descer abaixo do formulário. 30px gap + 30px do padding do formulário. */
-        /* O cálculo acima é uma tentativa, talvez precise de ajuste fino dependendo do resultado final */
     }
 }
 
-/* Estilos para telas menores (abaixo de 900px) - Stacked vertically */
+/* Estilos para telas menores (abaixo de 900px) - Empilhados verticalmente */
 @media (max-width: 899px) {
     .main-content-wrapper {
         display: flex;
@@ -245,16 +239,13 @@ nav a:hover {
     #orcamento,
     #servicos {
         width: 100%; /* Ocupam a largura total em telas pequenas */
-        max-width: 600px; /* Mantém um limite máximo para não ficarem muito grandes em tablets */
+        max-width: 600px; /* Limite máximo para não ficarem muito grandes em tablets */
         margin: 0;
-        order: unset; /* Reseta a ordem para seguir o HTML */
+        order: unset; /* Reseta a ordem para seguir o HTML (formulário acima de serviços) */
     }
-    /* Se quiser o formulário acima dos serviços em telas pequenas, pode definir: */
-    #orcamento { order: 1; }
-    #servicos { order: 2; }
 }
 
-/* Seção Nossos Serviços (estilos secundários, geralmente não precisam de muita mudança) */
+/* Seção Nossos Serviços (estilos secundários para o grid) */
 #servicos h2 {
     font-size: 2.5rem;
     color: #002f6c;
