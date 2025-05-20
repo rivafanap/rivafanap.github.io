@@ -195,39 +195,52 @@ nav a:hover {
 @media (min-width: 900px) {
     .main-content-wrapper {
         display: flex;
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-        justify-content: flex-end; /* AJUSTE CHAVE: Joga todo o conteúdo para a direita */
-        align-content: flex-start; /* Alinha o conteúdo ao topo do container */
-        align-items: flex-start; /* Alinha os itens ao topo de suas linhas */
-        gap: 30px; /* Espaço entre os elementos */
+        flex-direction: column; /* Empilha os itens verticalmente */
+        justify-content: flex-start; /* Alinha o conteúdo ao topo do container */
+        align-items: flex-end; /* AJUSTE CHAVE: Alinha todos os itens (formulário e serviços) à direita */
         padding: 20px;
         max-width: 1200px; /* Mantém um limite para o wrapper geral */
-        margin: 40px auto; /* Centraliza o wrapper (mas o conteúdo fica à direita por justify-content) */
+        margin: 40px auto; /* Centraliza o wrapper, mas os itens dentro dele se alinham à direita */
     }
 
     /* Formulário - lado direito e com largura definida */
     #orcamento {
-        flex: 0 0 400px; /* Largura base de 400px, não cresce nem encolhe */
-        order: 1; /* O formulário é o primeiro item na ordem de renderização (para ficar à direita e no topo) */
+        width: 400px; /* Largura fixa para o formulário */
         max-width: 450px; /* Limite para não ficar gigante */
-        margin-left: auto; /* Empurra o formulário para a direita dentro do flex container */
+        margin-right: 0; /* Garante que não haja margem extra à direita */
     }
 
-    /* Seção de Serviços - lado esquerdo, abaixo do formulário e mais estreita */
+    /* Seção de Serviços - lado direito, abaixo do formulário, altura reduzida e largura alinhada */
     #servicos {
-        flex: 0 0 600px; /* AJUSTE CHAVE: Largura base de 600px (mais estreita que antes) */
-        order: 2; /* Será o segundo item na ordem de renderização (abaixo e à esquerda do formulário) */
-        margin-top: -380px; /* AJUSTE CHAVE: Empurra a seção de serviços para cima. Você precisará ajustar este valor (ex: -350px, -400px) para alinhar perfeitamente com a imagem de referência */
-        margin-right: auto; /* Empurra os serviços para a esquerda, ao lado do formulário */
+        width: 600px; /* Largura para a seção de serviços */
+        max-width: 700px; /* Limite para não ficar gigante */
+        margin-top: 30px; /* Espaço entre o formulário e a seção de serviços */
         background-color: rgba(255, 255, 255, 0.95);
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
+        /* Para reduzir a altura visual, podemos ajustar o padding ou o tamanho da fonte dos itens internos */
+        /* O padding do grid container ou o tamanho dos itens de serviço podem ser ajustados para diminuir a altura total */
+    }
+    
+    /* Reduzindo a altura dos itens de serviço para diminuir a altura total da seção */
+    .servico-item {
+        padding: 15px; /* Reduz o padding interno dos itens de serviço */
+    }
+    .servico-item i {
+        font-size: 2rem; /* Reduz o tamanho dos ícones */
+        margin-bottom: 10px;
+    }
+    .servico-item h3 {
+        font-size: 1rem; /* Reduz o tamanho do título */
+    }
+    .servico-item p {
+        font-size: 0.85rem; /* Reduz o tamanho do parágrafo */
     }
 }
 
-/* Estilos para telas menores (abaixo de 899px) - Empilhados verticalmente */
+/* Estilos para telas menores (abaixo de 899px) - Empilhados verticalmente no centro */
 @media (max-width: 899px) {
     .main-content-wrapper {
         display: flex;
@@ -237,7 +250,7 @@ nav a:hover {
         gap: 20px;
         max-width: 90%;
         margin: 40px auto;
-        justify-content: center; /* Volta a centralizar em telas menores */
+        justify-content: center;
     }
 
     #orcamento,
@@ -245,7 +258,6 @@ nav a:hover {
         width: 100%; /* Ocupam a largura total em telas pequenas */
         max-width: 600px; /* Limite máximo para não ficarem muito grandes em tablets */
         margin: 0; /* Remove margens específicas de desktop */
-        order: unset; /* Reseta a ordem para seguir o HTML (formulário acima de serviços) */
     }
 }
 
@@ -256,20 +268,21 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* Grid de serviços */
+/* Grid de serviços (manterá a responsividade interna) */
 .servicos-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Ajuste o minmax para mais estreito */
+    gap: 10px; /* Reduz o gap entre os itens */
+    max-width: 100%; /* Permite que o grid se adapte à largura da seção */
     margin: 0 auto;
 }
 
+/* Os estilos .servico-item, i, h3, p já foram ajustados acima na media query para desktop. Fora dela, manterão o padrão ou o que você tiver. */
 .servico-item {
     background-color: #ff6600;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 25px;
+    padding: 25px; /* Padding padrão */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,16 +296,20 @@ nav a:hover {
 }
 
 .servico-item i {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Tamanho padrão do ícone */
     color: #fff;
     margin-bottom: 15px;
 }
 
 .servico-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Tamanho padrão do título */
     color: #fff;
     margin-top: 10px;
 }
+.servico-item p {
+    font-size: 1rem; /* Tamanho padrão do parágrafo */
+}
+
 
 /* Rodapé */
 footer {
@@ -303,4 +320,3 @@ footer {
     font-size: 0.9em;
     margin-top: 40px;
 }
-
