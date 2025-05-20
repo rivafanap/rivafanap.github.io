@@ -140,7 +140,7 @@ nav a:hover {
     border-radius: 12px; /* Cantos mais arredondados para um visual moderno */
     margin: 40px auto;
     width: 90%;
-    max-width: 700px; /* Aumentei a largura máxima para melhor aproveitamento do espaço */
+    max-width: 600px; /* Aumentei a largura máxima para melhor aproveitamento do espaço */
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra para profundidade */
 }
@@ -172,10 +172,10 @@ nav a:hover {
     font-size: 1rem;
 }
 #orcamento {
-    width: 60%; /* Reduz o tamanho do formulário */
-    max-width: 400px; /* Ajusta o limite de largura */
+    width: 70%; /* Reduz o tamanho do formulário */
+    max-width: 500px; /* Ajusta o limite de largura */
     position: absolute;
-    right: 50px; /* Move para a direita */
+    right: 55px; /* Move para a direita */
     top: 150px; /* Ajusta a posição vertical */
 }
 
@@ -271,7 +271,7 @@ nav a:hover {
 /* Seção Nossos Serviços */
 #servicos {
     text-align: center;
-    padding: 20px 20px; /* Altura da faixa branca diminuída */
+    padding: 15px 15px; /* Altura da faixa branca diminuída */
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-bottom: 40px;
@@ -349,12 +349,4 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
 }
-
-
-
-
-
-
-
-
 
