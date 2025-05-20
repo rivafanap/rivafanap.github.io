@@ -127,12 +127,12 @@ nav a:hover {
     line-height: 1.4;
 }
 
-/* Estilos gerais para o formulário (aplicados a #orcamento) */
+/* Estilos gerais para o formulário (#orcamento) */
 #orcamento {
     padding: 30px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
-    margin: 0; /* Remove margens extras */
+    margin: 0;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -195,27 +195,30 @@ nav a:hover {
 @media (min-width: 900px) {
     .main-content-wrapper {
         display: flex;
-        flex-direction: row; /* Itens em linha, na ordem do HTML */
-        justify-content: center; /* Centraliza as colunas */
-        align-items: flex-start; /* Alinha os itens ao topo */
-        gap: 30px; /* Espaço entre as colunas */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        justify-content: flex-end; /* AJUSTE CHAVE: Joga todo o conteúdo para a direita */
+        align-content: flex-start; /* Alinha o conteúdo ao topo do container */
+        align-items: flex-start; /* Alinha os itens ao topo de suas linhas */
+        gap: 30px; /* Espaço entre os elementos */
         padding: 20px;
-        max-width: 1200px; /* Largura máxima do conteúdo principal */
-        margin: 40px auto; /* Centraliza o wrapper na página */
+        max-width: 1200px; /* Mantém um limite para o wrapper geral */
+        margin: 40px auto; /* Centraliza o wrapper (mas o conteúdo fica à direita por justify-content) */
     }
 
-    /* Formulário - lado direito e um pouco mais largo */
+    /* Formulário - lado direito e com largura definida */
     #orcamento {
-        flex: 0 0 400px; /* Largura base de 400px. Não cresce nem encolhe */
-        order: 2; /* Move o formulário para o segundo slot (direita) */
-        max-width: 450px; /* Garante que não estique demais */
+        flex: 0 0 400px; /* Largura base de 400px, não cresce nem encolhe */
+        order: 1; /* O formulário é o primeiro item na ordem de renderização (para ficar à direita e no topo) */
+        max-width: 450px; /* Limite para não ficar gigante */
+        margin-left: auto; /* Empurra o formulário para a direita dentro do flex container */
     }
 
     /* Seção de Serviços - lado esquerdo, abaixo do formulário e mais estreita */
     #servicos {
-        flex: 0 0 700px; /* Largura base de 700px. Não cresce nem encolhe */
-        order: 1; /* Move os serviços para o primeiro slot (esquerda) */
-        margin-top: 150px; /* ESTE É O AJUSTE CHAVE: Desce a seção de serviços. Ajuste este valor (ex: 120px, 180px) para alinhar como na imagem. */
+        flex: 0 0 600px; /* AJUSTE CHAVE: Largura base de 600px (mais estreita que antes) */
+        order: 2; /* Será o segundo item na ordem de renderização (abaixo e à esquerda do formulário) */
+        margin-top: -380px; /* AJUSTE CHAVE: Empurra a seção de serviços para cima. Você precisará ajustar este valor (ex: -350px, -400px) para alinhar perfeitamente com a imagem de referência */
+        margin-right: auto; /* Empurra os serviços para a esquerda, ao lado do formulário */
         background-color: rgba(255, 255, 255, 0.95);
         padding: 30px;
         border-radius: 12px;
@@ -224,7 +227,7 @@ nav a:hover {
     }
 }
 
-/* Estilos para telas menores (abaixo de 900px) - Empilhados verticalmente */
+/* Estilos para telas menores (abaixo de 899px) - Empilhados verticalmente */
 @media (max-width: 899px) {
     .main-content-wrapper {
         display: flex;
@@ -234,13 +237,14 @@ nav a:hover {
         gap: 20px;
         max-width: 90%;
         margin: 40px auto;
+        justify-content: center; /* Volta a centralizar em telas menores */
     }
 
     #orcamento,
     #servicos {
         width: 100%; /* Ocupam a largura total em telas pequenas */
         max-width: 600px; /* Limite máximo para não ficarem muito grandes em tablets */
-        margin: 0;
+        margin: 0; /* Remove margens específicas de desktop */
         order: unset; /* Reseta a ordem para seguir o HTML (formulário acima de serviços) */
     }
 }
@@ -299,3 +303,4 @@ footer {
     font-size: 0.9em;
     margin-top: 40px;
 }
+
