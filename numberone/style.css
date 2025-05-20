@@ -100,64 +100,59 @@ nav a:hover {
 
 /* Seção Hero */
 .hero {
-    text-align: center; /* Centraliza melhor o texto */
-    padding: 0.6rem 0; /* Removendo padding do hero container */
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc); /* Cor de fundo da etiqueta */
-    border-radius: 0; /* Removendo border-radius do hero container */
-    margin: 0; /* Remove margens para grudar nas bordas da página */
-    width: 100%; /* Largura da etiqueta */
-    border-radius: 0; /* Remove bordas arredondadas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    font-weight: bold; /* Peso da fonte (será aplicado no overlay) */
+    text-align: center;
+    padding: 0.6rem 0;
+    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 }
 
 .hero-overlay {
-    text-align: center; /* Centraliza o conteúdo dentro da faixa laranja */
-    padding: 1rem 0; /* Ajuste o espaçamento vertical conforme necessário */
+    text-align: center;
+    padding: 1rem 0;
 }
 
 .hero-overlay h2 {
-    font-size: 2.0em; /* Ajuste o tamanho conforme desejado */
+    font-size: 2.0em;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 10px; /* Adiciona um espaço entre as frases */
+    margin-bottom: 10px;
 }
 
 .hero-overlay p {
-    font-size: 1.2em; /* Define um tamanho menor para a segunda frase (ajuste conforme desejado) */
+    font-size: 1.2em;
     color: #fff;
     font-weight: normal;
-    margin-top: 0; /* Remove qualquer margem superior padrão */
-    line-height: 1.4; /* Melhora a leitura da segunda frase */
+    margin-top: 0;
+    line-height: 1.4;
 }
 
-/* AJUSTES IMPORTANTES: Para a seção de orçamento */
+/* Ajustes para a seção de orçamento */
 #orcamento {
-    padding: 30px; /* Aumentei um pouco o padding interno para mais respiro */
-    background: rgba(255, 255, 255, 0.95); /* Levemente mais opaco para destacar */
-    border-radius: 12px; /* Cantos mais arredondados para um visual moderno */
-    /* Estas propriedades foram REMOVIDAS ou AJUSTADAS para o novo layout flexbox */
-    /* width: 70%; */ /* Removido */
-    /* max-width: 500px; */ /* Mantido, mas flexbox controlará primariamente */
-    /* position: absolute; */ /* Removido */
-    /* right: 55px; */ /* Removido */
-    /* top: 150px; */ /* Removido */
-    margin: 0; /* Garante que não haja margens conflitantes com o flexbox */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    margin: 0; /* Removido margens extras */
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra para profundidade */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* As propriedades de posicionamento absoluto foram removidas/ajustadas pelo flexbox */
 }
 
 #orcamento h2 {
-    font-size: 2.2rem; /* Ajustei o tamanho do título */
+    font-size: 2.2rem;
     color: #002f6c;
-    margin-bottom: 25px; /* Mais espaço abaixo do título */
-    text-align: center; /* Centralizei o título da seção */
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 #orcamento label {
-    display: block; /* Coloca cada rótulo em sua própria linha */
-    margin-bottom: 8px; /* Espaço abaixo de cada rótulo */
-    font-weight: bold; /* Destaca os rótulos */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
     color: #333;
 }
 
@@ -165,23 +160,23 @@ nav a:hover {
 #orcamento input[type="email"],
 #orcamento select,
 #orcamento textarea {
-    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
-    padding: 12px; /* Aumentei o padding interno dos campos */
-    margin-bottom: 20px; /* Mais espaço abaixo de cada campo */
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 6px; /* Cantos arredondados nos campos */
-    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura total */
+    border-radius: 6px;
+    box-sizing: border-box;
     font-size: 1rem;
 }
 
 #orcamento select {
-    appearance: none; /* Remove a aparência padrão do select */
-    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center; /* Adiciona um ícone de seta */
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
     background-size: 16px;
 }
 
 #orcamento textarea {
-    resize: vertical; /* Permite redimensionamento vertical da textarea */
+    resize: vertical;
     min-height: 100px;
 }
 
@@ -194,7 +189,7 @@ nav a:hover {
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
-    width: 100%; /* Botão ocupar toda a largura */
+    width: 100%;
 }
 
 #orcamento button[type="submit"]:hover {
@@ -209,44 +204,46 @@ nav a:hover {
     }
 
     .form-row > div {
-        flex: 1; /* Distribui o espaço igualmente entre os itens da linha */
+        flex: 1;
     }
 
-    /* Ajuste para o campo de tipo de viagem ocupar a largura total */
     .form-row #tipo_viagem {
-        width: 100%; /* Garante que o select ocupe a largura total do seu contêiner */
+        width: 100%;
     }
 }
 
-/* NOVO: Wrapper para o conteúdo principal (formulário e serviços) */
+/* NOVO: Wrapper para o conteúdo principal (Serviços e Formulário) */
 .main-content-wrapper {
     display: flex;
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     align-items: flex-start; /* Alinha os itens ao topo do wrapper */
-    gap: 30px; /* Espaço entre o formulário e os serviços */
+    gap: 30px; /* Espaço entre as colunas */
     padding: 20px;
     max-width: 1200px; /* Limita a largura do conteúdo principal */
     margin: 40px auto; /* Centraliza o wrapper na página */
 }
 
-/* NOVO: Estilo para a seção de orçamento dentro do flexbox */
-#orcamento {
-    flex: 1 1 400px; /* flex-grow, flex-shrink, flex-basis. Define uma largura base de 400px. */
-    order: 1; /* Garante que o formulário venha primeiro na ordem flex */
-    /* Outras propriedades de #orcamento já foram definidas acima */
-}
-
-/* NOVO: Estilo para a seção Nossos Serviços dentro do flexbox */
+/* AJUSTES IMPORTANTES: Estilo para a seção Nossos Serviços (agora à esquerda) */
 #servicos {
-    flex: 2 1 600px; /* Ocupa mais espaço e tem uma largura base maior */
-    order: 2; /* Garante que os serviços venham depois do formulário */
-    margin: 0; /* Garante que não haja margens conflitantes com o flexbox */
+    flex: 2 1 600px; /* Ocupa mais espaço, base de 600px */
+    order: 1; /* NOVO: Garante que "Nossos Serviços" venha primeiro (à esquerda) */
+    margin: 0; /* Remove margens extras */
     background-color: rgba(255, 255, 255, 0.95); /* Fundo branco e ligeiramente opaco */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Mantém o texto centralizado */
 }
+
+/* AJUSTES IMPORTANTES: Estilo para a seção de orçamento (agora à direita e mais estreita) */
+#orcamento {
+    flex: 1 1 350px; /* NOVO: Base de 350px para ser mais estreito */
+    order: 2; /* NOVO: Garante que o formulário venha depois (à direita) */
+    max-width: 400px; /* Limite máximo para o formulário */
+    /* Outras propriedades de #orcamento já foram definidas acima */
+}
+
 
 /* AJUSTES: Responsividade para dispositivos menores (coluna única) */
 @media (max-width: 900px) {
@@ -260,16 +257,15 @@ nav a:hover {
     #servicos {
         width: 90%; /* Ambos ocupam 90% da largura em telas menores */
         max-width: 600px; /* Mantém um max-width para não ficarem muito grandes em tablets */
+        order: unset; /* Remove a ordem específica para empilhar normalmente */
     }
+    /* Para telas menores, se você quer o formulário ANTES dos serviços empilhados, adicione: */
+    #orcamento { order: 1; }
+    #servicos { order: 2; }
 }
 
 
-/* Seção Nossos Serviços (estilos existentes, mantidos ou ligeiramente ajustados) */
-#servicos {
-    text-align: center;
-    /* padding, background-color, border-radius, margin-bottom já definidos acima no novo bloco */
-}
-
+/* Seção Nossos Serviços (estilos secundários) */
 #servicos h2 {
     font-size: 2.5rem;
     color: #002f6c;
@@ -333,60 +329,6 @@ nav a:hover {
         font-size: 1.1rem;
     }
 }
-
-/* Seção de Contato (se você tiver uma, ela não está no HTML que me enviou, mas manterei o CSS dela se for adicionada) */
-/* Removi a seção #contato como uma section separada no HTML e assumi que o link
-   do menu vai para o rodapé. Se você tiver uma seção de contato específica,
-   pode adicioná-la de volta ao HTML, talvez logo antes do footer.
-*/
-/*
-#contato {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-*/
-
-/* Lista de contatos (se você usar) */
-/*
-.contato-lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.contato-lista li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: none;
-    padding: 5px 0;
-}
-
-.contato-lista i {
-    font-size: 1.5rem;
-    color: #ff6600;
-    text-align: center;
-}
-
-.contato-lista a {
-    color: #333;
-    text-decoration: none;
-}
-
-.contato-lista a:hover {
-    text-decoration: underline;
-}
-*/
-
 
 /* Rodapé */
 footer {
