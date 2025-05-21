@@ -194,44 +194,52 @@ nav a:hover {
 /* AJUSTES IMPORTANTES: Layout para telas maiores (desktop) */
 @media (min-width: 900px) {
     .main-content-wrapper {
-        display: flex;
-        flex-direction: column; /* Empilha os itens verticalmente */
-        justify-content: flex-start; /* Alinha o conteúdo ao topo do container */
-        align-items: flex-end; /* AJUSTE CHAVE: Alinha todos os itens (formulário e serviços) à direita */
+        display: grid; /* Usamos Grid para controle preciso das colunas */
+        grid-template-columns: 1fr 400px; /* Coluna esquerda flexível, coluna direita com 400px de largura */
+        gap: 30px; /* Espaço entre as colunas */
         padding: 20px;
-        max-width: 1200px; /* Mantém um limite para o wrapper geral */
-        margin: 40px auto; /* Centraliza o wrapper, mas os itens dentro dele se alinham à direita */
+        max-width: 1200px; /* Largura máxima do wrapper */
+        margin: 40px auto; /* Centraliza o wrapper na página */
+        align-items: start; /* Alinha o conteúdo ao topo das células do grid */
     }
 
-    /* Formulário - lado direito e com largura definida */
+    /* Formulário - colocado na segunda coluna do grid (direita) */
     #orcamento {
-        width: 400px; /* Largura fixa para o formulário, como na imagem */
-        max-width: 450px; /* Limite para não ficar gigante */
+        grid-column: 2 / 3; /* Ocupa a segunda coluna */
+        grid-row: 1 / 2; /* Ocupa a primeira linha */
+        width: 100%; /* Ocupa 100% da largura da sua célula no grid (400px) */
+        max-width: 450px; /* Um limite, mas o grid-template-columns já controla bem */
         margin-right: 0; /* Garante que não haja margem extra à direita */
-        margin-bottom: 30px; /* Espaço entre o formulário e a seção de serviços */
     }
 
-    /* Seção de Serviços - lado direito, abaixo do formulário, altura reduzida e largura alinhada */
+    /* Seção de Serviços - colocada na primeira coluna do grid (esquerda), mas abaixo do formulário */
     #servicos {
-        width: 600px; /* Largura para a seção de serviços (como na imagem) */
+        grid-column: 1 / 2; /* Ocupa a primeira coluna */
+        grid-row: 1 / 2; /* Ocupa a primeira linha, mas será empurrada para baixo visualmente */
+        width: 600px; /* Largura da seção de serviços, como na imagem */
         max-width: 700px; /* Limite para não ficar gigante */
-        /* margin-top não é mais necessário aqui, pois o gap já está no main-content-wrapper */
+        margin-top: 150px; /* AJUSTE CHAVE: Empurra a seção de serviços para baixo. Você precisará ajustar este valor para alinhar perfeitamente. */
+        margin-left: auto; /* Centraliza a seção dentro da coluna à esquerda */
         background-color: rgba(255, 255, 255, 0.95);
-        padding: 20px; /* AJUSTE CHAVE: Reduz o padding da seção para diminuir sua altura total */
+        padding: 20px; /* Reduz o padding da seção para diminuir sua altura total */
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
-        margin-right: 0; /* Alinha à direita */
     }
     
-    /* Reduzindo a altura dos itens de serviço para diminuir a altura total da seção*/
+    /* Grid de serviços dentro da seção "Nossos Serviços" (para que seja vertical) */
     .servicos-grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Permite que mais itens caibam e reduz a largura de cada um */
-        gap: 10px; /* Reduz o gap entre os itens */
+        display: flex; /* Muda para flexbox */
+        flex-direction: column; /* AJUSTE CHAVE: Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens na coluna */
+        gap: 15px; /* Espaço entre os itens verticalmente */
+        max-width: 100%; /* Adapta-se à largura da seção */
     }
 
     .servico-item {
+        width: 100%; /* Itens ocupam a largura total da seção */
         padding: 15px; /* Reduz o padding interno dos itens de serviço */
+        box-sizing: border-box; /* Garante que o padding não adicione largura extra */
     }
     .servico-item i {
         font-size: 2rem; /* Reduz o tamanho dos ícones */
@@ -248,7 +256,7 @@ nav a:hover {
 /* Estilos para telas menores (abaixo de 899px) - Empilhados verticalmente no centro */
 @media (max-width: 899px) {
     .main-content-wrapper {
-        display: flex;
+        display: flex; /* Volta a usar flexbox para mobile */
         flex-direction: column; /* Empilha os elementos verticalmente */
         align-items: center; /* Centraliza os itens empilhados */
         padding: 20px;
@@ -263,10 +271,19 @@ nav a:hover {
         width: 100%; /* Ocupam a largura total em telas pequenas */
         max-width: 600px; /* Limite máximo para não ficarem muito grandes em tablets */
         margin: 0; /* Remove margens específicas de desktop */
+        grid-column: unset; /* Reseta as propriedades de grid */
+        grid-row: unset;
     }
+
     /* Reajusta o padding e fonte dos itens de serviço para telas menores se necessário */
+    .servicos-grid-container {
+        display: grid; /* Volta ao grid padrão para mobile */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Volta ao grid de múltiplas colunas */
+        gap: 15px; /* Volta ao gap padrão */
+    }
     .servico-item {
         padding: 25px; /* Padding padrão para telas menores */
+        width: auto; /* Reseta largura para auto */
     }
     .servico-item i {
         font-size: 2.5rem; /* Tamanho padrão do ícone para telas menores */
@@ -279,19 +296,11 @@ nav a:hover {
     }
 }
 
-/* Seção Nossos Serviços (estilos secundários para o grid, fora da media query para valores padrão) */
+/* Seção Nossos Serviços (estilos secundários para o h2, fora da media query para valores padrão) */
 #servicos h2 {
     font-size: 2.5rem;
     color: #002f6c;
     margin-bottom: 30px;
-}
-
-.servicos-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Valor padrão para grid, se não for sobrescrito */
-    gap: 15px; /* Valor padrão para gap */
-    max-width: 100%;
-    margin: 0 auto;
 }
 
 /* Rodapé */
