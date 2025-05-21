@@ -17,12 +17,14 @@ body {
 /* Cabeçalho principal com a imagem agencianumberone.jpg */
 header.header-banner {
     width: 100%;
-    height: 350px; /* VALOR AJUSTADO: Aumentado para 350px para mostrar mais da imagem */
+    /* Ajustado para uma altura que geralmente acomoda banners mais largos */
+    height: 400px; /* Aumentado para dar mais espaço. Teste este valor! */
     background-image: url('https://rivafanap.github.io/numberone/agencianumberone.jpg'); /* Caminho para a imagem do banner */
-    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-size: contain; /* MUDANÇA PRINCIPAL: Garante que a imagem inteira seja visível */
     background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat;
-    /* Remove qualquer display flex/align-items/justify-content se não houver conteúdo interno */
+    background-repeat: no-repeat; /* Garante que a imagem não se repita caso haja espaço */
+    background-color: #375b5b; /* Cor de fundo caso 'contain' deixe espaços vazios */
+    /* Removido qualquer display flex/align-items/justify-content se não houver conteúdo interno */
 }
 
 /* Garante que elementos antigos de logo/título não apareçam */
@@ -260,3 +262,4 @@ footer {
     font-size: 0.9em;
     margin-top: 40px;
 }
+
