@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <header class="header-com-imagem">
+    <header class="header-banner">
         </header>
 
     <nav>
@@ -28,31 +28,6 @@
     </div>
 
     <div class="main-content-wrapper">
-
-        <section id="orcamento" class="form-section" data-aos="fade-up">
-            <h2>Solicite Seu Orçamento</h2>
-            <form action="submit-orcamento.php" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-
-                <label for="tipo_viagem">Tipo de Viagem:</label>
-                <select id="tipo_viagem" name="tipo_viagem" required>
-                    <option value="" disabled selected>Selecione o Tipo de Viagem</option>
-                    <option value="nacional">Passagem Nacional</option>
-                    <option value="internacional">Passagem Internacional</option>
-                    <option value="pacote">Pacote de Viagem</option>
-                    <option value="hotel">Reserva de Hotel</option>
-                </select>
-
-                <label for="mensagem">Detalhes:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="4" required></textarea>
-
-                <button class="button" type="submit">Enviar</button>
-            </form>
-        </section>
 
         <section id="servicos" class="servicos-section" data-aos="fade-up">
             <h2 class="animated-title">Nossos Serviços</h2>
@@ -83,6 +58,31 @@
                     <p>Obtenha suporte para emissão de vistos e documentação.</p>
                 </div>
             </div>
+        </section>
+
+        <section id="orcamento" class="form-section" data-aos="fade-up">
+            <h2>Solicite Seu Orçamento</h2>
+            <form action="submit-orcamento.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+
+                <label for="tipo_viagem">Tipo de Viagem:</label>
+                <select id="tipo_viagem" name="tipo_viagem" required>
+                    <option value="" disabled selected>Selecione o Tipo de Viagem</option>
+                    <option value="nacional">Passagem Nacional</option>
+                    <option value="internacional">Passagem Internacional</option>
+                    <option value="pacote">Pacote de Viagem</option>
+                    <option value="hotel">Reserva de Hotel</option>
+                </select>
+
+                <label for="mensagem">Detalhes:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="4" required></textarea>
+
+                <button class="button" type="submit">Enviar</button>
+            </form>
         </section>
 
     </div>
