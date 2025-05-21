@@ -205,26 +205,31 @@ nav a:hover {
 
     /* Formulário - lado direito e com largura definida */
     #orcamento {
-        width: 400px; /* Largura fixa para o formulário */
+        width: 400px; /* Largura fixa para o formulário, como na imagem */
         max-width: 450px; /* Limite para não ficar gigante */
         margin-right: 0; /* Garante que não haja margem extra à direita */
+        margin-bottom: 30px; /* Espaço entre o formulário e a seção de serviços */
     }
 
     /* Seção de Serviços - lado direito, abaixo do formulário, altura reduzida e largura alinhada */
     #servicos {
-        width: 600px; /* Largura para a seção de serviços */
+        width: 600px; /* Largura para a seção de serviços (como na imagem) */
         max-width: 700px; /* Limite para não ficar gigante */
-        margin-top: 30px; /* Espaço entre o formulário e a seção de serviços */
+        /* margin-top não é mais necessário aqui, pois o gap já está no main-content-wrapper */
         background-color: rgba(255, 255, 255, 0.95);
-        padding: 30px;
+        padding: 20px; /* AJUSTE CHAVE: Reduz o padding da seção para diminuir sua altura total */
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
-        /* Para reduzir a altura visual, podemos ajustar o padding ou o tamanho da fonte dos itens internos */
-        /* O padding do grid container ou o tamanho dos itens de serviço podem ser ajustados para diminuir a altura total */
+        margin-right: 0; /* Alinha à direita */
     }
     
-    /* Reduzindo a altura dos itens de serviço para diminuir a altura total da seção */
+    /* Reduzindo a altura dos itens de serviço para diminuir a altura total da seção*/
+    .servicos-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Permite que mais itens caibam e reduz a largura de cada um */
+        gap: 10px; /* Reduz o gap entre os itens */
+    }
+
     .servico-item {
         padding: 15px; /* Reduz o padding interno dos itens de serviço */
     }
@@ -259,57 +264,35 @@ nav a:hover {
         max-width: 600px; /* Limite máximo para não ficarem muito grandes em tablets */
         margin: 0; /* Remove margens específicas de desktop */
     }
+    /* Reajusta o padding e fonte dos itens de serviço para telas menores se necessário */
+    .servico-item {
+        padding: 25px; /* Padding padrão para telas menores */
+    }
+    .servico-item i {
+        font-size: 2.5rem; /* Tamanho padrão do ícone para telas menores */
+    }
+    .servico-item h3 {
+        font-size: 1.2rem; /* Tamanho padrão do título para telas menores */
+    }
+    .servico-item p {
+        font-size: 1rem; /* Tamanho padrão do parágrafo para telas menores */
+    }
 }
 
-/* Seção Nossos Serviços (estilos secundários para o grid) */
+/* Seção Nossos Serviços (estilos secundários para o grid, fora da media query para valores padrão) */
 #servicos h2 {
     font-size: 2.5rem;
     color: #002f6c;
     margin-bottom: 30px;
 }
 
-/* Grid de serviços (manterá a responsividade interna) */
 .servicos-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Ajuste o minmax para mais estreito */
-    gap: 10px; /* Reduz o gap entre os itens */
-    max-width: 100%; /* Permite que o grid se adapte à largura da seção */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Valor padrão para grid, se não for sobrescrito */
+    gap: 15px; /* Valor padrão para gap */
+    max-width: 100%;
     margin: 0 auto;
 }
-
-/* Os estilos .servico-item, i, h3, p já foram ajustados acima na media query para desktop. Fora dela, manterão o padrão ou o que você tiver. */
-.servico-item {
-    background-color: #ff6600;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px; /* Padding padrão */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    color: #fff;
-}
-.servico-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.servico-item i {
-    font-size: 2.5rem; /* Tamanho padrão do ícone */
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.servico-item h3 {
-    font-size: 1.2rem; /* Tamanho padrão do título */
-    color: #fff;
-    margin-top: 10px;
-}
-.servico-item p {
-    font-size: 1rem; /* Tamanho padrão do parágrafo */
-}
-
 
 /* Rodapé */
 footer {
