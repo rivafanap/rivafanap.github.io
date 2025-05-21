@@ -13,69 +13,41 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Cabeçalho */
-header {
-    background: rgba(0, 47, 108, 0.9);
-    color: #fff;
-    padding: 15px;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente o container */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-/* Ajuste do container de logo e título */
-.logo-titulo-container {
+/* NOVO Cabeçalho com imagem de fundo (agencianumberone.jpg) */
+header.header-com-imagem {
+    width: 100%;
+    height: 250px; /* Ajuste a altura conforme a sua imagem para que ela apareça bem */
+    background-image: url('https://rivafanap.github.io/numberone/agencianumberone.jpg'); /* Caminho para sua nova imagem */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza perfeitamente */
-    gap: 5px; /* Aumenta a distância entre logo e texto */
-}
-.header-title {
-    margin-left: -0.8px; /* Aproxima o texto da logo */
+    justify-content: center;
+    color: white; /* Cor do texto sobre a imagem, se você adicionar algum */
+    text-align: center;
 }
 
-/* Ajuste da logo */
-.logo-aviao {
-    height: auto;
-    max-height: 8em; /* Logo um pouco menor */
-    width: auto;
-    align-self: center;
+/* Esconde os elementos antigos do logo e título para evitar conflito com a imagem de fundo */
+.logo-titulo-container, .logo-aviao, .header-title {
+    display: none;
 }
 
-/* Responsividade */
-@media (max-width: 700px) {
-    .logo-aviao {
-        max-height: 2.5em; /* Ajuste para telas menores */
-    }
-}
-
-.header-title {
+/* Overlay para melhorar a legibilidade (se houver texto sobre a imagem) */
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* Uma leve transparência para a imagem aparecer */
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Mantém "NUMBER ONE" acima de "Viagens" */
-    align-items: flex-end; /* Alinha "Viagens" à direita */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-.viagens {
-    font-size: 2em;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 0.2em;
-    padding-left: 0.1em;
-}
 
-.number-one {
-    font-size: 3.0em;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 0;
-}
 
 /* Navegação */
 nav {
-    background: rgba(255, 102, 0, 0.9);
+    background: rgba(0, 128, 128, 0.9); /* Verde forte (teal) */
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -91,14 +63,14 @@ nav a {
 
 nav a:hover {
     background-color: #fff;
-    color: #ff6600;
+    color: #006666; /* Verde mais escuro para hover */
 }
 
-/* Seção Hero */
+/* Seção Hero (anteriormente laranja, agora verde) */
 .hero {
     text-align: center;
     padding: 0.6rem 0;
-    background: linear-gradient(45deg, #ff6600cc, #ff9900cc);
+    background: linear-gradient(45deg, #008080cc, #009999cc); /* Gradiente de verdes */
     border-radius: 0;
     margin: 0;
     width: 100%;
@@ -139,7 +111,7 @@ nav a:hover {
 
 #orcamento h2 {
     font-size: 2.2rem;
-    color: #002f6c;
+    color: #006666; /* Verde escuro */
     margin-bottom: 25px;
     text-align: center;
 }
@@ -176,7 +148,7 @@ nav a:hover {
 }
 
 #orcamento button[type="submit"] {
-    background-color: #ff6600;
+    background-color: #008080; /* Verde forte (teal) */
     color: #fff;
     padding: 14px 24px;
     border: none;
@@ -188,7 +160,7 @@ nav a:hover {
 }
 
 #orcamento button[type="submit"]:hover {
-    background-color: #ff8033;
+    background-color: #004d4d; /* Verde mais escuro para hover */
 }
 
 /* AJUSTES IMPORTANTES: Layout para telas maiores (desktop) */
@@ -299,7 +271,7 @@ nav a:hover {
 /* Seção Nossos Serviços (estilos secundários para o h2, fora da media query para valores padrão) */
 #servicos h2 {
     font-size: 2.5rem;
-    color: #002f6c;
+    color: #006666; /* Verde escuro */
     margin-bottom: 30px;
 }
 
