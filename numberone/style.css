@@ -21,31 +21,21 @@ header.header-com-imagem {
     background-size: cover; /* Garante que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Cor do texto sobre a imagem, se você adicionar algum */
-    text-align: center;
-}
-
-/* Esconde os elementos antigos do logo e título para evitar conflito com a imagem de fundo */
-.logo-titulo-container, .logo-aviao, .header-title {
-    display: none;
-}
-
-/* Overlay para melhorar a legibilidade (se houver texto sobre a imagem) */
-.header-overlay {
-    background-color: rgba(0, 0, 0, 0.2); /* Uma leve transparência para a imagem aparecer */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Mantém flex para centralização se necessário */
     align-items: center;
     justify-content: center;
 }
 
+/* Remove os estilos dos elementos antigos do logo e título */
+.logo-titulo-container, 
+.logo-aviao, 
+.header-title,
+.viagens,
+.number-one {
+    display: none; /* Esconde os elementos antigos */
+}
 
-/* Navegação */
+/* Navegação - Cores verdes */
 nav {
     background: rgba(0, 128, 128, 0.9); /* Verde forte (teal) */
     display: flex;
@@ -66,7 +56,7 @@ nav a:hover {
     color: #006666; /* Verde mais escuro para hover */
 }
 
-/* Seção Hero (anteriormente laranja, agora verde) */
+/* Seção Hero - Gradiente de verdes */
 .hero {
     text-align: center;
     padding: 0.6rem 0;
@@ -184,44 +174,42 @@ nav a:hover {
         margin-right: 0; /* Garante que não haja margem extra à direita */
     }
 
-    /* Seção de Serviços - colocada na primeira coluna do grid (esquerda), mas abaixo do formulário */
+    /* Seção de Serviços - colocada na primeira coluna do grid (esquerda) */
     #servicos {
         grid-column: 1 / 2; /* Ocupa a primeira coluna */
-        grid-row: 1 / 2; /* Ocupa a primeira linha, mas será empurrada para baixo visualmente */
-        width: 600px; /* Largura da seção de serviços, como na imagem */
+        grid-row: 1 / 2; /* Ocupa a primeira linha */
+        width: 100%; /* Ocupa 100% da largura da sua célula no grid */
         max-width: 700px; /* Limite para não ficar gigante */
-        margin-top: 150px; /* AJUSTE CHAVE: Empurra a seção de serviços para baixo. Você precisará ajustar este valor para alinhar perfeitamente. */
+        margin-top: 0; /* REMOVIDO o ajuste de margem para alinhar as seções */
         margin-left: auto; /* Centraliza a seção dentro da coluna à esquerda */
         background-color: rgba(255, 255, 255, 0.95);
-        padding: 20px; /* Reduz o padding da seção para diminuir sua altura total */
+        padding: 30px; /* Ajustado para o padding original da seção */
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
     
-    /* Grid de serviços dentro da seção "Nossos Serviços" (para que seja vertical) */
+    /* Restaurado o grid de serviços para ser horizontal em telas maiores */
     .servicos-grid-container {
-        display: flex; /* Muda para flexbox */
-        flex-direction: column; /* AJUSTE CHAVE: Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens na coluna */
-        gap: 15px; /* Espaço entre os itens verticalmente */
-        max-width: 100%; /* Adapta-se à largura da seção */
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Mantém múltiplas colunas */
+        gap: 15px; 
     }
 
     .servico-item {
-        width: 100%; /* Itens ocupam a largura total da seção */
-        padding: 15px; /* Reduz o padding interno dos itens de serviço */
-        box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+        width: auto; /* Itens ajustam largura automaticamente no grid */
+        padding: 25px; /* Restaurado o padding original dos itens de serviço */
+        box-sizing: border-box;
     }
     .servico-item i {
-        font-size: 2rem; /* Reduz o tamanho dos ícones */
+        font-size: 2.5rem; /* Restaurado o tamanho original dos ícones */
         margin-bottom: 10px;
     }
     .servico-item h3 {
-        font-size: 1rem; /* Reduz o tamanho do título */
+        font-size: 1.2rem; /* Restaurado o tamanho original do título */
     }
     .servico-item p {
-        font-size: 0.85rem; /* Reduz o tamanho do parágrafo */
+        font-size: 1rem; /* Restaurado o tamanho original do parágrafo */
     }
 }
 
@@ -247,7 +235,7 @@ nav a:hover {
         grid-row: unset;
     }
 
-    /* Reajusta o padding e fonte dos itens de serviço para telas menores se necessário */
+    /* Garante que o grid de serviços funcione para mobile */
     .servicos-grid-container {
         display: grid; /* Volta ao grid padrão para mobile */
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Volta ao grid de múltiplas colunas */
