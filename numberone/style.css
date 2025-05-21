@@ -17,7 +17,7 @@ body {
 header.header-com-imagem {
     width: 100%;
     height: 250px; /* Ajuste a altura conforme a sua imagem para que ela apareça bem */
-    background-image: url('https://rivafanap.github.io/numberone/agencianumberone.jpg'); /* Caminho para sua nova imagem */
+    background-image: url('https://rivafanap.github.io/numberone/agencianumberone.jpg'); /* Usa a imagem agencianumberone.jpg */
     background-size: cover; /* Garante que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat;
@@ -26,14 +26,27 @@ header.header-com-imagem {
     justify-content: center;
 }
 
-/* Remove os estilos dos elementos antigos do logo e título */
-.logo-titulo-container, 
-.logo-aviao, 
+/* Esconde os elementos antigos do logo e título, para evitar conflito com a imagem de fundo */
+.logo-titulo-container,
+.logo-aviao,
 .header-title,
 .viagens,
 .number-one {
-    display: none; /* Esconde os elementos antigos */
+    display: none;
 }
+
+/* A sobreposição é opcional aqui se a imagem já tiver o tom desejado */
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.0); /* Removido o overlay, ou coloque 0.2 se quiser um leve escurecimento */
+    width: 100%;
+    height: 100%;
+    /* Display e alinhamento podem ser removidos se não houver conteúdo dentro do overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Navegação - Cores verdes */
 nav {
@@ -157,7 +170,7 @@ nav a:hover {
 @media (min-width: 900px) {
     .main-content-wrapper {
         display: grid; /* Usamos Grid para controle preciso das colunas */
-        grid-template-columns: 1fr 400px; /* Coluna esquerda flexível, coluna direita com 400px de largura */
+        grid-template-columns: 1fr 400px; /* Coluna esquerda flexível (serviços), coluna direita com 400px (formulário) */
         gap: 30px; /* Espaço entre as colunas */
         padding: 20px;
         max-width: 1200px; /* Largura máxima do wrapper */
@@ -180,16 +193,16 @@ nav a:hover {
         grid-row: 1 / 2; /* Ocupa a primeira linha */
         width: 100%; /* Ocupa 100% da largura da sua célula no grid */
         max-width: 700px; /* Limite para não ficar gigante */
-        margin-top: 0; /* REMOVIDO o ajuste de margem para alinhar as seções */
+        margin-top: 0; /* Garante que não haja margem extra no topo */
         margin-left: auto; /* Centraliza a seção dentro da coluna à esquerda */
         background-color: rgba(255, 255, 255, 0.95);
-        padding: 30px; /* Ajustado para o padding original da seção */
+        padding: 30px; /* Padding original da seção */
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
     
-    /* Restaurado o grid de serviços para ser horizontal em telas maiores */
+    /* RESTAURADO: Grid de serviços para ser horizontal em telas maiores (múltiplas colunas) */
     .servicos-grid-container {
         display: grid; 
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Mantém múltiplas colunas */
@@ -198,18 +211,18 @@ nav a:hover {
 
     .servico-item {
         width: auto; /* Itens ajustam largura automaticamente no grid */
-        padding: 25px; /* Restaurado o padding original dos itens de serviço */
+        padding: 25px; /* Padding original dos itens de serviço */
         box-sizing: border-box;
     }
     .servico-item i {
-        font-size: 2.5rem; /* Restaurado o tamanho original dos ícones */
+        font-size: 2.5rem; /* Tamanho original dos ícones */
         margin-bottom: 10px;
     }
     .servico-item h3 {
-        font-size: 1.2rem; /* Restaurado o tamanho original do título */
+        font-size: 1.2rem; /* Tamanho original do título */
     }
     .servico-item p {
-        font-size: 1rem; /* Restaurado o tamanho original do parágrafo */
+        font-size: 1rem; /* Tamanho original do parágrafo */
     }
 }
 
