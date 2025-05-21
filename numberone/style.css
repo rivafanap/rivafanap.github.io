@@ -1,100 +1,262 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUMBER ONE VIAGENS - Sua Agência de Viagens</title>
-    <link rel="stylesheet" href="https://rivafanap.github.io/numberone/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header class="header-banner">
-        </header>
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Caminho para a imagem de fundo principal da página */
+    background: url('https://rivafanap.github.io/numberone/Design.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    scroll-behavior: smooth;
+}
 
-    <nav>
-        <a href="#orcamento">Solicitar Orçamento</a>
-        <a href="#servicos">Nossos Serviços</a>
-        <a href="#contato">Contato</a>
-    </nav>
+/* Cabeçalho principal com a imagem agencianumberone.jpg */
+header.header-banner {
+    width: 100%;
+    height: 250px; /* Ajuste a altura conforme a sua imagem para que ela apareça bem */
+    background-image: url('https://rivafanap.github.io/numberone/agencianumberone.jpg'); /* Caminho para a imagem do banner */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Remove qualquer display flex/align-items/justify-content se não houver conteúdo interno */
+}
 
-    <div class="hero">
-        <div class="hero-overlay">
-            <h2>Planeje sua próxima viagem conosco!</h2>
-            <p>Ofertas incríveis para destinos nacionais e internacionais.</p>
-            <p><strong>Vendas de Passagens Aéreas - Pacotes e Reservas</strong></p>
-        </div>
-    </div>
+/* Garante que elementos antigos de logo/título não apareçam */
+.logo-titulo-container,
+.logo-aviao,
+.header-title,
+.viagens,
+.number-one {
+    display: none !important; /* Usar !important para garantir que sejam escondidos */
+}
 
-    <div class="main-content-wrapper">
+/* Navegação - Cores verdes */
+nav {
+    background: rgba(0, 128, 128, 0.9); /* Verde forte (teal) */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
 
-        <section id="servicos" class="servicos-section" data-aos="fade-up">
-            <h2 class="animated-title">Nossos Serviços</h2>
-            <div class="servicos-grid-container">
-                <div class="servico-item">
-                    <i class="fas fa-plane-departure"></i>
-                    <h3>Passagens Aéreas Nacionais</h3>
-                    <p>Encontre as melhores tarifas para voos dentro do Brasil.</p>
-                </div>
-                <div class="servico-item">
-                    <i class="fas fa-plane-arrival"></i>
-                    <h3>Passagens Aéreas Internacionais</h3>
-                    <p>Viaje para qualquer lugar do mundo com suporte especializado.</p>
-                </div>
-                <div class="servico-item">
-                    <i class="fas fa-suitcase"></i>
-                    <h3>Pacotes de Viagens</h3>
-                    <p>Planeje sua viagem completa com hospedagem e passeios inclusos.</p>
-                </div>
-                <div class="servico-item">
-                    <i class="fas fa-bed"></i>
-                    <h3>Reserva de Hotel</h3>
-                    <p>Escolha entre milhares de hotéis com preços exclusivos.</p>
-                </div>
-                <div class="servico-item">
-                    <i class="fas fa-passport"></i>
-                    <h3>Consultoria de Visto</h3>
-                    <p>Obtenha suporte para emissão de vistos e documentação.</p>
-                </div>
-            </div>
-        </section>
+nav a {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
+}
 
-        <section id="orcamento" class="form-section" data-aos="fade-up">
-            <h2>Solicite Seu Orçamento</h2>
-            <form action="submit-orcamento.php" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+nav a:hover {
+    background-color: #fff;
+    color: #006666; /* Verde mais escuro para hover */
+}
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+/* Seção Hero - Gradiente de verdes */
+.hero {
+    text-align: center;
+    padding: 0.6rem 0;
+    background: linear-gradient(45deg, #008080cc, #009999cc); /* Gradiente de verdes */
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
 
-                <label for="tipo_viagem">Tipo de Viagem:</label>
-                <select id="tipo_viagem" name="tipo_viagem" required>
-                    <option value="" disabled selected>Selecione o Tipo de Viagem</option>
-                    <option value="nacional">Passagem Nacional</option>
-                    <option value="internacional">Passagem Internacional</option>
-                    <option value="pacote">Pacote de Viagem</option>
-                    <option value="hotel">Reserva de Hotel</option>
-                </select>
+.hero-overlay {
+    padding: 1rem 0;
+}
 
-                <label for="mensagem">Detalhes:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Detalhe sua solicitação" rows="4" required></textarea>
+.hero-overlay h2 {
+    font-size: 2.0em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
 
-                <button class="button" type="submit">Enviar</button>
-            </form>
-        </section>
+.hero-overlay p {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: normal;
+    margin-top: 0;
+    line-height: 1.4;
+}
 
-    </div>
-    <footer id="contato-footer">
-        <p>&copy; 2025 Agência NUMBER ONE VIAGENS - Vendas de Passagens Aéreas. Todos os direitos reservados.</p>
-        <small>Desenvolvido por Rivania</small>
-    </footer>
+/* Estilos gerais para o formulário (#orcamento) */
+#orcamento {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+#orcamento h2 {
+    font-size: 2.2rem;
+    color: #006666; /* Verde escuro */
+    margin-bottom: 25px;
+    text-align: center;
+}
 
-</body>
-</html>
+#orcamento label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#orcamento input[type="text"],
+#orcamento input[type="email"],
+#orcamento select,
+#orcamento textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#orcamento select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+    background-size: 16px;
+}
+
+#orcamento textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#orcamento button[type="submit"] {
+    background-color: #008080; /* Verde forte (teal) */
+    color: #fff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#orcamento button[type="submit"]:hover {
+    background-color: #004d4d; /* Verde mais escuro para hover */
+}
+
+/* Seção Nossos Serviços (estilos secundários para o h2) */
+#servicos h2 {
+    font-size: 2.5rem;
+    color: #006666; /* Verde escuro */
+    margin-bottom: 30px;
+}
+
+/* Layout para telas maiores (desktop): Grid de 2 colunas */
+@media (min-width: 900px) {
+    .main-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 400px; /* 1a coluna flexível para serviços, 2a fixa para formulário */
+        gap: 30px;
+        padding: 40px 20px; /* Aumenta um pouco o padding para espaçamento geral */
+        max-width: 1200px;
+        margin: 40px auto; /* Centraliza o wrapper */
+        align-items: start; /* Alinha o conteúdo ao topo das células */
+    }
+
+    #servicos {
+        grid-column: 1 / 2; /* Fica na primeira coluna */
+        grid-row: 1 / 2;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%; /* Ocupa 100% da largura da coluna */
+    }
+
+    #orcamento {
+        grid-column: 2 / 3; /* Fica na segunda coluna */
+        grid-row: 1 / 2;
+        width: 100%; /* Ocupa 100% da largura da coluna */
+    }
+
+    /* Grid de serviços para ter múltiplas colunas em desktop */
+    .servicos-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 2 ou mais colunas dependendo do espaço */
+        gap: 15px;
+        justify-items: center; /* Centraliza os itens dentro de suas células */
+    }
+
+    .servico-item {
+        padding: 25px; /* Mantém o padding original */
+        width: auto; /* Deixa a largura flexível para o grid */
+    }
+    .servico-item i {
+        font-size: 2.5rem;
+    }
+    .servico-item h3 {
+        font-size: 1.2rem;
+    }
+    .servico-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para telas menores (abaixo de 899px): Empilhados verticalmente no centro */
+@media (max-width: 899px) {
+    .main-content-wrapper {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        max-width: 90%;
+        margin: 20px auto; /* Ajuste a margem para mobile */
+        justify-content: center;
+    }
+
+    #orcamento,
+    #servicos {
+        width: 100%; /* Ocupam a largura total em telas pequenas */
+        max-width: 600px; /* Limite máximo para tablets */
+        margin: 0;
+        grid-column: unset; /* Reseta propriedades de grid */
+        grid-row: unset;
+    }
+
+    /* Grid de serviços para mobile */
+    .servicos-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    .servico-item {
+        padding: 25px;
+        width: auto;
+    }
+    .servico-item i {
+        font-size: 2.5rem;
+    }
+    .servico-item h3 {
+        font-size: 1.2rem;
+    }
+    .servico-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
