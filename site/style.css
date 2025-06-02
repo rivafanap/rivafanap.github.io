@@ -9,7 +9,7 @@ body {
 
 /* Cabeçalho com imagem de fundo */
 header {
-    background: url('https://USERNAME.github.io/REPOSITORY/logotipo.png') center/cover no-repeat;
+    background: url('logo.png') center/cover no-repeat;
     height: 300px;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@ header::before {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    background: url('https://USERNAME.github.io/REPOSITORY/hero-bg.jpg') center/cover no-repeat;
+    background: url('hero-bg.jpg') center/cover no-repeat;
 }
 
 /* Formulários */
