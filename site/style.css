@@ -1,1 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #004080;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#search {
+    background: #f0f0f0;
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0080ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#services, #destinations {
+    padding: 30px;
+}
+
+.service, .destination {
+    margin-bottom: 20px;
+}
+
+.destination img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+
+
 
