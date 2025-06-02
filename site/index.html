@@ -1,78 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number One Viagens & Turismo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NUMBER ONE VIAGENS - Sua Agência de Viagens</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Number One Viagens & Turismo</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </nav>
+
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <img class="logo-aviao" src="branca.png" alt="Logo Number One" width="100">
+            <div class="text-center">
+                <h1 class="number-one fw-bold">NUMBER ONE</h1>
+                <p class="viagens"><em>Viagens</em></p>
+            </div>
+        </div>
     </header>
 
-    <section id="search">
-        <h2>Encontre sua próxima aventura!</h2>
-        <form>
-            <input type="text" placeholder="Origem">
-            <input type="text" placeholder="Destino">
-            <input type="date" placeholder="Check-in">
-            <input type="date" placeholder="Check-out">
-            <input type="number" placeholder="Passageiros">
-            <button type="submit">Buscar</button>
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#orcamento">Solicitar Orçamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Nossos Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-overlay text-center text-white py-5" style="background: url('hero-bg.jpg') center/cover no-repeat;">
+        <div class="container">
+            <h2 class="fw-bold">Planeje sua próxima viagem conosco!</h2>
+            <p class="fs-4">Vendas de Passagens Aéreas - Pacotes e Reservas</p>
+        </div>
+    </div>
+
+    <!-- Seção de Orçamento -->
+    <section id="orcamento" class="py-5">
+        <div class="container">
+            <h2 class="text-center text-primary fw-bold">Solicite um Orçamento</h2>
+            <form class="p-4 bg-light rounded shadow">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="tipo_viagem" class="form-label">Tipo de Viagem:</label>
+                    <select class="form-select" id="tipo_viagem" name="tipo_viagem">
+                        <option>Internacional</option>
+                        <option>Nacional</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="detalhes" class="form-label">Detalhes:</label>
+                    <textarea class="form-control" id="detalhes" name="detalhes"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+        </div>
     </section>
 
-    <section id="services">
-        <h2>Nossos Serviços</h2>
-        <div class="service">
-            <h3>Passagens Aéreas</h3>
-            <p>Encontre os melhores preços em voos nacionais e internacionais.</p>
-        </div>
-        <div class="service">
-            <h3>Pacotes de Viagens</h3>
-            <p>Planeje sua viagem com pacotes personalizados.</p>
-        </div>
-        <div class="service">
-            <h3>Reserva de Hotéis</h3>
-            <p>Encontre acomodações perfeitas para sua estadia.</p>
-        </div>
-        <div class="service">
-            <h3>Aluguel de Carros</h3>
-            <p>Viaje com conforto e autonomia alugando um carro.</p>
-        </div>
-    </section>
-
-    <section id="destinations">
-        <h2>Destinos Populares</h2>
-        <div class="destination">
-            <img src="paris.jpg" alt="Paris">
-            <p>Paris, França</p>
-        </div>
-        <div class="destination">
-            <img src="london.jpg" alt="Londres">
-            <p>Londres, Reino Unido</p>
-        </div>
-        <div class="destination">
-            <img src="newyork.jpg" alt="Nova York">
-            <p>Nova York, EUA</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Number One Viagens & Turismo - Todos os direitos reservados.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 NUMBER ONE VIAGENS - Todos os direitos reservados.</p>
+        <small>Desenvolvido por Rivania</small>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
 </body>
 </html>
-
-
-
