@@ -88,6 +88,15 @@ button {
 .btn-primary:hover {
     background-color: #E07C1A;
 }
+header {
+    background: url('https://github.com/seu-usuario/seu-repositorio/raw/main/topsite.jpg') center/cover no-repeat;
+    height: 300px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
 
 .navbar-nav .nav-link {
     font-weight: bold;
